@@ -1,0 +1,81 @@
+@mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+}
+
+@mixin transition($values...) {
+    -webkit-transition: $values;
+    -moz-transition: $values;
+    -o-transition: $values;
+    transition: $values;
+}
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+    transform: $value;
+}
+
+@mixin object-fit($value) {
+    -o-object-fit: $value;
+    object-fit: $value;
+    font-family: "object-fit: #{$value};";
+}
+
+.site-card {
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(50% - .75rem);
+    padding: 1rem;
+    margin: .25rem;
+    overflow: hidden;
+    color: #161209;
+    background-color: darken(#fff, 6%);
+    @include border-radius(10px);
+    @include transition(transform 0.25s ease-out);
+
+    [theme=dark] & {
+        color: #a9a9b3;
+        background-color: darken(#292a2d, 6%);
+    }
+
+    .site-logo-wrapper {
+        float: left;
+        margin-right: 10%;
+        width: 4rem;
+        height: 4rem;
+
+        .site-logo {
+            transform:translateY(-50%);
+        }
+    }
+
+    .site-content-wrapper {
+        .site-name {
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 1.125rem;
+            line-height: 1.5em;
+            margin: .25rem 0 .5rem;
+        }
+
+        .site-desc {
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: .875rem;
+            line-height: 1.5em;
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .site-card {
+        width: 100%;
+    }
+}

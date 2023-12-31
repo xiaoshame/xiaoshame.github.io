@@ -1,0 +1,17 @@
+{{- $name := cond .IsNamedParams (.Get "name") (.Get 0) -}}
+{{- $url := cond .IsNamedParams (.Get "url") (.Get 1) -}}
+{{- $desc := cond .IsNamedParams (.Get "desc") (.Get 2) | default $name -}}
+{{- $logo := cond .IsNamedParams (.Get "logo") (.Get 3) | default "/images/default-avatar.webp" -}}
+
+<div class="site-card">
+    <div class="site-logo-wrapper">
+        <img class=" site-logo" src="{{ with $logo }}{{ . }}{{ end }}">
+    </div>
+    <div class="site-content-wrapper">
+        <a href="{{ $url | safeURL }}" {{ with $name }} title="{{ printf " %v - %v" $name $desc }}"{{ end }}{{ if (urls.Parse
+            $url).Host }} rel="noopener" target="_blank" {{ end }} class="site-link">
+        <div class="site-name">{{ with $name }}{{ . }}{{ end }}</div>
+        <div class="site-desc">{{ with $desc }}{{ . }}{{ end }}</div>
+        </a>
+    </div>
+</div>

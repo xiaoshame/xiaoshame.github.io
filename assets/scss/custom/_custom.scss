@@ -1,0 +1,164 @@
+/** @format */
+
+// 文件位置：~/assets/scss/custom/_custom.scss
+
+.notice {
+  position: relative;
+  padding: 1em 1em 1em 2.5em;
+  margin-bottom: 1em;
+  border-radius: 4px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .notice-title {
+    position: absolute;
+    left: 0.8em;
+
+    .notice-icon {
+      width: 1.2em;
+      height: 1.2em;
+    }
+  }
+
+  &.notice-warning {
+    background: hsla(0, 65%, 65%, 0.15);
+    border-left: 5px solid hsl(0, 65%, 65%);
+
+    .notice-title {
+      color: hsl(0, 65%, 65%);
+    }
+  }
+
+  &.notice-info {
+    background: hsla(30, 80%, 70%, 0.15);
+    border-left: 5px solid hsl(30, 80%, 70%);
+
+    .notice-title {
+      color: hsl(30, 80%, 70%);
+    }
+  }
+
+  &.notice-note {
+    background: hsla(200, 65%, 65%, 0.15);
+    border-left: 5px solid hsl(200, 65%, 65%);
+
+    .notice-title {
+      color: hsl(200, 65%, 65%);
+    }
+  }
+
+  &.notice-tip {
+    background: hsla(140, 65%, 65%, 0.15);
+    border-left: 5px solid hsl(140, 65%, 65%);
+
+    .notice-title {
+      color: hsl(140, 65%, 65%);
+    }
+  }
+}
+
+[data-theme="dark"] .notice {
+  &.notice-warning {
+    background: hsla(0, 25%, 35%, 0.15);
+    border-left: 5px solid hsl(0, 25%, 35%);
+
+    .notice-title {
+      color: hsl(0, 25%, 35%);
+    }
+  }
+
+  &.notice-info {
+    background: hsla(30, 25%, 35%, 0.15);
+    border-left: 5px solid hsl(30, 25%, 35%);
+
+    .notice-title {
+      color: hsl(30, 25%, 35%);
+    }
+  }
+
+  &.notice-note {
+    background: hsla(200, 25%, 35%, 0.15);
+    border-left: 5px solid hsl(200, 25%, 35%);
+
+    .notice-title {
+      color: hsl(200, 25%, 35%);
+    }
+  }
+
+  &.notice-tip {
+    background: hsla(140, 25%, 35%, 0.15);
+    border-left: 5px solid hsl(140, 25%, 35%);
+
+    .notice-title {
+      color: hsl(140, 25%, 35%);
+    }
+  }
+}
+
+// /* 搜索页面 */
+// .search {
+//     position: relative;
+//     padding-top: 3.5rem;
+//     padding-bottom: 1rem;
+//     width: 57.5%;
+//     margin: 0 auto;
+//     background: white;
+//     opacity: .95;
+// }
+
+// [theme=dark] .search {
+//     background: #3a3535;
+// }
+
+// [theme=dark] .search header,
+// .search header {
+//     background-color: #f8f8f8;
+// }
+
+// [theme=dark] .search header:hover,
+// .search header:hover {
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+// }
+
+// .search header h1 {
+//     padding-left: 1rem;
+//     background: white;
+// }
+
+// [theme=dark] .search header h1 {
+//     background: #3a3535;
+// }
+
+// [theme=dark] .search input,
+// .search input {
+//     height: initial;
+//     width: initial;
+//     color: initial;
+//     background-color: white;
+//     margin: 0 0 0 1rem;
+//     border-width: 2px;
+//     border-style: inset;
+//     border-color: initial;
+//     border-image: initial;
+//     -webkit-border-radius: 0;
+//     -moz-border-radius: 0;
+//     border-radius: 0;
+// }
+
+// .search #search-results {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+// }
+
+// [theme=dark] a:active,
+// [theme=dark] a:hover {
+//     color: #2d96bd;
+// }
+
+// .search hr {
+//     margin-left: 1rem;
+//     margin-right: 1rem;
+// }
