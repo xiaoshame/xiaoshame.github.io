@@ -5,6 +5,6 @@ lastmod : "{{ .Date }}"
 tags : [""] 
 categories : [""]
 draft : true
-featuredImage : ""
-summary : "todo"
+featuredImage :
+summary : 'todo'
 ---
