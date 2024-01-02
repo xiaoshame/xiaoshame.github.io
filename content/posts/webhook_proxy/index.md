@@ -1,12 +1,12 @@
 ---
-title : "为Giscus增加企业微信通知功能" 
+title : "为博客Giscus评论增加通知机器人" 
 date : "2023-12-18T15:34:23+08:00" 
 lastmod : "2023-12-18T15:34:23+08:00" 
 tags : ["Hugo","代理","JS","cloudflare","Giscus"] 
 categories : ["技术"]
 draft : false
 featuredImage : /images/posts/webhook_proxy/featuredImage.jpg
-summary : '文章介绍了如何给Giscus系统增加一个企业微信通知功能的方案和实现方式。使用github的webhook和cloudflare的worker服务，可以将新增的discussion和comment信息转发给企业微信。'
+summary : '文章介绍了如何给Giscus系统增加一个机器人通知功能的方案和实现方式。使用github的webhook和cloudflare的worker服务，可以将新增的discussion和comment信息转发给企业微信或飞书。'
 ---
 
 ## 背景
@@ -246,5 +246,5 @@ addEventListener("fetch", event => {
 ## 总结
 
 1. 下一阶段要学习下JS，结合cloudflare worker可以做出一些有意思的工具出来
-2. 一个功能由不同的服务组成的，以后看到有意思的产品时，可以有意识锻炼下如何通过不同的能力完成服务的搭建
-3. 最近工作软件切换成飞书同样支持webhook，简单调整下hook地址和sendMdMsg中的消息参数即可
+2. 以后看到有意思的产品，在脑海中有意识锻炼下如何通过不同的能力完成对应服务的搭建
+3. 最近工作软件切换成飞书，调整hook地址和sendMdMsg中的消息参数后，通知消息切换到飞书机器人
