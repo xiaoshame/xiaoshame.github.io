@@ -24,10 +24,10 @@ summary : '搭建个人书城，可选择使用talebook或copyBook开源项目�
 2. copyBook 需要通过爬虫脚本将章节信息写入数据库，搭建的网站类似网络小说在线阅读网站
 3. 采用talebook 搭建网站，步骤很简单，按照说明文档进行部署就行。我采用docker进行的部署
     1. docker-compose 安装：https://cloud.tencent.com/developer/article/1855291
-    2. 部署指令：docker-compose -f docker-compose.yml  up -d
+    2. 部署指令：`docker-compose -f docker-compose.yml  up -d`
 4. 闲置的机器上采用caddy2进行反向代理
     1. talebook部署完成后，修改/etc/caddy/Caddyfile
-    2. 新增reverse_proxy 127.0.0.1:8080，8080为docker-compose.yml中填写的端口
+    2. 新增`reverse_proxy 127.0.0.1:8080，8080为docker-compose.yml`中填写的端口
     3. XXXX为对应的域名
     4. 使用对应域名即可访问
 5. 手机上下载kybook APP添加opds地址，支持搜索，书籍下载后阅读
@@ -46,15 +46,15 @@ import sites/*
 
 1. 整体爬虫代码框架完全复用copyBook这个项目,只在bookspider/bookspider/spider 中添加解析文件
 2. 添加解析xx.py文件，并修改name参数为xx，编写好响应的解析代码后
-    1. 修改copyBook\bookspider\start.py为cmdline.execute('scrapy crawl xx'.split()) 即可正常运行
-3. yield scrapy.Request(bookUrl,meta={"categoryName":categoryName},callback=self.getBooks)
+    1. 修改`copyBook\bookspider\start.py`为`cmdline.execute('scrapy crawl xx'.split())` 即可正常运行
+3. `yield scrapy.Request(bookUrl,meta={"categoryName":categoryName},callback=self.getBooks)`
     1. bookUrl为完整的地址,getBooks为回调函数
     2. getBooks中response为请求返回数据，如果地址是文件地址，则response.body即文件数据
 4. allowed_domains 中为允许访问的域名，根据爬虫需要进行添加
 
 ### scrapy使用代理
 
-参考网络文章，修改copyBook\bookspider\bookspider\settings.py未成功，直接在爬虫类中添加如下代码，验证代理通过
+参考网络文章，修改`copyBook\bookspider\bookspider\settings.py`未成功，直接在爬虫类中添加如下代码，验证代理通过
 
 ```python
 os.environ["HTTP_PROXY"] = "http://127.0.0.1:1081"
@@ -73,8 +73,8 @@ def decode(self,data):
         return result
 ```
 
-1. 安装PyExecJS，pip install PyExecJS
-2. context.call 中decode为xxx.js中函数名，data为函数需要的参数
+1. 安装PyExecJS，`pip install PyExecJS`
+2. context.call中decode为xxx.js中函数名，data为函数需要的参数
 3. PyExecJS的运行依赖node.js
 
 ### xpath
@@ -118,9 +118,9 @@ def parse(self, response):
                 yield scrapy.Request(self.base_url + author_url,meta={"authorName":author_name},callback=self.getBooks)
 ```
 
-1. len(author.xpath("thead/tr/th/a/text()").extract()) 通过长度判断是否有值
-2. author_name = author.xpath("thead/tr/th/a/text()").extract()[0] 取值
-3. book.xpath("td[1]/text()").extract() 列表索引从1开始
+1. `len(author.xpath("thead/tr/th/a/text()").extract())`通过长度判断是否有值
+2. `author_name = author.xpath("thead/tr/th/a/text()").extract()[0]`取值
+3. `book.xpath("td[1]/text()").extract()` 列表索引从1开始
 
 ## 总结
 
