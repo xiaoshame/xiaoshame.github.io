@@ -1,8 +1,8 @@
 ---
-title : "scrapy初次使用记录" 
+title : "搭建个人书城" 
 date : "2024-01-02T10:15:29+08:00" 
 lastmod : "2024-01-02T10:15:29+08:00" 
-tags : ["scrapy","xpath"] 
+tags : ["scrapy","xpath","python"] 
 categories : ["技术"]
 draft : false
 featuredImage : /images/posts/scrapy_use/featuredImage.jpg
@@ -24,13 +24,15 @@ summary : '搭建个人书城，可选择使用talebook或copyBook开源项目�
 2. copyBook 需要通过爬虫脚本将章节信息写入数据库，搭建的网站类似网络小说在线阅读网站
 3. 采用talebook 搭建网站，步骤很简单，按照说明文档进行部署就行。我采用docker进行的部署
     1. [docker-compose 安装](https://cloud.tencent.com/developer/article/1855291)
-    2. 部署指令：`docker-compose -f docker-compose.yml  up -d`
+    2. docker-compose.yml中`/tmp/demo:/data`调整为`/data/talebook:/data`
+    3. 部署指令：`docker-compose -f docker-compose.yml  up -d`
 4. 闲置的机器上采用caddy2进行反向代理
     1. talebook部署完成后，修改/etc/caddy/Caddyfile新增`reverse_proxy 127.0.0.1:8080`
     2. 8080为docker-compose.yml中填写的端口
     3. XXXX为对应的域名
     4. 使用对应域名即可访问网站
-5. 手机上下载kybook APP添加opds地址，支持搜索，书籍下载后阅读
+5. 通过爬虫获取不同线上书城的书籍，上传到服务器指定的目录`/data/talebook/book/imports`，在网页通过批量同步方式导入网站
+6. 手机上下载kybook APP添加opds地址，支持搜索，书籍下载后阅读
 
 ```plaintext
 XXXX {
@@ -42,7 +44,9 @@ XXXX {
 import sites/*
 ```
 
-## scrapy爬虫
+## 爬虫常用技能
+
+### scrapy爬虫
 
 1. 整体爬虫代码框架完全复用copyBook这个项目,只需在`bookspider/bookspider/spider`中添加解析文件
 2. 添加解析xx.py文件，并修改name参数为xx，编写好想要解析代码

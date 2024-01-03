@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-01-02T17:01:17&#43;08:00</updated>
+    <updated>2024-01-03T18:00:59&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -17,7 +17,7 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.120.3">Hugo</generator>
         <entry>
-            <title type="text">scrapy初次使用记录</title>
+            <title type="text">搭建个人书城</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/scrapy_use/" />
             <id>https://xiaoshame.github.io/posts/scrapy_use/</id>
             <updated>2024-01-02T10:15:29&#43;08:00</updated>
@@ -27,14 +27,14 @@
                     <uri>https://xiaoshame.github.io/</uri>
                     <email>xiaoshame1209@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">搭建个人书城，可选择使用talebook或copyBook开源项目，前者简洁支持多种格式上传，后者需要通过爬虫将章节信息写入数据库，类似网络小说阅读网站。使用scrapy爬虫时，可复用copyBook项目，添加解析文件即可，还可添加代理和在python中运行js</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">搭建个人书城，可选择使用talebook或copyBook开源项目，前者简洁支持多种格式上传，后者类似网络小说网站，需要将章节信息写入数据库。爬虫复用copyBook项目，添加解析文件即可，还可添加代理和在python中运行js</summary>
             
                 <content type="html">&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;最近准备看看《一只特立独行的猪》这本书，在找书过程中看到了很多有意思的开源项目和网站。考虑到有个服务器一直闲置，然后目的由找书变成了搭建个人的书城。&lt;/p&gt;
 &lt;h2 id=&#34;资源&#34;&gt;资源&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/talebook/talebook&#34;&gt;网站搭建talebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hahaha108/copyBook&#34;&gt;网站搭建&amp;amp;爬虫copyBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hahaha108/copyBook&#34;&gt;网站搭建copyBook&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;网站搭建&#34;&gt;网站搭建&lt;/h2&gt;
 &lt;ol&gt;
@@ -42,18 +42,20 @@
 &lt;li&gt;copyBook 需要通过爬虫脚本将章节信息写入数据库，搭建的网站类似网络小说在线阅读网站&lt;/li&gt;
 &lt;li&gt;采用talebook 搭建网站，步骤很简单，按照说明文档进行部署就行。我采用docker进行的部署
 &lt;ol&gt;
-&lt;li&gt;docker-compose 安装：https://cloud.tencent.com/developer/article/1855291&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/article/1855291&#34;&gt;docker-compose 安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docker-compose.yml中&lt;code&gt;/tmp/demo:/data&lt;/code&gt;调整为&lt;code&gt;/data/talebook:/data&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;部署指令：&lt;code&gt;docker-compose -f docker-compose.yml  up -d&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;闲置的机器上采用caddy2进行反向代理
 &lt;ol&gt;
-&lt;li&gt;talebook部署完成后，修改/etc/caddy/Caddyfile&lt;/li&gt;
-&lt;li&gt;新增&lt;code&gt;reverse_proxy 127.0.0.1:8080，8080为docker-compose.yml&lt;/code&gt;中填写的端口&lt;/li&gt;
+&lt;li&gt;talebook部署完成后，修改/etc/caddy/Caddyfile新增&lt;code&gt;reverse_proxy 127.0.0.1:8080&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;8080为docker-compose.yml中填写的端口&lt;/li&gt;
 &lt;li&gt;XXXX为对应的域名&lt;/li&gt;
-&lt;li&gt;使用对应域名即可访问&lt;/li&gt;
+&lt;li&gt;使用对应域名即可访问网站&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
+&lt;li&gt;通过爬虫获取不同线上书城的书籍，上传到服务器指定的目录&lt;code&gt;/data/talebook/book/imports&lt;/code&gt;，在网页通过批量同步方式导入网站&lt;/li&gt;
 &lt;li&gt;手机上下载kybook APP添加opds地址，支持搜索，书籍下载后阅读&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -76,12 +78,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import sites/*
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;scrapy爬虫&#34;&gt;scrapy爬虫&lt;/h2&gt;
+&lt;/div&gt;&lt;h2 id=&#34;爬虫常用技能&#34;&gt;爬虫常用技能&lt;/h2&gt;
+&lt;h3 id=&#34;scrapy爬虫&#34;&gt;scrapy爬虫&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;整体爬虫代码框架完全复用copyBook这个项目,只在bookspider/bookspider/spider 中添加解析文件&lt;/li&gt;
-&lt;li&gt;添加解析xx.py文件，并修改name参数为xx，编写好响应的解析代码后
+&lt;li&gt;整体爬虫代码框架完全复用copyBook这个项目,只需在&lt;code&gt;bookspider/bookspider/spider&lt;/code&gt;中添加解析文件&lt;/li&gt;
+&lt;li&gt;添加解析xx.py文件，并修改name参数为xx，编写好想要解析代码
 &lt;ol&gt;
-&lt;li&gt;修改&lt;code&gt;copyBook\bookspider\start.py&lt;/code&gt;为&lt;code&gt;cmdline.execute(&#39;scrapy crawl xx&#39;.split())&lt;/code&gt; 即可正常运行&lt;/li&gt;
+&lt;li&gt;修改&lt;code&gt;copyBook\bookspider\start.py&lt;/code&gt;为&lt;code&gt;cmdline.execute(&#39;scrapy crawl xx&#39;.split())&lt;/code&gt; 即可运行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;yield scrapy.Request(bookUrl,meta={&amp;quot;categoryName&amp;quot;:categoryName},callback=self.getBooks)&lt;/code&gt;
@@ -248,6 +251,12 @@
                             
                             
                                 <category scheme="https://xiaoshame.github.io/tags/xpath/" term="xpath" label="xpath" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/python/" term="python" label="python" />
                             
                         
                     
