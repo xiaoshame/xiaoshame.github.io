@@ -17,6 +17,9 @@ summary : '搭建个人书城，可选择使用talebook或copyBook开源项目�
 
 1. [网站搭建talebook](https://github.com/talebook/talebook)
 2. [网站搭建copyBook](https://github.com/hahaha108/copyBook)
+3. [24h搜书网](https://24hbook.com/)
+4. [备胎书屋](https://beitai.cc/)
+5. [必读推荐](https://www.bidutuijian.com/)
 
 ## 网站搭建
 

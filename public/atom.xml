@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-01-03T18:00:59&#43;08:00</updated>
+    <updated>2024-01-03T18:07:10&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -35,6 +35,9 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/talebook/talebook&#34;&gt;网站搭建talebook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/hahaha108/copyBook&#34;&gt;网站搭建copyBook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://24hbook.com/&#34;&gt;24h搜书网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://beitai.cc/&#34;&gt;备胎书屋&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bidutuijian.com/&#34;&gt;必读推荐&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;网站搭建&#34;&gt;网站搭建&lt;/h2&gt;
 &lt;ol&gt;
