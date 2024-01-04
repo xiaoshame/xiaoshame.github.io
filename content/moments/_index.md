@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "1.4" content = "人生是没有意义的，我们的任务是让其变的有意义。一句没啥用得废话">}}
+{{< /moment >}}
+
 {{< moment year = "2023" date = "12.31" content = "评论坏了，还不知道为啥">}}
 {{< /moment >}}
 
