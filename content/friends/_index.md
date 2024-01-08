@@ -23,6 +23,8 @@ badge = false
 
 {{< friend name="Memory" url="https://blog.yandaojiang.com/" desc="yandaojiang" logo="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/memos_img/2306/header.webp" >}}
 
+{{< friend name="Jack's Space" url="https://veryjack.com/" desc="一切都是最好的安排" logo="https://pix.veryjack.com/i/2023/04/04/fsxnkv.webp" >}}
+
 - 添加友链首先将本站链接添加至你的网站，信息如下：
 {{< notice notice-tip >}}
 - 网站名称：阿松日常
