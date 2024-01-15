@@ -214,6 +214,14 @@ hugo-theme-moments主题生成的网页中使用到的css和js信息：
 {{ end }}
 ```
 
+### bug修复
+
+1. 手机上搜索框不展示
+    1. 页面上调试发现搜索框与其他菜单class值不同，搜索为`class="menu-item search-item"`， 与其他菜单为`class="menu-item"`
+    2. 手动删除search-item显示正常，在代码中搜素search-item，删除menu.html中search-item即可修复此问题
+2. 说说页面无暗黑模式
+    1. 待解决
+
 ### 总结
 
 本文最想告知读者和自我总结的是:解决问题的思维方式。希望读者可以感受到这点，也希望本文可以帮助读者解决一些问题。
