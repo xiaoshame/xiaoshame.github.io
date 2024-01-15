@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "1.15" content = "公司业务不景气持续裁员，为什么不学学马斯克一步到位，慢刀子割肉对公司伤害更大">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "1.4" content = "人生是没有意义的，我们的任务是让其变的有意义。一句没啥用得废话">}}
 {{< /moment >}}
 
