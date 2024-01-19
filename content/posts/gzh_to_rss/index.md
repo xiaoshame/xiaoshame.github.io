@@ -40,7 +40,7 @@ summary : '使用python编写的脚本可以将公众号的最新文章保存到
         <webMaster>xiaoshame1209@gmail.com (阿松)</webMaster>
         <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         <lastBuildDate>Mon, 15 Jan 2024 10:00:43 +0000</lastBuildDate>
-        <ns0:link rel="self" type="application/rss+xml" href="https://xiaoqian713.live/get/extract/603/OEBPS/rss.xml" />
+        <ns0:link rel="self" type="application/rss+xml" href="https://xiaoqian713.live/get/extract/603/rss.xml" />
     </channel>
 </rss>
 ```
@@ -49,14 +49,13 @@ summary : '使用python编写的脚本可以将公众号的最新文章保存到
 
 1. 将本地保存文章调整为将获取到的RSS信息中的文章内容保存到xml中
 2. 获取前一天之前所有的文章
-3. 将代码和rss.xml放到服务器中，配置python相关环境
-4. 将代码调整为获取前一天所有的文章，更新rss.xml文件，确保代码运行正常
-    1. 代码改动点：`if pubDate > start_time and pubDate < end_time:`
+3. 将代码和rss.xml放到服务器中，rss.xml重命名为rss_base.xml,配置python相关环境
+4. 运行代码即可获取前一天所有的文章，并更新到rss.xml文件，检测结果确保代码运行正常
 5. 确保可以通过http服务访问rss.xml文件,修改rss.xml中href地址为对应的文件地址
     1. 我的服务器上之前搭建了一个服务，所以直接找了个地方放进去，试验下地址可访问即可
 6. 将前一天文章更新到rss.xml中，与更新前数据对比，确定数据无误
 7. 在feedly中订阅对应的文件地址
-    1. 大家想订阅这个rss,订阅地址为：`https://xiaoqian713.live/get/extract/603/OEBPS/rss.xml`
+    1. 大家想订阅这个rss,订阅地址为：`https://xiaoqian713.live/get/extract/603/rss.xml`
 
 ```python
 import concurrent.futures
@@ -87,7 +86,15 @@ def get_list_name_url(html):
 def get_recent_article(url,channel,start_time,end_time):
     ## 获取对应XML信息
     try:
-        xml = requests.get(url=url, headers='').text
+        response = requests.get(url=url, headers={})
+        content_type = response.headers.get('Content-Type')
+
+        # 检查是否有charset=utf-8
+        if 'charset=utf-8' in content_type:
+            xml = response.text
+        else:
+        # 如果不是UTF-8，可以尝试手动转换编码
+            xml = response.content.decode('utf-8', errors='ignore')
     except requests.exceptions.SSLError as err:
         print('SSL Error. Adding custom certs to Certifi store...')
     # 加载XML文件,获取根元素
@@ -125,9 +132,12 @@ def get_blog_list(url,start_time,end_time):
     ## 获取不同博客名和对应RSS订阅地址
     name_list,url_list = get_list_name_url(html)
     # 创建或加载新的RSS文件树和根元素
-    rss = ET.parse('rss.xml')
+    rss = ET.parse('rss_base.xml')
     root = rss.getroot()
     channel = root.find('channel')
+    last_build_date = channel.find('lastBuildDate')
+    if last_build_date is not None:
+        last_build_date.text = end_time.strftime('%a, %d %b %Y %H:%M:%S %z')
     # channel = ET.SubElement(rss, 'channel')
     # 提交任务给线程池，并获取Future对象
     futures = []
@@ -182,7 +192,7 @@ service cron start
 crontab -e
 
 ### 每天9点定时运行python脚本
-0 9 * * * python /data/talebook/books/extract/603/OEBPS/blog_list.py
+0 9 * * * python /data/talebook/books/extract/603/blog_list_rss.py
 ```
 
 ## 最后
