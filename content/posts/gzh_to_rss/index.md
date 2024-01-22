@@ -2,7 +2,7 @@
 title : "使用feedly订阅公众号" 
 date : "2024-01-18T17:40:30+08:00" 
 lastmod : "2024-01-18T17:40:30+08:00" 
-tags : ["rss","python","博客"] 
+tags : ["rss","python","博客","MinIO"] 
 categories : ["技术"]
 draft : false
 featuredImage : /images/posts/gzh_to_rss/featuredImage.jpg
@@ -16,7 +16,8 @@ summary : '使用python编写的脚本可以将公众号的最新文章保存到
 ## 解决思路
 
 1. feedly订阅的是一个网站的rss.xml文件，所以只需构造一个rss.xml文件放到服务器,对应的文件支持通过http访问，即可在feedly进行订阅
-2. 使用服务器定时任务，定时更新前一天发布的公众号文章信息到rss.xml文件
+2. 使用服务器定时任务，定时更新最近发布的公众号文章信息到rss.xml文件
+3. minio服务可以对外提供文件服务
 
 ## 具体操作
 
@@ -28,19 +29,14 @@ summary : '使用python编写的脚本可以将公众号的最新文章保存到
 
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns1="http://purl.org/rss/1.0/modules/content/"
-    version="2.0">
+<rss xmlns:ns0="http://purl.org/rss/1.0/modules/content/" version="2.0">
     <channel>
         <title>公众号综合</title>
-        <link>https://xiaoqian713.live/</link>
-        <description>目前共380个，公开331个公众号</description>
-        <generator>Hugo 0.121.0 https://gohugo.io/</generator>
-        <language>zh-CN</language>
-        <managingEditor>xiaoshame1209@gmail.com (阿松)</managingEditor>
-        <webMaster>xiaoshame1209@gmail.com (阿松)</webMaster>
-        <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-        <lastBuildDate>Mon, 15 Jan 2024 10:00:43 +0000</lastBuildDate>
-        <ns0:link rel="self" type="application/rss+xml" href="https://xiaoqian713.live/get/extract/603/rss.xml" />
+        <link>https://xiaoqian713.live/rss/rss.xml</link>
+        <description>公众号聚合</description>
+        <copyright>asong</copyright>
+        <pubDate>Mon, 22 Jan 2024 16:28:02 </pubDate>
+        <lastBuildDate>Mon, 22 Jan 2024 16:28:02 </lastBuildDate>
     </channel>
 </rss>
 ```
@@ -48,14 +44,11 @@ summary : '使用python编写的脚本可以将公众号的最新文章保存到
 ### 修改python代码
 
 1. 将本地保存文章调整为将获取到的RSS信息中的文章内容保存到xml中
-2. 获取前一天之前所有的文章
-3. 将代码和rss.xml放到服务器中，rss.xml重命名为rss_base.xml,配置python相关环境
-4. 运行代码即可获取前一天所有的文章，并更新到rss.xml文件，检测结果确保代码运行正常
-5. 确保可以通过http服务访问rss.xml文件,修改rss.xml中href地址为对应的文件地址
-    1. 我的服务器上之前搭建了一个服务，所以直接找了个地方放进去，试验下地址可访问即可
-6. 将前一天文章更新到rss.xml中，与更新前数据对比，确定数据无误
-7. 在feedly中订阅对应的文件地址
-    1. 大家想订阅这个rss,订阅地址为：`https://xiaoqian713.live/get/extract/603/rss.xml`
+2. 使用docker部署了minio对象存储服务，用于存储rss.xml文件
+3. 将代码和rss.xml放到服务器中，配置python相关环境
+4. 测试代码确定运行无误，rss.xml可自行上传到minio中
+5. 在feedly中订阅对应的文件地址
+    1. 大家想订阅这个rss,订阅地址为：`https://xiaoqian713.live/rss/rss.xml`
 
 ```python
 import concurrent.futures
@@ -63,6 +56,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 import threading
 import requests
+import minio
 from bs4 import BeautifulSoup
 
 # 定义一个锁
@@ -118,8 +112,13 @@ def get_recent_article(url,channel,start_time,end_time):
                         pubDate = datetime.strptime(node.text, "%a, %d %b %Y %H:%M:%S %z").replace(tzinfo=None)
                     ## 将内容写入文件中
                     if pubDate > start_time and pubDate < end_time:
-                        channel.append(item)
-        return url + " successe"
+                        first_item = channel.find('item')
+                        if first_item is not None:
+                            channel.insert(list(channel).index(first_item), item)
+                        else:
+                        # 如果没有其他item元素，直接追加到channel元素
+                            channel.append(item)
+            return url + " successe"
     except ET.ParseError:
         return url + " fail"
 
@@ -132,12 +131,15 @@ def get_blog_list(url,start_time,end_time):
     ## 获取不同博客名和对应RSS订阅地址
     name_list,url_list = get_list_name_url(html)
     # 创建或加载新的RSS文件树和根元素
-    rss = ET.parse('rss_base.xml')
+    rss = ET.parse(r'D:\workspace\script\gzh_to_rss\rss.xml')
     root = rss.getroot()
     channel = root.find('channel')
     last_build_date = channel.find('lastBuildDate')
+    pubDate = channel.find('pubDate')
     if last_build_date is not None:
         last_build_date.text = end_time.strftime('%a, %d %b %Y %H:%M:%S %z')
+    if pubDate is not None:
+        pubDate.text = end_time.strftime('%a, %d %b %Y %H:%M:%S %z')
     # channel = ET.SubElement(rss, 'channel')
     # 提交任务给线程池，并获取Future对象
     futures = []
@@ -157,17 +159,27 @@ def get_blog_list(url,start_time,end_time):
     executor.shutdown()
     #将最终结果写入文件
     with lock:
-        rss.write('rss.xml', encoding='UTF-8', xml_declaration=True)
+        rss.write(r'D:\workspace\script\gzh_to_rss\rss.xml', encoding='UTF-8', xml_declaration=True)
+    print("write rss done")
+
+def up_data_minio(bucket: str):
+    minio_conf = {
+        'endpoint': '127.0.0.1:9000',
+        'access_key': 'xxxx',
+        'secret_key': 'xxxx',
+        'secure': False
+    }
+    client = minio.Minio(**minio_conf)
+    client.fput_object(bucket_name=bucket, object_name='rss.xml',file_path='rss.xml',content_type='text/xml')
+    print("syn rss.xml done")
 
 if __name__ == "__main__":
-    ## 查询前几天，不包含当天
-    days = 1
-    current_datetime= datetime.now()
-    # 设置时、分、秒为0，仅保留年、月、日
-    end_time = current_datetime.replace(hour=0, minute=0, second=0, microsecond=0)
-    start_time = end_time - timedelta(days=days)
-    ## 获取最近一周内发表的文章
+    end_time = datetime.now()
+    ## 定时查询
+    start_time = end_time - timedelta(hours=4)
+    ## 获取最近4H内发表的文章
     get_blog_list("https://wechat2rss.xlab.app/posts/list/",start_time,end_time)
+    up_data_minio('rss')
 
 ```
 
@@ -192,7 +204,24 @@ service cron start
 crontab -e
 
 ### 每天9点定时运行python脚本
-0 9 * * * python /data/talebook/books/extract/603/blog_list_rss.py
+0 */4 * * * python /data/talebook/books/extract/603/blog_list_rss.py
+
+### 为crontab增加日志
+0 */4 * * * python /data/talebook/books/extract/603/blog_list_rss.py >> $HOME/for_crontab/mylog.log 2>&1
+```
+
+### minio部署
+
+参考文章：
+
+1. [部署私有对象存储服务: Minio](https://ysicing.me/tools/minio-deploy/)
+2. [自建对象存储服务MinIO进行文件备份](https://blog.littlefox.me/archives/695)
+3. [Docker搭建minio文件服务器](https://developer.aliyun.com/article/1329720)
+
+```plaintext
+### 下载镜像
+1. docker pull minio/minio
+
 ```
 
 ## 最后
