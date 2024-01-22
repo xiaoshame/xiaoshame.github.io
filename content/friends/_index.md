@@ -25,12 +25,13 @@ badge = false
 
 {{< friend name="Jack's Space" url="https://veryjack.com/" desc="一切都是最好的安排" logo="https://pix.veryjack.com/i/2023/04/04/fsxnkv.webp" >}}
 
-{{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-large.png" >}}
+{{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
+{{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
 
 - 添加友链首先将本站链接添加至你的网站，信息如下：
 {{< notice notice-tip >}}
-- 网站名称：阿松日常
+- 网站名称：阿松的博客
 - 网站地址：https://xiaoshame.github.io/
 - 网站logo：https://xiaoshame.github.io/images/logo.png
 - 网站描述：一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活

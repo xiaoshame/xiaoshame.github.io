@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 22 Jan 2024 19:40:41 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 22 Jan 2024 19:47:55 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -430,14 +430,12 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 下载镜像
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull minio/minio
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 构建容器
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 9000:9000 --name minio -d --restart=always -e &amp;#34;MINIO_ACCESS_KEY=admin&amp;#34; -e &amp;#34;MINIO_SECRET_KEY=admin123456&amp;#34; -v /home/data:/data \
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-v /home/config:/root/.minio minio/minio server /data --console-address &amp;#34;:9001&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -p 9000:9000 --name minio -d --restart=always -e &amp;#34;MINIO_ACCESS_KEY=admin&amp;#34; -e &amp;#34;MINIO_SECRET_KEY=admin123456&amp;#34; -v /home/data:/data -v /home/config:/root/.minio minio/minio server /data --console-address &amp;#34;:9001&amp;#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;### 配置caddy
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xiaoqian713.live {
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    reverse_proxy 127.0.0.1:9000
