@@ -65,7 +65,7 @@
         "description": "使用python编写的脚本可以将公众号的最新文章保存到本地，但本地阅读并不方便。作者通过使用feedly来订阅文章的方式解决了这个问题。",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  1729 ,
+        "wordCount":  1932 ,
         "image": "https://xiaoshame.github.io/images/logo.png",
         "author": {
             "@type": "Person",
@@ -283,7 +283,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1729</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1932</span>
     
     
         
@@ -304,6 +304,7 @@
         <li><a id="contents:获取一个xml模板" href="#获取一个xml模板">获取一个xml模板</a></li>
         <li><a id="contents:修改python代码" href="#修改python代码">修改python代码</a></li>
         <li><a id="contents:配置定时任务" href="#配置定时任务">配置定时任务</a></li>
+        <li><a id="contents:minio部署" href="#minio部署">minio部署</a></li>
       </ol>
     </li>
     <li><a id="contents:最后" href="#最后">最后</a></li>
@@ -314,7 +315,8 @@
 <h2 id="解决思路"><a href="#解决思路" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:解决思路" class="headings">解决思路</a></h2>
 <ol>
 <li>feedly订阅的是一个网站的rss.xml文件，所以只需构造一个rss.xml文件放到服务器,对应的文件支持通过http访问，即可在feedly进行订阅</li>
-<li>使用服务器定时任务，定时更新前一天发布的公众号文章信息到rss.xml文件</li>
+<li>使用服务器定时任务，定时更新最近发布的公众号文章信息到rss.xml文件</li>
+<li>minio服务可以对外提供文件服务</li>
 </ol>
 <h2 id="具体操作"><a href="#具体操作" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:具体操作" class="headings">具体操作</a></h2>
 <h3 id="获取一个xml模板"><a href="#获取一个xml模板" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:获取一个xml模板" class="headings">获取一个xml模板</a></h3>
@@ -336,27 +338,17 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;rss</span> <span class="na">xmlns:ns0=</span><span class="s">&#34;http://www.w3.org/2005/Atom&#34;</span> <span class="na">xmlns:ns1=</span><span class="s">&#34;http://purl.org/rss/1.0/modules/content/&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="na">version=</span><span class="s">&#34;2.0&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;rss</span> <span class="na">xmlns:ns0=</span><span class="s">&#34;http://purl.org/rss/1.0/modules/content/&#34;</span> <span class="na">version=</span><span class="s">&#34;2.0&#34;</span><span class="nt">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;channel&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&lt;title&gt;</span>公众号综合<span class="nt">&lt;/title&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;link&gt;</span>https://xiaoqian713.live/<span class="nt">&lt;/link&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;description&gt;</span>目前共380个，公开331个公众号<span class="nt">&lt;/description&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;generator&gt;</span>Hugo 0.121.0 https://gohugo.io/<span class="nt">&lt;/generator&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;language&gt;</span>zh-CN<span class="nt">&lt;/language&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;managingEditor&gt;</span>xiaoshame1209@gmail.com (阿松)<span class="nt">&lt;/managingEditor&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;webMaster&gt;</span>xiaoshame1209@gmail.com (阿松)<span class="nt">&lt;/webMaster&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;copyright&gt;</span>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)<span class="nt">&lt;/copyright&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;lastBuildDate&gt;</span>Mon, 15 Jan 2024 10:00:43 +0000<span class="nt">&lt;/lastBuildDate&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;ns0:link</span> <span class="na">rel=</span><span class="s">&#34;self&#34;</span> <span class="na">type=</span><span class="s">&#34;application/rss+xml&#34;</span> <span class="na">href=</span><span class="s">&#34;https://xiaoqian713.live/get/extract/603/OEBPS/rss.xml&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;link&gt;</span>https://xiaoqian713.live/rss/rss.xml<span class="nt">&lt;/link&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;description&gt;</span>公众号聚合<span class="nt">&lt;/description&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;copyright&gt;</span>asong<span class="nt">&lt;/copyright&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;pubDate&gt;</span>Mon, 22 Jan 2024 16:28:02 <span class="nt">&lt;/pubDate&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;lastBuildDate&gt;</span>Mon, 22 Jan 2024 16:28:02 <span class="nt">&lt;/lastBuildDate&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&lt;/channel&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/rss&gt;</span>
 </span></span></code></pre></td></tr></table></div>
@@ -364,126 +356,146 @@
 </div><h3 id="修改python代码"><a href="#修改python代码" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:修改python代码" class="headings">修改python代码</a></h3>
 <ol>
 <li>将本地保存文章调整为将获取到的RSS信息中的文章内容保存到xml中</li>
-<li>获取前一天之前所有的文章</li>
+<li>使用docker部署了minio对象存储服务，用于存储rss.xml文件</li>
 <li>将代码和rss.xml放到服务器中，配置python相关环境</li>
-<li>将代码调整为获取前一天所有的文章，更新rss.xml文件，确保代码运行正常
-<ol>
-<li>代码改动点：<code>if pubDate &gt; start_time and pubDate &lt; end_time:</code></li>
-</ol>
-</li>
-<li>确保可以通过http服务访问rss.xml文件,修改rss.xml中href地址为对应的文件地址
-<ol>
-<li>我的服务器上之前搭建了一个服务，所以直接找了个地方放进去，试验下地址可访问即可</li>
-</ol>
-</li>
-<li>将前一天文章更新到rss.xml中，与更新前数据对比，确定数据无误</li>
+<li>测试代码确定运行无误，rss.xml可自行上传到minio中</li>
 <li>在feedly中订阅对应的文件地址
 <ol>
-<li>大家想订阅这个rss,订阅地址为：<code>https://xiaoqian713.live/get/extract/603/OEBPS/rss.xml</code></li>
+<li>大家想订阅这个rss,订阅地址为：<code>https://xiaoqian713.live/rss/rss.xml</code></li>
 </ol>
 </li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span><span class="lnt">65
-</span><span class="lnt">66
-</span><span class="lnt">67
-</span><span class="lnt">68
-</span><span class="lnt">69
-</span><span class="lnt">70
-</span><span class="lnt">71
-</span><span class="lnt">72
-</span><span class="lnt">73
-</span><span class="lnt">74
-</span><span class="lnt">75
-</span><span class="lnt">76
-</span><span class="lnt">77
-</span><span class="lnt">78
-</span><span class="lnt">79
-</span><span class="lnt">80
-</span><span class="lnt">81
-</span><span class="lnt">82
-</span><span class="lnt">83
-</span><span class="lnt">84
-</span><span class="lnt">85
-</span><span class="lnt">86
-</span><span class="lnt">87
-</span><span class="lnt">88
-</span><span class="lnt">89
-</span><span class="lnt">90
-</span><span class="lnt">91
-</span><span class="lnt">92
-</span><span class="lnt">93
-</span><span class="lnt">94
-</span><span class="lnt">95
-</span><span class="lnt">96
-</span><span class="lnt">97
-</span><span class="lnt">98
-</span><span class="lnt">99
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">concurrent.futures</span>
@@ -491,6 +503,7 @@
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">threading</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">minio</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 定义一个锁</span>
@@ -514,7 +527,15 @@
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_recent_article</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="n">channel</span><span class="p">,</span><span class="n">start_time</span><span class="p">,</span><span class="n">end_time</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">## 获取对应XML信息</span>
 </span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">xml</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{})</span>
+</span></span><span class="line"><span class="cl">        <span class="n">content_type</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 检查是否有charset=utf-8</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="s1">&#39;charset=utf-8&#39;</span> <span class="ow">in</span> <span class="n">content_type</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">xml</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 如果不是UTF-8，可以尝试手动转换编码</span>
+</span></span><span class="line"><span class="cl">            <span class="n">xml</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">SSLError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;SSL Error. Adding custom certs to Certifi store...&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># 加载XML文件,获取根元素</span>
@@ -538,8 +559,13 @@
 </span></span><span class="line"><span class="cl">                        <span class="n">pubDate</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">%a</span><span class="s2">, </span><span class="si">%d</span><span class="s2"> %b %Y %H:%M:%S %z&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">                    <span class="c1">## 将内容写入文件中</span>
 </span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">pubDate</span> <span class="o">&gt;</span> <span class="n">start_time</span> <span class="ow">and</span> <span class="n">pubDate</span> <span class="o">&lt;</span> <span class="n">end_time</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">                        <span class="n">channel</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&#34; successe&#34;</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">first_item</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;item&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="n">first_item</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">channel</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">first_item</span><span class="p">),</span> <span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1"># 如果没有其他item元素，直接追加到channel元素</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">channel</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&#34; successe&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="n">ET</span><span class="o">.</span><span class="n">ParseError</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&#34; fail&#34;</span>
 </span></span><span class="line"><span class="cl">
@@ -552,9 +578,15 @@
 </span></span><span class="line"><span class="cl">    <span class="c1">## 获取不同博客名和对应RSS订阅地址</span>
 </span></span><span class="line"><span class="cl">    <span class="n">name_list</span><span class="p">,</span><span class="n">url_list</span> <span class="o">=</span> <span class="n">get_list_name_url</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># 创建或加载新的RSS文件树和根元素</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rss</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;rss.xml&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rss</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;D:\workspace\script\gzh_to_rss\rss.xml&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">root</span> <span class="o">=</span> <span class="n">rss</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="n">channel</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;channel&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">last_build_date</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;lastBuildDate&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pubDate</span> <span class="o">=</span> <span class="n">channel</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;pubDate&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">last_build_date</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">last_build_date</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S %z&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pubDate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pubDate</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y %H:%M:%S %z&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># channel = ET.SubElement(rss, &#39;channel&#39;)</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># 提交任务给线程池，并获取Future对象</span>
 </span></span><span class="line"><span class="cl">    <span class="n">futures</span> <span class="o">=</span> <span class="p">[]</span>
@@ -574,17 +606,27 @@
 </span></span><span class="line"><span class="cl">    <span class="n">executor</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">#将最终结果写入文件</span>
 </span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">lock</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">rss</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;rss.xml&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rss</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;D:\workspace\script\gzh_to_rss\rss.xml&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;UTF-8&#39;</span><span class="p">,</span> <span class="n">xml_declaration</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;write rss done&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">up_data_minio</span><span class="p">(</span><span class="n">bucket</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">minio_conf</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;endpoint&#39;</span><span class="p">:</span> <span class="s1">&#39;127.0.0.1:9000&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;access_key&#39;</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;secret_key&#39;</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;secure&#39;</span><span class="p">:</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">client</span> <span class="o">=</span> <span class="n">minio</span><span class="o">.</span><span class="n">Minio</span><span class="p">(</span><span class="o">**</span><span class="n">minio_conf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">client</span><span class="o">.</span><span class="n">fput_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="o">=</span><span class="n">bucket</span><span class="p">,</span> <span class="n">object_name</span><span class="o">=</span><span class="s1">&#39;rss.xml&#39;</span><span class="p">,</span><span class="n">file_path</span><span class="o">=</span><span class="s1">&#39;rss.xml&#39;</span><span class="p">,</span><span class="n">content_type</span><span class="o">=</span><span class="s1">&#39;text/xml&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;syn rss.xml done&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">## 查询前几天，不包含当天</span>
-</span></span><span class="line"><span class="cl">    <span class="n">days</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">current_datetime</span><span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># 设置时、分、秒为0，仅保留年、月、日</span>
-</span></span><span class="line"><span class="cl">    <span class="n">end_time</span> <span class="o">=</span> <span class="n">current_datetime</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">microsecond</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">start_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">days</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">## 获取最近一周内发表的文章</span>
+</span></span><span class="line"><span class="cl">    <span class="n">end_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## 定时查询</span>
+</span></span><span class="line"><span class="cl">    <span class="n">start_time</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## 获取最近4H内发表的文章</span>
 </span></span><span class="line"><span class="cl">    <span class="n">get_blog_list</span><span class="p">(</span><span class="s2">&#34;https://wechat2rss.xlab.app/posts/list/&#34;</span><span class="p">,</span><span class="n">start_time</span><span class="p">,</span><span class="n">end_time</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">up_data_minio</span><span class="p">(</span><span class="s1">&#39;rss&#39;</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="配置定时任务"><a href="#配置定时任务" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:配置定时任务" class="headings">配置定时任务</a></h3>
@@ -608,6 +650,9 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">### ubuntu 系统检查 cron 包是否安装
@@ -626,7 +671,57 @@
 </span></span><span class="line"><span class="cl">crontab -e
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">### 每天9点定时运行python脚本
-</span></span><span class="line"><span class="cl">0 9 * * * python /data/talebook/books/extract/603/OEBPS/blog_list.py
+</span></span><span class="line"><span class="cl">0 */4 * * * python /data/talebook/books/extract/603/blog_list_rss.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">### 为crontab增加日志
+</span></span><span class="line"><span class="cl">0 */4 * * * python /data/talebook/books/extract/603/blog_list_rss.py &gt;&gt; $HOME/for_crontab/mylog.log 2&gt;&amp;1
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><h3 id="minio部署"><a href="#minio部署" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:minio部署" class="headings">minio部署</a></h3>
+<p>参考文章：</p>
+<ol>
+<li><a href="https://ysicing.me/tools/minio-deploy/" target="_blank" rel="noopener">部署私有对象存储服务: Minio</a></li>
+<li><a href="https://blog.littlefox.me/archives/695" target="_blank" rel="noopener">自建对象存储服务MinIO进行文件备份</a></li>
+<li><a href="https://developer.aliyun.com/article/1329720" target="_blank" rel="noopener">Docker搭建minio文件服务器</a></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-plaintext" data-lang="plaintext"><span class="line"><span class="cl">### 下载镜像
+</span></span><span class="line"><span class="cl">docker pull minio/minio
+</span></span><span class="line"><span class="cl">### 构建容器
+</span></span><span class="line"><span class="cl">docker run -p 9000:9000 --name minio -d --restart=always -e &#34;MINIO_ACCESS_KEY=admin&#34; -e &#34;MINIO_SECRET_KEY=admin123456&#34; -v /home/data:/data \
+</span></span><span class="line"><span class="cl">-v /home/config:/root/.minio minio/minio server /data --console-address &#34;:9001&#34;
+</span></span><span class="line"><span class="cl">### 配置caddy
+</span></span><span class="line"><span class="cl">xiaoqian713.live {
+</span></span><span class="line"><span class="cl">    reverse_proxy 127.0.0.1:9000
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">console.xiaoqian713.live {
+</span></span><span class="line"><span class="cl">    reverse_proxy 127.0.0.1:9001
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">### 配置DNS解析(我用的cloudflare)
+</span></span><span class="line"><span class="cl">A console 主机IP
+</span></span><span class="line"><span class="cl">### 配置minio
+</span></span><span class="line"><span class="cl">1. 网页登录console.xiaoqian713.live
+</span></span><span class="line"><span class="cl">2. 创建bucket，访问权限设置为public
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="最后"><a href="#最后" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:最后" class="headings">最后</a></h2>
@@ -671,6 +766,8 @@
 
 
         
+    
+
 
 
         
@@ -735,6 +832,14 @@
                 
                     
                     <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>博客</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/minio/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>MinIO</a>
                 
             
         </div>

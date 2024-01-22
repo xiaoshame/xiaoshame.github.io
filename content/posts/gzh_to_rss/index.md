@@ -220,8 +220,21 @@ crontab -e
 
 ```plaintext
 ### 下载镜像
-1. docker pull minio/minio
-
+docker pull minio/minio
+### 构建容器
+docker run -p 9000:9000 --name minio -d --restart=always -e "MINIO_ACCESS_KEY=admin" -e "MINIO_SECRET_KEY=admin123456" -v /home/data:/data -v /home/config:/root/.minio minio/minio server /data --console-address ":9001"
+### 配置caddy
+xiaoqian713.live {
+    reverse_proxy 127.0.0.1:9000
+}
+console.xiaoqian713.live {
+    reverse_proxy 127.0.0.1:9001
+}
+### 配置DNS解析(我用的cloudflare)
+A console 主机IP
+### 配置minio
+1. 网页登录console.xiaoqian713.live
+2. 创建bucket，访问权限设置为public
 ```
 
 ## 最后
