@@ -89,6 +89,19 @@ function changeMode() {
         }
     {{ end }}
 
+    //giscus
+    // iframe 元素
+    const giscusIframe = document.querySelector('.giscus-frame');
+    if (giscusIframe) {
+        // 检测当前主题是否为暗黑模式
+        if (isDark) {
+            giscusIframe.src = giscusIframe.src.replace('theme=light', 'theme=dark');
+        } else {
+            giscusIframe.src = giscusIframe.src.replace('theme=dark', 'theme=light');
+        }
+    }
+
+
     // Mermaid
     // https://github.com/reuixiy/hugo-theme-meme/issues/205
     if (typeof mermaidConfig !== 'undefined') {
