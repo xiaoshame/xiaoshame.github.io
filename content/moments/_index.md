@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "1.23" content = "博客部分页面暗黑模式有问题，修复后看着舒服多了">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "1.15" content = "公司业务不景气持续裁员，为什么不学学马斯克一步到位，慢刀子割肉对公司伤害更大">}}
 {{< /moment >}}
 
