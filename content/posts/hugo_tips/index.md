@@ -2,7 +2,7 @@
 title : "Hugo使用小结" 
 description : "" 
 date : "2023-12-09T11:11:06+08:00" 
-lastmod : "2023-12-09T11:11:06+08:00" 
+lastmod : "2023-01-23T20:16:00+08:00" 
 tags : ["hugo","tips"] 
 categories : ["技术"]
 draft : false
@@ -66,26 +66,38 @@ summary : '本文总结了使用hugo建立博客需要的前端和hugo知识。�
 主要操作点如下：
 
 1. 在github中启用Giscus功能
-2. 使用partial方式在giscus.html中嵌入Giscus代码
-3. 修改blog\layouts\partials\pages\post.html 中评论元素代码文件地址，即修改partial shortcode 之后使用的地址
+2. 在`\layouts\partials\comments`中添加giscus.html文件，粘贴[Giscus官网](https://giscus.app/zh-CN)中获取的Giscus代码
+3. 复制`themes\meme\layouts\partials\pages\post.html`放到`\layouts\partials\pages\`中
+4. 修改`\layouts\partials\pages\post.html` 中`{{ partial "components/comments.html" . }}`为`{{ partial "comments/giscus.html" . }}`
+5. 评论无法动态切换成暗黑模式，修改`\themes\meme\assets\js\dark-mode.js`中changeMode函数，增加下面代码
 
-本来准备支持meme主题中autoLoadComments参数，手动加载评论时才加载Giscus，因对前端知识不熟练放弃，后续再改进。
+```js
+    const giscusIframe = document.querySelector('.giscus-frame');
+    if (giscusIframe) {
+        // 检测当前主题是否为暗黑模式
+        if (isDark) {
+            giscusIframe.src = giscusIframe.src.replace('theme=light', 'theme=dark');
+        } else {
+            giscusIframe.src = giscusIframe.src.replace('theme=dark', 'theme=light');
+        }
+    }
+```
 
 #### Lunr搜索支持中文
 
 整体修复流程如下：
 
-1. lunr搜索不支持中文,google 找到了开源lurn扩展项目[lunr-languages](https://github.com/MihaiValentin/lunr-languages)
-2. 在[cdn.jsdelivr.net](https://www.jsdelivr.com/)找到扩展项目对应lunr-zh.js地址，修改hugo.toml中lunr_lang参数```lunr_lang="/npm/lunr-languages-zh@1.4.0/lunr.zh.js"```，在网页中测试不支持中文，查看网页html源码发现未引用lunr-zh.js
-3. 阅读主题源码是blog\themes\meme\layouts\partials\third-party\lunr-search.html中```if in $supported $lang``` 过滤zh导致，在$supported中添加"zh",查阅页面html发现lunr-zh.js已引用，测试搜索仍然不支持中文，同时网页控制台报错```未捕获的类型错误：nodejieba.cut 不是函数```
+1. lunr搜索官方不支持中文,google 找到了开源lurn扩展项目[lunr-languages](https://github.com/MihaiValentin/lunr-languages)
+2. 在[cdn.jsdelivr.net](https://www.jsdelivr.com/)找到扩展项目对应lunr-zh.js地址，修改hugo.toml中lunr_lang参数`lunr_lang="/npm/lunr-languages-zh@1.4.0/lunr.zh.js"`，在网页中测试不支持中文，查看网页html源码发现未引用lunr-zh.js
+3. 阅读主题源码是blog\themes\meme\layouts\partials\third-party\lunr-search.html中`if in $supported $lang` 过滤zh导致，在$supported中添加"zh",查阅页面html发现lunr-zh.js已引用，测试搜索仍然不支持中文，同时网页控制台报错`未捕获的类型错误：nodejieba.cut 不是函数`
 4. 查看[lunr-languages issues](https://github.com/MihaiValentin/lunr-languages/issues/91)提示原因是需要node运行，同时贴出了解决项目方案[mochi-cards/lunr-languages](https://github.com/mochi-cards/lunr-languages/tree/mochi/zh-novel-segment)
 5. 修复版本的lurn-zh.js无法通过在线地址方式导入，调整为本地导入。下载mochi-cards/lunr-languages项目中的lunr-zh.js文件放入/static/js中
-6. /layouts中创建partials/custom文件夹，在custom中创建script.html文件，填入```<script src="/js/lunr.zh.js" defer></script>```
-7. 修改lunr-search.html在线导入代码，```{{- $scripts = union $scripts (slice $srcLang) -}}```调整为```{{- if eq $lang "zh" -}}{{- else -}}{{- $scripts = union $scripts (slice $srcLang) -}}{{- end -}}```
+6. 在`layouts/partials/custom`创建script.html文件，填入`<script src="/js/lunr.zh.js" defer></script>`
+7. 修改lunr-search.html在线导入代码，`{{- $scripts = union $scripts (slice $srcLang) -}}`调整为`{{- if eq $lang "zh" -}}{{- else -}}{{- $scripts = union $scripts (slice $srcLang) -}}{{- end -}}`
 8. 运行测试控制台提示'Lunr is not present. Please include / require Lunr before this script.'，查看lurn-zh.js源码是
-```'undefined' === typeof lunr```导致
-9. 因对前端知识不了解，只能通过控制变量进行测试定位问题。下载lurn-de.js文件，将引入lurn-zh.js文件调整为lurn-de.js文件，运行无报错。对比两个文件源码，lurn-zh.js中```(this, function(Segment) {``` 比lurn-de.js多Segment参数，确定Segment未使用后删除Segment参数，再次测试运行正常
-10. 在[cdn.jsdelivr.net](https://www.jsdelivr.com/)中找到支持中文的lurn.js,修改hugo.toml中```lunr = "/npm/lunr-zh-cn@0.7.1/lunr.min.js"```,测试后对中文的搜索支持的更好。
+`'undefined' === typeof lunr`导致
+9. 因对前端知识不了解，只能通过控制变量进行测试定位问题。下载lurn-de.js文件，将引入lurn-zh.js文件调整为引入lurn-de.js文件，运行无报错。对比两个文件源码，lurn-zh.js中`(this, function(Segment) {` 比lurn-de.js多Segment参数，确定Segment未使用删除Segment参数，再次测试运行正常
+10. 在[cdn.jsdelivr.net](https://www.jsdelivr.com/)中找到支持中文的lurn.js,修改hugo.toml中`lunr = "/npm/lunr-zh-cn@0.7.1/lunr.min.js"`,测试后对中文的搜索支持的更好。
 
 整个修复流程使我对hugo的结构有了更一步的理解，同时也对meme主题有了更深的认知。
 
@@ -146,8 +158,8 @@ hugo-theme-moments主题生成的网页中使用到的css和js信息：
                         {{ .Inner }}
                         </div>
                     </div>
-                    <div class="moment-note">
-                        {{with .Get "note"}}<p class="note">{{ . }}</p>{{end}}
+                    <div class="share-link-block">
+                        {{with .Get "url"}}<p class="url"><a href = {{ . }}>{{ . }}</a></p>{{end}}
                     </div>
                 </div>
                 <hr>
@@ -220,8 +232,9 @@ hugo-theme-moments主题生成的网页中使用到的css和js信息：
     1. 页面上调试发现搜索框与其他菜单class值不同，搜索为`class="menu-item search-item"`， 与其他菜单为`class="menu-item"`
     2. 手动删除search-item显示正常，在代码中搜素search-item，删除menu.html中search-item即可修复此问题
 2. 说说页面无暗黑模式
-    1. 待解决
+    1. 将`\assets\scss\style-refractored.scss`中color相关的代码删除，复用主题的色彩
 
 ### 总结
 
-本文最想告知读者和自我总结的是:解决问题的思维方式。希望读者可以感受到这点，也希望本文可以帮助读者解决一些问题。
+1. 本文最想告知读者和自我总结的是:解决问题的思维方式。希望读者可以感受到这点，也希望本文可以帮助读者解决一些问题。
+2. 间隔1个月后再次阅读本文，整体文章内容偏多有些细节未介绍，表述能力需要优化
