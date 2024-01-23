@@ -17,8 +17,8 @@
                         {{ .Inner }}
                         </div>
                     </div>
-                    <div class="moment-note">
-                        {{with .Get "note"}}<p class="note"><a href = {{ . }}>跳转</a></p>{{end}}
+                    <div class="share-link-block">
+                        {{with .Get "url"}}<p class="url"><a href = {{ . }}>{{ . }}</a></p>{{end}}
                     </div>
                 </div>
                 <hr>

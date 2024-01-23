@@ -4,17 +4,11 @@
     justify-content: center;
 }
 
-// style for main framework
-body {
-    background-color: #f5f5f5;
-}
-
 .pure-g [class*=pure-u] {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    color: rgb(33, 37, 41);
 
     code {
         font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, "Microsoft YaHei", monospace;
@@ -22,7 +16,6 @@ body {
 
     :not(pre)>code {
         font-size: 14px;
-        background-color: #e3e6e8;
         padding: 2px 4px;
         border-radius: 3px;
     }
@@ -45,7 +38,6 @@ body {
         overflow: hidden;
         margin: 0 16px 16px 16px;
         padding: 16px 0 0 16px;
-        color: #525960;
 
         &::before {
             content: "";
@@ -56,12 +48,6 @@ body {
             left: 0;
             width: 4px;
             border-radius: 2px;
-            background: #c8ccd0;
-        }
-
-        mark {
-            // fix color for mark inside blockquote
-            color: inherit;
         }
     }
 
@@ -79,7 +65,6 @@ body {
 .page {
     max-width: 1150px;
     margin: auto;
-    background-color: white;
 }
 
 .container {
@@ -126,60 +111,18 @@ p {
     margin-bottom: 30px;
 
     .site-title {
-        color: rgb(108, 117, 125);
         font-size: 56px;
         font-weight: 300;
         margin-bottom: 20px;
     }
 
     .signature {
-        color: rgba(0, 0, 0, 0.5);
         font-size: 20px;
         font-weight: 300;
     }
 }
 
 /* END - top cover part */
-
-/* START - pagination */
-// todo replace this part
-$dark-blue: #21365c;
-$blue: #3A6bA5;
-$gray: #919EB1;
-
-.pagination {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 30px;
-
-    .page-item {
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        &.active {
-            background-color: $blue;
-            color: #ffffff;
-        }
-
-        &.disabled {
-            color: $gray;
-        }
-    }
-
-    a {
-        color: $dark-blue;
-        text-decoration: none;
-    }
-
-    .page-link .page-item:hover {
-        background-color: #f5f5f5;
-    }
-}
-
-/* END - pagination */
-
 
 /* START - time */
 .time {
@@ -215,51 +158,6 @@ $gray: #919EB1;
 /* END - time */
 
 
-/* START - user name, avatar & tags */
-.user-info {
-    display: flex;
-
-    .avatar {
-        max-height: 45px;
-        float: left;
-    }
-
-    .intro {
-        float: left;
-        padding-left: 5px;
-
-        .name {
-            color: #186D9C !important;
-            margin-bottom: 0;
-            line-height: 1.1;
-            font-size: 24px;
-        }
-
-        div:nth-child(2) {
-            word-break: break-all;
-            line-height: 18px;
-        }
-
-        .tag {
-            font-size: 80%;
-            margin-left: 0px;
-            margin-right: 10px;
-            color: #6c757d !important;
-            white-space: nowrap;
-
-            &::before {
-                content: "#";
-                padding-right: 1px;
-            }
-        }
-    }
-
-    margin-bottom: 24px;
-}
-
-/* END - user name, avatar & tags */
-
-
 /* START - for the main content */
 .context {
     clear: left;
@@ -267,7 +165,6 @@ $gray: #919EB1;
 
     a {
         text-decoration: none;
-        color: #0059b3;
 
         &:visited {
             color: #0059b3;
@@ -332,7 +229,6 @@ $gray: #919EB1;
     padding-bottom: 10px;
     padding-top: 10px;
     margin-bottom: 10px;
-    background: #f7f7f7;
 
     .link-table {
         margin-left: 10%;
@@ -344,10 +240,14 @@ $gray: #919EB1;
         max-height: 50px;
     }
 
-    a {
-        color: #17a2b8;
-        word-wrap: break-word;
-        text-decoration: none;
+    .url {
+        margin-top: 0;
+        margin-bottom: 0;
+        a {
+            color: #17a2b8;
+            word-wrap: break-word;
+            text-decoration: none;
+        }
     }
 }
 
@@ -365,99 +265,4 @@ $gray: #919EB1;
         left: 0;
         top: 0;
     }
-}
-
-// for the note info
-.moment-note {
-    display: flex;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    margin-right: 5px;
-    color: #808080;
-
-    .note {
-        font-size: 80%;
-        text-indent: 20px;
-        color: rgba(0, 0, 0, 0.5);
-
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-
-// note at the bottom of each row
-.moment-note {
-    .like-btn {
-        padding-right: 12px;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .comment-btn {
-        padding-right: 10px;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
-// hr 
-// hr {
-//     margin-top: 20px;
-//     border-width: 0;
-//     border-top: 1px solid;
-//     border-color: rgba(0, 0, 0, 0.1);
-//     max-width: 75%;
-//     clear: both
-// }
-
-/* END - for the main content */
-
-
-/* START - footer*/
-.footer {
-    padding-top: 20px;
-    padding-bottom: 30px;
-    background-color: #f5f5f5;
-
-    color: #6c757d !important;
-    text-align: center;
-    font-size: 95%;
-
-    a {
-        text-decoration: underline !important;
-        color: #6c757d !important;
-    }
-}
-
-/* END - footer*/
-
-
-/* back-to-top button */
-#back-top-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-
-    border: none;
-    outline: none;
-
-    background-color: #d1d1d1;
-    /* Set a background color */
-    color: #2157ad;
-    /* Text color */
-
-    opacity: 0.85;
-
-    cursor: pointer;
-    /* Add a mouse pointer on hover */
-
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 20px;
 }

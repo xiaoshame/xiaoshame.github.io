@@ -30,14 +30,11 @@
     width: calc(50% - .75rem);
     padding: 1rem;
     margin: .25rem;
+    color: #161209;
+    background-color: darken(#fff, 6%);
     overflow: hidden;
     @include border-radius(10px);
     @include transition(transform 0.25s ease-out);
-
-    [data-theme='light'] &{
-        color: #161209;
-        background-color: darken(#fff, 6%);
-    }
 
     [data-theme='dark'] &{
         color: #d7d8c5;
