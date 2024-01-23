@@ -31,14 +31,17 @@
     padding: 1rem;
     margin: .25rem;
     overflow: hidden;
-    color: #161209;
-    background-color: darken(#fff, 6%);
     @include border-radius(10px);
     @include transition(transform 0.25s ease-out);
 
-    [theme=dark] & {
-        color: #a9a9b3;
-        background-color: darken(#292a2d, 6%);
+    [data-theme='light'] &{
+        color: #161209;
+        background-color: darken(#fff, 6%);
+    }
+
+    [data-theme='dark'] &{
+        color: #d7d8c5;
+        background-color: darken(#39393b, 6%);
     }
 
     .site-logo-wrapper {
