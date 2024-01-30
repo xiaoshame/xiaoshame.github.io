@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "1.23" content = "试了下hysteria2，速度确实快" url="https://www.iiiam.in/articles/server/deploy-hysteria2">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "1.23" content = "博客部分页面暗黑模式有问题，修复后看着舒服多了">}}
 {{< /moment >}}
 
