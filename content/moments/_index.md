@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "2.1" content = "春节前在写点什么呢？卡壳了">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "2.1" content = "折腾了下twitter的API，被整无语了">}}
 {{< /moment >}}
 
