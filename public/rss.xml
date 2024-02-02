@@ -23,10 +23,319 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 02 Feb 2024 11:04:51 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 02 Feb 2024 14:23:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
+        
+            <item>
+                <title>App Defaults</title>
+                <link>https://xiaoshame.github.io/posts/app_defaults/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/app_defaults/</guid>
+                <pubDate>Fri, 02 Feb 2024 11:10:50 &#43;0800</pubDate>
+                
+                    <author>xiaoshame1209@gmail.com (阿松)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon notice-icon&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z&#34; /&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;文章更新后无法同步到公众号，如果您是在公众号阅读的本文，可以点击阅读原文查看更新后的内容。&lt;/p&gt;&lt;/div&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;昨天看到&lt;a href=&#34;https://www.yunyitang.me/app-defaults/&#34;&gt;YUNYI BLOG&lt;/a&gt;，一直也想总结下自己日常生活和工作使用的软件，合适的软件能帮助我们提高效率，起到事半功倍的效果。下面是我常用的一些软件，推荐给大家。&lt;/p&gt;
+&lt;h2 id=&#34;电脑软件windwos&#34;&gt;电脑软件（Windwos）&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Edge&lt;/td&gt;
+&lt;td&gt;浏览器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;Google Chrome&lt;/td&gt;
+&lt;td&gt;浏览器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Microsoft Office&lt;/td&gt;
+&lt;td&gt;Word, Excel, PowerPoint, Outlook&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Hugo&lt;/td&gt;
+&lt;td&gt;博客静态站点生成器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;7zip&lt;/td&gt;
+&lt;td&gt;解压缩工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;Totalcmd&lt;/td&gt;
+&lt;td&gt;文件管理工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;OneNote&lt;/td&gt;
+&lt;td&gt;在线笔记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;Microsoft To Do&lt;/td&gt;
+&lt;td&gt;to do&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;文件蜈蚣&lt;/td&gt;
+&lt;td&gt;磁链/BT下载工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;Internet Download Manager&lt;/td&gt;
+&lt;td&gt;日常下载工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;v2aryN&lt;/td&gt;
+&lt;td&gt;上网工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;Xshell7&lt;/td&gt;
+&lt;td&gt;SSH&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;VLC&lt;/td&gt;
+&lt;td&gt;视频播放&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;洛雪音乐助手&lt;/td&gt;
+&lt;td&gt;听歌软件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;Beyond Compare 4&lt;/td&gt;
+&lt;td&gt;文本差异对比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;Everything&lt;/td&gt;
+&lt;td&gt;本地文件搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;pot&lt;/td&gt;
+&lt;td&gt;翻译+划词翻译&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;PixPin&lt;/td&gt;
+&lt;td&gt;截图+OCR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;vscode&lt;/td&gt;
+&lt;td&gt;代码编写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;SpaceSniffer&lt;/td&gt;
+&lt;td&gt;磁盘文件大小统计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;PowerShell&lt;/td&gt;
+&lt;td&gt;命令行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;yt-dlp&lt;/td&gt;
+&lt;td&gt;youtube/B站视频下载&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;GPT4&lt;/td&gt;
+&lt;td&gt;编码助手&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;手机软件iphone&#34;&gt;手机软件（iPhone）&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Edge&lt;/td&gt;
+&lt;td&gt;浏览器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;高德地图&lt;/td&gt;
+&lt;td&gt;地图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;图书&lt;/td&gt;
+&lt;td&gt;看书&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;香色闺阁&lt;/td&gt;
+&lt;td&gt;看小说&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;京东&lt;/td&gt;
+&lt;td&gt;购物&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;微信&lt;/td&gt;
+&lt;td&gt;聊天&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;支付宝&lt;/td&gt;
+&lt;td&gt;买基金&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;招商银行&lt;/td&gt;
+&lt;td&gt;银行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;国家医保服务平台&lt;/td&gt;
+&lt;td&gt;医保&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;快捷指令&lt;/td&gt;
+&lt;td&gt;自动化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;文件&lt;/td&gt;
+&lt;td&gt;文件管理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;翻译&lt;/td&gt;
+&lt;td&gt;本地翻译&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;播客&lt;/td&gt;
+&lt;td&gt;听播客&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;Feedly&lt;/td&gt;
+&lt;td&gt;RSS 阅读器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;Shadowrocket&lt;/td&gt;
+&lt;td&gt;上网工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;Microsoft To Do&lt;/td&gt;
+&lt;td&gt;to do&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;youtube&lt;/td&gt;
+&lt;td&gt;看视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;Gmail&lt;/td&gt;
+&lt;td&gt;邮箱&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;Stream&lt;/td&gt;
+&lt;td&gt;抓包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;VLC&lt;/td&gt;
+&lt;td&gt;本地视频播放&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;a-Shell&lt;/td&gt;
+&lt;td&gt;配合快捷指令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;PikPak&lt;/td&gt;
+&lt;td&gt;网盘，离线下载&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;twitter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;OneNote&lt;/td&gt;
+&lt;td&gt;在线笔记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;Slay the Spire&lt;/td&gt;
+&lt;td&gt;杀戮尖塔 肉鸽卡牌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/app/">APP</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>使用feedly订阅公众号</title>
@@ -2218,6 +2527,9 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;案例&#34;&gt;案例&lt;/h3&gt;
 &lt;h4 id=&#34;评论使用giscus&#34;&gt;评论使用Giscus&lt;/h4&gt;
+
+&lt;div class=&#34;notice notice-tip&#34; &gt;
+    &lt;div class=&#34;notice-title&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; class=&#34;icon notice-icon&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path d=&#34;M504 256a248 248 0 11-496 0 248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z&#34; /&gt;&lt;/svg&gt;&lt;/div&gt;&lt;p&gt;meme主题最新版本已支持Giscus，在hugo.toml中添加配置即可使用。实现方案与本文内容类似&lt;/p&gt;&lt;/div&gt;
 &lt;p&gt;具体操作流程参考文章&lt;a href=&#34;https://ivonblog.com/posts/hugo-giscus-comment/&#34;&gt;安裝Giscus作為Hugo網站的留言板，支援轉換Gitalk/Utterances的留言&lt;/a&gt;
 主要操作点如下：&lt;/p&gt;
 &lt;ol&gt;

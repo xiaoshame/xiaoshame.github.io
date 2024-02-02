@@ -62,6 +62,10 @@ summary : '本文总结了使用hugo建立博客需要的前端和hugo知识。�
 
 #### 评论使用Giscus
 
+{{< notice notice-tip >}}
+meme主题最新版本已支持Giscus，在hugo.toml中添加配置即可使用。实现方案与本文内容类似
+{{< /notice >}}
+
 具体操作流程参考文章[安裝Giscus作為Hugo網站的留言板，支援轉換Gitalk/Utterances的留言](https://ivonblog.com/posts/hugo-giscus-comment/)
 主要操作点如下：
 

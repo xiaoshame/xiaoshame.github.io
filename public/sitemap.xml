@@ -2,10 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xiaoshame.github.io/tags/minio/</loc>
-    <lastmod>2024-01-18T17:40:30+08:00</lastmod>
+    <loc>https://xiaoshame.github.io/tags/app/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/posts/app_defaults/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/posts/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2024-02-02T11:10:50+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/minio/</loc>
     <lastmod>2024-01-18T17:40:30+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/python/</loc>
@@ -13,12 +28,6 @@
   </url><url>
     <loc>https://xiaoshame.github.io/tags/rss/</loc>
     <lastmod>2024-01-18T17:40:30+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaoshame.github.io/tags/</loc>
-    <lastmod>2024-01-18T17:40:30+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaoshame.github.io/</loc>
-    <lastmod>2024-02-02T10:29:14+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2024-01-18T17:40:30+08:00</lastmod>
@@ -36,9 +45,6 @@
     <lastmod>2024-01-11T13:44:14+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/posts/annual_review_2023/</loc>
-    <lastmod>2024-01-08T17:53:54+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-01-08T17:53:54+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/%E6%80%BB%E7%BB%93/</loc>
