@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "2.2" content = "瞅了一眼meme官方仓库，居然支持了giscus，实现方式和我自己写的差不多">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "2.1" content = "春节前在写点什么呢？卡壳了">}}
 {{< /moment >}}
 
