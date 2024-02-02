@@ -408,6 +408,61 @@
 
     
 
+        
+
+        
+
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            const giscus = document.getElementById('giscus');
+            if (!giscus) return;
+            const script = document.createElement('script');
+
+            script.src = 'https:\/\/giscus.app\/client.js';
+            script.dataset.repo = 'xiaoshame\/xiaoshame.github.io';
+            script.dataset.repoId = 'R_kgDOK_Tbew';
+            script.dataset.category = 'Announcements';
+            script.dataset.categoryId = 'DIC_kwDOK_Tbe84CcGkt';
+            script.dataset.mapping = 'title';
+
+            
+                script.dataset.strict = '0';
+            
+            
+                script.dataset.reactionsEnabled = '1';
+            
+            
+                script.dataset.emitMetadata = '0';
+            
+
+            script.dataset.inputPosition = 'bottom';
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.dataset.theme = 'dark';
+        } else {
+            script.dataset.theme = 'light';
+        }
+            script.dataset.lang = 'zh-CN';
+            script.dataset.loading = 'lazy';
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+
+            giscus.appendChild(script);
+        })();
+    }
+</script>
+        
+
+        
+
+    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
