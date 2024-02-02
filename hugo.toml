@@ -612,7 +612,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 直接加载评论，不需要手动点击按钮加载
-    autoLoadComments = false
+    autoLoadComments = true
 
     ## Disqus
     enableDisqus = false
@@ -689,6 +689,39 @@ uglyURLs = false
     gitalkLeaveAnimation = "accordionVertical"
     gitalkEnableHotKey = true
     # 说明：https://github.com/gitalk/gitalk
+
+    ## Giscus
+    enableGiscus = true
+    giscusRepo = "xiaoshame/xiaoshame.github.io"
+    giscusRepoId = "R_kgDOK_Tbew"
+    giscusCategory = "Announcements"
+    giscusCategoryId = "DIC_kwDOK_Tbe84CcGkt"
+    giscusMapping = "title"
+    giscusStrict = false
+    giscusReactionsEnabled = true
+    giscusEmitMetaData = false
+    giscusInputPosition = "bottom"
+    giscusTheme = "light"
+    giscusThemeDark = "dark"
+    giscusLang = "zh-CN"
+    # 说明：https://giscus.app/zh-CN
+
+    # Remark42
+    enableRemark42 = false
+    remark42Host = ""
+    remark42SiteId = "remark"
+    remark42Url = ""
+    remark42Components = ["embed"]
+    remark42MaxShownComments = 15
+    remark42MaxLastComments = 15
+    remark42Theme = "light"
+    remark42PageTitle = ""
+    remark42Locale = "zh"
+    remark42ShowEmailSubscription = true
+    remark42ShowRssSubscription = true
+    remark42SimpleView = false
+    remark42NoFooter = false
+    # 说明：https://remark42.com/docs/configuration/frontend/
 
 
     ######################################

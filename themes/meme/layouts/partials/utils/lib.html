@@ -68,14 +68,6 @@
     {{- $defalut := printf "/npm/lunr-languages@1.4.0/min/lunr.%s.min.js" $lang -}}
     {{- $path = $.Site.Params.lib.path.lunr_lang | default $defalut -}}
 {{- end -}}
-{{- if eq $type "jieba" -}}
-{{- $defalut := "/npm/@node-rs/jieba@1.7.2/index.min.js" -}}
-{{- $path = $.Site.Params.lib.path.jieba | default $defalut -}}
-{{- end -}}
-{{- if eq $type "requirejs" -}}
-{{- $defalut := "/npm/requirejs@2.3.6/require.min.js" -}}
-{{- $path = $.Site.Params.lib.path.requirejs | default $defalut -}}
-{{- end -}}
 
 {{- if eq $type "mathjax" -}}
     {{- $defalut := "/npm/mathjax@3.1.2/es5/tex-mml-chtml.js" -}}
@@ -116,6 +108,11 @@
 {{- if eq $type "utterances" -}}
     {{- $defalut := "https://utteranc.es/client.js" -}}
     {{- $host = $.Site.Params.lib.path.utterances | default $defalut -}}
+{{- end -}}
+
+{{- if eq $type "giscus" -}}
+    {{- $defalut := "https://giscus.app/client.js" -}}
+    {{- $host = $.Site.Params.lib.path.giscus | default $defalut -}}
 {{- end -}}
 
 <!--

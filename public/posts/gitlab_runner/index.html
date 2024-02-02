@@ -22,7 +22,7 @@
     
     
         
-            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.9d3139e286403f779cdb17e762fb84ea6be8df69ae0e31ad0f55bd24af8f60b6.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.61bc192c1e8e3a7e8554f47d795a4196a900c9aa7ae41e911ad85b7beda85ba3.js"></script>
 
         
     
@@ -738,22 +738,25 @@
 
 
         
-<script src="https://giscus.app/client.js"
-        data-repo="xiaoshame/xiaoshame.github.io"
-        data-repo-id="R_kgDOK_Tbew"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOK_Tbe84CcGkt"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
+    
 
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            <div id="giscus"></div>
+        
+
+        
+
+    
 
 
 
@@ -813,6 +816,51 @@
 
         
 
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            const giscus = document.getElementById('giscus');
+            if (!giscus) return;
+            const script = document.createElement('script');
+
+            script.src = 'https:\/\/giscus.app\/client.js';
+            script.dataset.repo = 'xiaoshame\/xiaoshame.github.io';
+            script.dataset.repoId = 'R_kgDOK_Tbew';
+            script.dataset.category = 'Announcements';
+            script.dataset.categoryId = 'DIC_kwDOK_Tbe84CcGkt';
+            script.dataset.mapping = 'title';
+
+            
+                script.dataset.strict = '0';
+            
+            
+                script.dataset.reactionsEnabled = '1';
+            
+            
+                script.dataset.emitMetadata = '0';
+            
+
+            script.dataset.inputPosition = 'bottom';
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.dataset.theme = 'dark';
+        } else {
+            script.dataset.theme = 'light';
+        }
+            script.dataset.lang = 'zh-CN';
+            script.dataset.loading = 'lazy';
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+
+            giscus.appendChild(script);
+        })();
+    }
+</script>
         
 
         

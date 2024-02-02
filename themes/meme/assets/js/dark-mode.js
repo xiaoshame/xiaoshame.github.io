@@ -9,11 +9,11 @@ if (userPrefers === 'dark') {
     changeModeMeta('light');
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     changeMode();
 });
 
-window.addEventListener("DOMContentLoaded", event => {
+window.addEventListener("DOMContentLoaded", () => {
     // Update meta tags and code highlighting
     changeMode();
 
@@ -89,18 +89,27 @@ function changeMode() {
         }
     {{ end }}
 
-    //giscus
-    // iframe 元素
-    const giscusIframe = document.querySelector('.giscus-frame');
-    if (giscusIframe) {
-        // 检测当前主题是否为暗黑模式
+    {{ if and .Site.Params.enableGiscus (eq hugo.Environment "production") }}
+        // Change Giscus Comments Theme
         if (isDark) {
-            giscusIframe.src = giscusIframe.src.replace('theme=light', 'theme=dark');
+            changeGiscusTheme('{{ .Site.Params.giscusThemeDark | default "dark" }}');
         } else {
-            giscusIframe.src = giscusIframe.src.replace('theme=dark', 'theme=light');
+            changeGiscusTheme('{{ .Site.Params.giscusTheme | default "light" }}');
         }
-    }
-
+        function changeGiscusTheme(theme) {
+            function sendMessage(message) {
+                const iframe = document.querySelector('iframe.giscus-frame');
+                if (iframe !== null) {
+                    iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+                }
+            }
+            sendMessage({
+                setConfig: {
+                    theme: theme,
+                },
+            });
+        }
+    {{ end }}
 
     // Mermaid
     // https://github.com/reuixiy/hugo-theme-meme/issues/205
