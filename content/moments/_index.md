@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment year = "2024" date = "2.4" content = "下雪了，完全没有开心的感觉，只感受到了不方便。不过小朋友很开心">}}
+{{< /moment >}}
+
 {{< moment year = "2024" date = "2.2" content = "瞅了一眼meme官方仓库，居然支持了giscus，实现方式和我自己写的差不多">}}
 {{< /moment >}}
 
