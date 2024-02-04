@@ -126,19 +126,15 @@ p {
 
 /* START - time */
 .time {
-    text-align: right;
-    padding-right: 60px;
+    text-align: left;
+    padding-right: 30px;
     /* white-space: nowrap; */
     font-weight: 300;
     margin-bottom: 20px;
 
-    .month-day {
+    .date {
         font-size: 24px;
         margin-bottom: 10px;
-    }
-
-    .year {
-        font-size: 16px;
     }
 }
 
