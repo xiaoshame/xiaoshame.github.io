@@ -6,6 +6,11 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/5" content = "武汉降雪，快乐与痛苦并存">}}
+{{< moment_image url = "/images/moments/sleet.jpg">}}
+{{< moment_image url = "/images/moments/snowman.jpg">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/5" content = "现在慢慢开始看书了，虽然看的有点慢。博客总是不知道写什么，书籍的读后感是个挺好的主题">}}
 {{< /moment >}}
 
@@ -73,7 +78,7 @@ badge = false
 {{< /moment >}}
 
 {{< moment date = "2023/12/05" content = "第一条">}}
-{{< moment_image url = "/moments/laugh.png">}}
+{{< moment_image url = "/images/moments/laugh.png">}}
 {{< /moment >}}
 
 {{< /moments >}}
