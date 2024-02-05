@@ -25,6 +25,8 @@ badge = false
 
 {{< friend name="Jack's Space" url="https://veryjack.com/" desc="一切都是最好的安排" logo="https://pix.veryjack.com/i/2023/04/04/fsxnkv.webp" >}}
 
+{{< friend name="冰剑" url="https://digu.plus/" desc="采用人工智能，各部分零件齐全，运转稳定，经三十多年的运行，属质量信得过产品" logo="https://cravatar.cn/avatar/0c9157a4f48ba4cc94ada5e7016bcf72" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
