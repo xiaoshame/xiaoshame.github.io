@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/6" content = "又下雪了，坏处是计划再次被打破，好处是可以带娃滑滑雪">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/5" content = "武汉降雪，快乐与痛苦并存">}}
 {{< moment_image url = "/images/moments/sleet.jpg">}}
 {{< moment_image url = "/images/moments/snowman.jpg">}}
@@ -35,9 +38,6 @@ badge = false
 {{< moment date = "2024/1/23" content = "博客部分页面暗黑模式有问题，修复后看着舒服多了">}}
 {{< /moment >}}
 
-{{< moment date = "2024/1/23" content = "博客部分页面暗黑模式有问题，修复后看着舒服多了">}}
-{{< /moment >}}
-
 {{< moment date = "2024/1/15" content = "公司业务不景气持续裁员，为什么不学学马斯克一步到位，慢刀子割肉对公司伤害更大">}}
 {{< /moment >}}
 
@@ -59,7 +59,7 @@ badge = false
 {{< moment date = "2023/12/19" content = "听博客节目，准备参考着做个家庭24年的预算">}}
 {{< /moment >}}
 
-{{< moment date = "2023/12/18" content = "是不是改定24年目标了，随着博客的建立，最近3个月个人生活也发生了变化">}}
+{{< moment date = "2023/12/18" content = "是不是该定24年目标了，随着博客的建立，最近3个月个人生活也发生了变化">}}
 {{< /moment >}}
 
 {{< moment date = "2023/12/14" content = "发小红书好难">}}
