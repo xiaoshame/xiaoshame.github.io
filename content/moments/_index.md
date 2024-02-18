@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/18" content = "新年快乐，开工大吉">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/6" content = "又下雪了，坏处是计划再次被打破，好处是可以带娃滑滑雪">}}
 {{< /moment >}}
 
