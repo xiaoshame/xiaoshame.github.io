@@ -32,6 +32,7 @@ summary : "收藏日常工作生活中对自己有益的文档，方便后期查
 * [SBSCAN -Spring一套带走](https://mp.weixin.qq.com/s?__biz=MzU0MzkzOTYzOQ==&mid=2247488117&idx=1&sn=fbef7bbcab977e17c0200638a58fdd23&chksm=fb029f2dcc75163b9e9305e350b35288151c911e9233fe58fa53c2ec75d008fbab5597d56f8d&scene=58&subscene=0#rd)
 * [终于实现了照片备份到 NAS 的终极方案](https://blog.xiaohack.org/4854.html)
 * [在 CloudFlare Workers 部署 VLESS 节点](https://blog.misaka.rest/2023/07/29/cf-wkrs-vless/)
+* [使用 Docker 部署 Hysteria2](https://www.iiiam.in/articles/server/deploy-hysteria2)
 
 ### CV
 
@@ -48,6 +49,8 @@ summary : "收藏日常工作生活中对自己有益的文档，方便后期查
 * [左耳朵耗子的话](https://mp.weixin.qq.com/s/bOnW8gDJ-dXp4KbAjhDw9A)
 * [Linux配置V2ray作为客户端来访问GitHub等服务](https://qiuyedx.com/?p=1837)
 * [Docker-从入门到实践](https://yeasy.gitbook.io/docker_practice/)
+* [centos7 下 yum安装与卸载python3](https://www.cnblogs.com/pengpengboshi/p/13282986.html)
+* [centos7 如何安装与使用 Anaconda](https://developer.aliyun.com/article/1133875)
 
 ### 理财
 
