@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/19" content = "每个人无论是谁都有温柔的部分，只看他温柔的部分就喜欢上他是不行的">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/18" content = "新年快乐，开工大吉">}}
 {{< /moment >}}
 
