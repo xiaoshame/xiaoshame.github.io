@@ -6,6 +6,11 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/22" content = "学名: 霰(xiàn)">}}
+{{< moment_image url = "/images/moments/24/20240222101914.jpg">}}
+{{< moment_image url = "/images/moments/24/20240222101918.jpg">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/19" content = "每个人无论是谁都有温柔的部分，只看他温柔的部分就喜欢上他是不行的">}}
 {{< /moment >}}
 
