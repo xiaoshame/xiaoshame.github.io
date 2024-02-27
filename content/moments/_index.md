@@ -6,6 +6,15 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/2/26" content = "创建了一个Telegram bot，居然要先在APP中给它发个消息进行激活">}}
+{{< /moment >}}
+
+{{< moment date = "2024/2/26" content = "开学了，希望娃少生病，答应娃参加一次学校的活动，要兑现">}}
+{{< /moment >}}
+
+{{< moment date = "2024/2/24" content = "元宵节，吃了元宵，好多年没吃，最没有存在感的节日">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/22" content = "学名: 霰(xiàn)">}}
 {{< moment_image url = "/images/moments/24/20240222101914.jpg">}}
 {{< moment_image url = "/images/moments/24/20240222101918.jpg">}}
