@@ -6,7 +6,10 @@ badge = false
 
 {{< moments >}}
 
-{{< moment date = "2024/2/26" content = "创建了一个Telegram bot，居然要先在APP中给它发个消息进行激活">}}
+{{< moment date = "2024/2/28" content = "昨天晚上第一次给娃掏耳屎，掏出两块又大又硬的耳屎">}}
+{{< /moment >}}
+
+{{< moment date = "2024/2/27" content = "创建了一个Telegram bot，居然要先在APP中给它发个消息进行激活">}}
 {{< /moment >}}
 
 {{< moment date = "2024/2/26" content = "开学了，希望娃少生病，答应娃参加一次学校的活动，要兑现">}}
