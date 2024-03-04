@@ -67,6 +67,6 @@ summary : 'todo'
 
 ![hello](/images/posts/gzh_chat/2.jpg)
 
-![Write a poetry](/images/posts/gzh_chat/3.png)
+![Write a poetry](/images/posts/gzh_chat/3.jpg)
 
-![who is Lu Xun](/images/posts/gzh_chat/4.png)
+![who is Lu Xun](/images/posts/gzh_chat/4.jpg)
