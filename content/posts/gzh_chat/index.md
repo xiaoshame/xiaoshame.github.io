@@ -6,7 +6,7 @@ tags : ["大模型"]
 categories : ["技术"]
 draft : false
 featuredImage : /images/posts/gzh_chat/featuredImage.jpg
-summary : 'todo'
+summary : '该文指导如何搭建一个微信公众号机器人使用阿里云通义千问模型，步骤包括注册和配置域名、vercel部署代码、设置公众号服务器配置，并提供了相关步骤和所需资源。'
 ---
 
 ## 前期准备
