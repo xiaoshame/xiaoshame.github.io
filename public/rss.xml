@@ -23,10 +23,140 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 06 Feb 2024 10:11:01 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 04 Mar 2024 10:21:59 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
+        
+            <item>
+                <title>花2毛钱给微信公众号接入阿里云通义千问大模型</title>
+                <link>https://xiaoshame.github.io/posts/gzh_chat/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/gzh_chat/</guid>
+                <pubDate>Fri, 01 Mar 2024 19:28:02 &#43;0800</pubDate>
+                
+                    <author>xiaoshame1209@gmail.com (阿松)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;github账号&lt;/li&gt;
+&lt;li&gt;vercel账号&lt;/li&gt;
+&lt;li&gt;微信公众号&lt;/li&gt;
+&lt;li&gt;nic.ua账号&lt;/li&gt;
+&lt;li&gt;阿里云账号&lt;/li&gt;
+&lt;li&gt;Telegram账号&lt;/li&gt;
+&lt;li&gt;cloudflare账号&lt;/li&gt;
+&lt;li&gt;一个外币卡&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;操作流程&#34;&gt;操作流程&lt;/h2&gt;
+&lt;h3 id=&#34;注册域名&#34;&gt;注册域名&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;注册nic.ua账号，申请免费域名，注册需要绑定信用卡，验证扣费1乌克兰格里夫纳约0.19人民币
+&lt;ol&gt;
+&lt;li&gt;申请的免费域名需要激活，推荐使用Telegram进行激活，注意Telegram注册的账号与nic.ua注册的手机号一致&lt;/li&gt;
+&lt;li&gt;在cloudflare中添加新申请的域名，在nic.ua中修改NS服务器到cloudflare&lt;/li&gt;
+&lt;li&gt;参考：&lt;a href=&#34;https://zhuanlan.zhihu.com/p/630011467&#34;&gt;永久免费域名PP.UA最新注册指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;嫌麻烦，可以直接在阿里云/Godaddy等网站买个最便宜的域名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;开通通义千问&#34;&gt;开通通义千问&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;注册阿里云账号，开通&lt;a href=&#34;https://dashscope.console.aliyun.com/overview&#34;&gt;模型服务灵积&lt;/a&gt;服务&lt;/li&gt;
+&lt;li&gt;服务开通成功后，在左侧菜单找到管理中心-&amp;gt;API-KEY管理，创建apiKey备用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;vercel部署&#34;&gt;vercel部署&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;注册github账号后，fork&lt;a href=&#34;https://github.com/LuhangRui/qw-wechat-vercel&#34;&gt;qw-wechat-vercel&lt;/a&gt;项目到自己仓库&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;变量&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;API_KEY=sk-xxxx&lt;/td&gt;
+&lt;td&gt;阿里云中创建的apikey&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;KEYWORD_REPLAY={&amp;quot;测试&amp;quot;:&amp;quot;关键词回复&amp;quot;}&lt;/td&gt;
+&lt;td&gt;自定义json字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;API_MODEL=qwen-72b-chat&lt;/td&gt;
+&lt;td&gt;大模型类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WX_TOKEN=53acb98d1dac49969b45797129f504f8&lt;/td&gt;
+&lt;td&gt;32位字符，后续公众号服务器配置会用到&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧&lt;/td&gt;
+&lt;td&gt;关注自动回复&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;待部署完成后，点击ADD Domain，把你的域名填上去就好了，会自动加https。提示添加解析时选择只添加域名&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在cloudflare中对应域名下添加DNS解析，添加A记录将域名指向76.223.126.88。&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/1.png&#34; alt=&#34;Add A&#34;&gt;&lt;/li&gt;
+&lt;li&gt;参考：&lt;a href=&#34;https://blog.tangly1024.com/article/vercel-domain&#34;&gt;Vercel应用绑定自己的域名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;访问https://你的域名/api/spark-wechat 页面输出failed，即为部署成功&lt;/li&gt;
+&lt;li&gt;访问https://你的域名 页面404，是因为项目里没有部署页面，所以访问会404&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;配置公众号&#34;&gt;配置公众号&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;注册公众号，个人订阅号就行&lt;/li&gt;
+&lt;li&gt;后台管理页面上找到设置与开发-基本配置-服务器配置，点修改&lt;/li&gt;
+&lt;li&gt;服务器地址url：https://你的域名/api/spark-wechat&lt;/li&gt;
+&lt;li&gt;TOKEN为第4步中使用的WX_TOKEN，&lt;/li&gt;
+&lt;li&gt;EncodingAESKey随机生成(不用这一项)&lt;/li&gt;
+&lt;li&gt;选明文模式就好了，提交会提示token验证成功，然后点启用服务器配置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;公众号测试&#34;&gt;公众号测试&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/2.jpg&#34; alt=&#34;hello&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/3.png&#34; alt=&#34;Write a poetry&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/4.png&#34; alt=&#34;who is Lu Xun&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">大模型</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>App Defaults</title>
@@ -2896,6 +3026,7 @@
 &lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzU0MzkzOTYzOQ==&amp;amp;mid=2247488117&amp;amp;idx=1&amp;amp;sn=fbef7bbcab977e17c0200638a58fdd23&amp;amp;chksm=fb029f2dcc75163b9e9305e350b35288151c911e9233fe58fa53c2ec75d008fbab5597d56f8d&amp;amp;scene=58&amp;amp;subscene=0#rd&#34;&gt;SBSCAN -Spring一套带走&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.xiaohack.org/4854.html&#34;&gt;终于实现了照片备份到 NAS 的终极方案&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.misaka.rest/2023/07/29/cf-wkrs-vless/&#34;&gt;在 CloudFlare Workers 部署 VLESS 节点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iiiam.in/articles/server/deploy-hysteria2&#34;&gt;使用 Docker 部署 Hysteria2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;cv&#34;&gt;CV&lt;/h3&gt;
 &lt;ul&gt;
@@ -2912,6 +3043,8 @@
 &lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/bOnW8gDJ-dXp4KbAjhDw9A&#34;&gt;左耳朵耗子的话&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://qiuyedx.com/?p=1837&#34;&gt;Linux配置V2ray作为客户端来访问GitHub等服务&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://yeasy.gitbook.io/docker_practice/&#34;&gt;Docker-从入门到实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/pengpengboshi/p/13282986.html&#34;&gt;centos7 下 yum安装与卸载python3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.aliyun.com/article/1133875&#34;&gt;centos7 如何安装与使用 Anaconda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;理财&#34;&gt;理财&lt;/h3&gt;
 &lt;ul&gt;
