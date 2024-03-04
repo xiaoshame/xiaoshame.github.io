@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/3/4" content = "最近沉迷《天之下》，《邻家的百万富翁》有段时间没看了，要捡起来继续看下去">}}
+{{< /moment >}}
+
 {{< moment date = "2024/2/28" content = "昨天晚上第一次给娃掏耳屎，掏出两块又大又硬的耳屎">}}
 {{< /moment >}}
 
