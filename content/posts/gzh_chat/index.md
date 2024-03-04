@@ -25,9 +25,9 @@ summary : '该文指导如何搭建一个微信公众号机器人使用阿里云
 ### 注册域名
 
 1. 注册nic.ua账号，申请免费域名，注册需要绑定信用卡，验证扣费1乌克兰格里夫纳约0.19人民币
-    1. 申请的免费域名需要激活，推荐使用Telegram进行激活，注意Telegram注册的账号与nic.ua注册的手机号一致
-    2. 在cloudflare中添加新申请的域名，在nic.ua中修改NS服务器到cloudflare
-    3. 参考：[永久免费域名PP.UA最新注册指南](https://zhuanlan.zhihu.com/p/630011467)
+    - 申请的免费域名需要激活，推荐使用Telegram进行激活，注意Telegram注册的账号与nic.ua注册的手机号一致
+    - 在cloudflare中添加新申请的域名，在nic.ua中修改NS服务器到cloudflare
+    - 参考：[永久免费域名PP.UA最新注册指南](https://zhuanlan.zhihu.com/p/630011467)
 2. 嫌麻烦，可以直接在阿里云/Godaddy等网站买个最便宜的域名
 
 ### 开通通义千问
@@ -39,20 +39,23 @@ summary : '该文指导如何搭建一个微信公众号机器人使用阿里云
 
 1. 注册github账号后，fork[qw-wechat-vercel](https://github.com/LuhangRui/qw-wechat-vercel)项目到自己仓库
 2. 注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去
-    | 变量| 说明                             |
-    | ---- |  -------------------------------- |
-    |API_KEY=sk-xxxx|阿里云中创建的apikey|
-    |KEYWORD_REPLAY={"测试":"关键词回复"}|自定义json字符串|
-    |API_MODEL=qwen-72b-chat|大模型类型|
-    |WX_TOKEN=53acb98d1dac49969b45797129f504f8|32位字符，后续公众号服务器配置会用到|
-    |SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧|关注自动回复|
 
-3. 待部署完成后，点击ADD Domain，把你的域名填上去就好了，会自动加https。提示添加解析时选择只添加域名
-    1. 在cloudflare中对应域名下添加DNS解析，添加A记录将域名指向76.223.126.88。
-    2. ![Add A](/images/posts/gzh_chat/1.png)
-    3. 参考：[Vercel应用绑定自己的域名](https://blog.tangly1024.com/article/vercel-domain)
-    4. 访问https://你的域名/api/spark-wechat 页面输出failed，即为部署成功
-    5. 访问https://你的域名 页面404，是因为项目里没有部署页面，所以访问会404
+| 序列| 变量| 说明                             |
+| :----: | :---- |  :-------------------------------- |
+|1|API_KEY=sk-xxxx|阿里云中创建的apikey|
+|2|KEYWORD_REPLAY={"测试":"关键词回复"}|自定义json字符串|
+|3|API_MODEL=qwen-72b-chat|大模型类型|
+|4|WX_TOKEN=53acb98d1dac49969b45797129f504f8|32位字符，后续公众号服务器配置会用到|
+|5|SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧|关注自动回复|
+
+### 绑定域名
+
+1. 在cloudflare中对应域名下添加DNS解析，添加A记录将域名指向76.223.126.88。
+    - ![Add A](/images/posts/gzh_chat/1.png)
+2. 待vercel部署完成后，点击ADD Domain，把你的域名填上去就好了，会自动加https。提示添加解析时选择只添加域名
+    - 参考：[Vercel应用绑定自己的域名](https://blog.tangly1024.com/article/vercel-domain)
+3. 访问https://你的域名/api/spark-wechat 页面输出failed，即为部署成功
+    - 访问https://你的域名 页面404，是因为项目里没有部署页面，所以访问会404
 
 ### 配置公众号
 

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-03-04T11:13:50&#43;08:00</updated>
+    <updated>2024-03-04T11:38:11&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -44,11 +44,11 @@
 &lt;h3 id=&#34;注册域名&#34;&gt;注册域名&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;注册nic.ua账号，申请免费域名，注册需要绑定信用卡，验证扣费1乌克兰格里夫纳约0.19人民币
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;申请的免费域名需要激活，推荐使用Telegram进行激活，注意Telegram注册的账号与nic.ua注册的手机号一致&lt;/li&gt;
 &lt;li&gt;在cloudflare中添加新申请的域名，在nic.ua中修改NS服务器到cloudflare&lt;/li&gt;
 &lt;li&gt;参考：&lt;a href=&#34;https://zhuanlan.zhihu.com/p/630011467&#34;&gt;永久免费域名PP.UA最新注册指南&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;嫌麻烦，可以直接在阿里云/Godaddy等网站买个最便宜的域名&lt;/li&gt;
 &lt;/ol&gt;
@@ -59,51 +59,61 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;vercel部署&#34;&gt;vercel部署&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;注册github账号后，fork&lt;a href=&#34;https://github.com/LuhangRui/qw-wechat-vercel&#34;&gt;qw-wechat-vercel&lt;/a&gt;项目到自己仓库&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去&lt;/p&gt;
+&lt;li&gt;注册github账号后，fork&lt;a href=&#34;https://github.com/LuhangRui/qw-wechat-vercel&#34;&gt;qw-wechat-vercel&lt;/a&gt;项目到自己仓库&lt;/li&gt;
+&lt;li&gt;注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去&lt;/li&gt;
+&lt;/ol&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;变量&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;序列&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;变量&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;API_KEY=sk-xxxx&lt;/td&gt;
-&lt;td&gt;阿里云中创建的apikey&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;API_KEY=sk-xxxx&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;阿里云中创建的apikey&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;KEYWORD_REPLAY={&amp;quot;测试&amp;quot;:&amp;quot;关键词回复&amp;quot;}&lt;/td&gt;
-&lt;td&gt;自定义json字符串&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;KEYWORD_REPLAY={&amp;quot;测试&amp;quot;:&amp;quot;关键词回复&amp;quot;}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;自定义json字符串&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;API_MODEL=qwen-72b-chat&lt;/td&gt;
-&lt;td&gt;大模型类型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;API_MODEL=qwen-72b-chat&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;大模型类型&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;WX_TOKEN=53acb98d1dac49969b45797129f504f8&lt;/td&gt;
-&lt;td&gt;32位字符，后续公众号服务器配置会用到&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;WX_TOKEN=53acb98d1dac49969b45797129f504f8&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;32位字符，后续公众号服务器配置会用到&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧&lt;/td&gt;
-&lt;td&gt;关注自动回复&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;关注自动回复&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;待部署完成后，点击ADD Domain，把你的域名填上去就好了，会自动加https。提示添加解析时选择只添加域名&lt;/p&gt;
+&lt;h3 id=&#34;绑定域名&#34;&gt;绑定域名&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;在cloudflare中对应域名下添加DNS解析，添加A记录将域名指向76.223.126.88。&lt;/li&gt;
+&lt;li&gt;在cloudflare中对应域名下添加DNS解析，添加A记录将域名指向76.223.126.88。
+&lt;ul&gt;
 &lt;li&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/1.png&#34; alt=&#34;Add A&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;待vercel部署完成后，点击ADD Domain，把你的域名填上去就好了，会自动加https。提示添加解析时选择只添加域名
+&lt;ul&gt;
 &lt;li&gt;参考：&lt;a href=&#34;https://blog.tangly1024.com/article/vercel-domain&#34;&gt;Vercel应用绑定自己的域名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;访问https://你的域名/api/spark-wechat 页面输出failed，即为部署成功&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;访问https://你的域名/api/spark-wechat 页面输出failed，即为部署成功
+&lt;ul&gt;
 &lt;li&gt;访问https://你的域名 页面404，是因为项目里没有部署页面，所以访问会404&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;配置公众号&#34;&gt;配置公众号&lt;/h3&gt;
