@@ -39,13 +39,13 @@ summary : '该文指导如何搭建一个微信公众号机器人使用阿里云
 
 ### vercel部署
 
-1. 注册github账号后，fork[qw-wechat-vercel](https://github.com/LuhangRui/qw-wechat-vercel)项目到自己仓库
+1. 注册github账号后，fork[qw-wechat-vercel](https://github.com/xiaoshame/qw-wechat-vercel)项目到自己仓库,感谢[LuhangRui qw-wechat-vercel项目](https://github.com/LuhangRui/qw-wechat-vercel)
 2. 注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去
 
 | 序列| 变量| 说明                             |
 | :----: | :---- |  :-------------------------------- |
 |1|API_KEY=sk-xxxx|阿里云中创建的apikey|
-|2|KEYWORD_REPLAY={"测试":"关键词回复"}|自定义json字符串|
+|2|KEYWORD_REPLAY={"千问":"大模型回答"}|自定义关键词，咨询问题包含千问 才由大模型回答|
 |3|API_MODEL=qwen-72b-chat|大模型类型|
 |4|WX_TOKEN=53acb98d1dac49969b45797129f504f8|32位字符，后续公众号服务器配置会用到|
 |5|SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，对我说句哈喽试试吧|关注自动回复|
@@ -70,8 +70,4 @@ summary : '该文指导如何搭建一个微信公众号机器人使用阿里云
 
 ### 公众号测试
 
-![hello](/images/posts/gzh_chat/2.jpg)
-
-![Write a poetry](/images/posts/gzh_chat/3.jpg)
-
-![who is Lu Xun](/images/posts/gzh_chat/4.jpg)
+![hello](/images/posts/gzh_chat/2.png)

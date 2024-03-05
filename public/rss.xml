@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 05 Mar 2024 09:48:01 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 05 Mar 2024 14:13:10 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -69,7 +69,7 @@
 &lt;/ol&gt;
 &lt;h3 id=&#34;vercel部署&#34;&gt;vercel部署&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;注册github账号后，fork&lt;a href=&#34;https://github.com/LuhangRui/qw-wechat-vercel&#34;&gt;qw-wechat-vercel&lt;/a&gt;项目到自己仓库&lt;/li&gt;
+&lt;li&gt;注册github账号后，fork&lt;a href=&#34;https://github.com/xiaoshame/qw-wechat-vercel&#34;&gt;qw-wechat-vercel&lt;/a&gt;项目到自己仓库,感谢&lt;a href=&#34;https://github.com/LuhangRui/qw-wechat-vercel&#34;&gt;LuhangRui qw-wechat-vercel项目&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去&lt;/li&gt;
 &lt;/ol&gt;
 &lt;table&gt;
@@ -88,8 +88,8 @@
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;KEYWORD_REPLAY={&amp;quot;测试&amp;quot;:&amp;quot;关键词回复&amp;quot;}&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;自定义json字符串&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;KEYWORD_REPLAY={&amp;quot;千问&amp;quot;:&amp;quot;大模型回答&amp;quot;}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;自定义关键词，咨询问题包含千问 才由大模型回答&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
@@ -136,9 +136,7 @@
 &lt;li&gt;选明文模式就好了，提交会提示token验证成功，然后点启用服务器配置。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;公众号测试&#34;&gt;公众号测试&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/2.jpg&#34; alt=&#34;hello&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/3.jpg&#34; alt=&#34;Write a poetry&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/4.jpg&#34; alt=&#34;who is Lu Xun&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/2.png&#34; alt=&#34;hello&#34;&gt;&lt;/p&gt;
 </description>
                 
                 
