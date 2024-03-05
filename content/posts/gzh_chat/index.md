@@ -9,6 +9,8 @@ featuredImage : /images/posts/gzh_chat/featuredImage.jpg
 summary : '该文指导如何搭建一个微信公众号机器人使用阿里云通义千问模型，步骤包括注册和配置域名、vercel部署代码、设置公众号服务器配置，并提供了相关步骤和所需资源。'
 ---
 
+支持接入通义千问和星火认知大模型，本文主要介绍通义千问的接入方案。星火认知大模型接入方案类似，[星火接入文档](https://github.com/LuhangRui/spark-wechat-vercel)
+
 ## 前期准备
 
 - github账号
@@ -66,7 +68,7 @@ summary : '该文指导如何搭建一个微信公众号机器人使用阿里云
 5. EncodingAESKey随机生成(不用这一项)
 6. 选明文模式就好了，提交会提示token验证成功，然后点启用服务器配置。
 
-## 公众号测试
+### 公众号测试
 
 ![hello](/images/posts/gzh_chat/2.jpg)
 
