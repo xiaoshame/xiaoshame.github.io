@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 04 Mar 2024 11:38:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 05 Mar 2024 09:48:01 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -38,7 +38,8 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
+                    <description>&lt;p&gt;支持接入通义千问和星火认知大模型，本文主要介绍通义千问的接入方案。星火认知大模型接入方案类似，&lt;a href=&#34;https://github.com/LuhangRui/spark-wechat-vercel&#34;&gt;星火接入文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;github账号&lt;/li&gt;
 &lt;li&gt;vercel账号&lt;/li&gt;
@@ -134,7 +135,7 @@
 &lt;li&gt;EncodingAESKey随机生成(不用这一项)&lt;/li&gt;
 &lt;li&gt;选明文模式就好了，提交会提示token验证成功，然后点启用服务器配置。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;公众号测试&#34;&gt;公众号测试&lt;/h2&gt;
+&lt;h3 id=&#34;公众号测试&#34;&gt;公众号测试&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/2.jpg&#34; alt=&#34;hello&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/3.jpg&#34; alt=&#34;Write a poetry&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/gzh_chat/4.jpg&#34; alt=&#34;who is Lu Xun&#34;&gt;&lt;/p&gt;
