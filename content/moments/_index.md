@@ -5,6 +5,8 @@ badge = false
 +++
 
 {{< moments >}}
+{{< moment date = "2024/3/8" content = "生活还是要有点仪式感，老婆开心，娃也开心，我也开心">}}
+{{< /moment >}}
 
 {{< moment date = "2024/3/4" content = "最近沉迷《天之下》，《邻家的百万富翁》有段时间没看了，要捡起来继续看下去">}}
 {{< /moment >}}
