@@ -5,6 +5,9 @@ badge = false
 +++
 
 {{< moments >}}
+{{< moment date = "2024/3/11" content = "下一篇文章应该就是GIPHY中动图快速发到微信">}}
+{{< /moment >}}
+
 {{< moment date = "2024/3/8" content = "生活还是要有点仪式感，老婆开心，娃也开心，我也开心">}}
 {{< /moment >}}
 
