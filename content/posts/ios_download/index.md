@@ -59,7 +59,7 @@ services:
 
 - 在docker-compose.yml 同级目录创建data，config 目录
 - docker-compose up -d运行
-- 配置域名，编辑/etc/caddy/Caddyfile文件，添加如下内容
+- 配置域名，编辑/etc/caddy/Caddyfile文件，添加如下内容后，systemctl restart caddy重启caddy
 
 ```plaintext
 file.你的域名 {
@@ -130,7 +130,7 @@ services:
 ```
 
 - docker-compose up -d运行
-- 配置域名，编辑/etc/caddy/Caddyfile文件，添加如下内容
+- 配置域名，编辑/etc/caddy/Caddyfile文件，添加如下内容后，systemctl restart caddy重启caddy
 
 ```plaintext
 aria2.你的域名 {
