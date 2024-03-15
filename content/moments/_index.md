@@ -63,7 +63,7 @@ badge = false
 {{< moment date = "2024/1/31" content = "评论系统居然坏了，飞书上的机器人不知道被谁删除了，才发现这个问题">}}
 {{< /moment >}}
 
-{{< moment date = "2024/1/23" content = "试了下hysteria2，速度确实快" url = "https://www/iiiam/in/articles/server/deploy-hysteria2">}}
+{{< moment date = "2024/1/23" content = "试了下hysteria2，速度确实快" url = "https://www.iiiam.in/articles/server/deploy-hysteria2">}}
 {{< /moment >}}
 
 {{< moment date = "2024/1/23" content = "博客部分页面暗黑模式有问题，修复后看着舒服多了">}}
