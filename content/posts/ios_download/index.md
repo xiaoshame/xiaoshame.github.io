@@ -23,7 +23,7 @@ summary : '本文章提供了一个在苹果手机上实现离线下载和实时
 
 1. 1台服务器，系统用的ubuntu 22.04
 2. 1个域名,配置好dns
-    1. ![dns](/images/post/ios_download/dns.png)
+    1. ![dns](/images/posts/ios_download/dns.png)
     2. 我使用cloudflare管理域名，配置好dns后在SSL/TLS选择中选择Full模式
 3. 安装docker和docker-compose
     1. apt-get update

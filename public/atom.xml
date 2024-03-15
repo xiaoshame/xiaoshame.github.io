@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-03-15T16:49:53&#43;08:00</updated>
+    <updated>2024-03-15T16:51:59&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -42,7 +42,7 @@
 &lt;li&gt;1台服务器，系统用的ubuntu 22.04&lt;/li&gt;
 &lt;li&gt;1个域名,配置好dns
 &lt;ol&gt;
-&lt;li&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/post/ios_download/dns.png&#34; alt=&#34;dns&#34;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/ios_download/dns.png&#34; alt=&#34;dns&#34;&gt;&lt;/li&gt;
 &lt;li&gt;我使用cloudflare管理域名，配置好dns后在SSL/TLS选择中选择Full模式&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
