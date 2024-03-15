@@ -26,8 +26,8 @@ summary : '本文章提供了一个在苹果手机上实现离线下载和实时
     1. ![dns](/images/posts/ios_download/dns.png)
     2. 我使用cloudflare管理域名，配置好dns后在SSL/TLS选择中选择Full模式
 3. 安装docker和docker-compose
-    1. apt-get update
-    2. apt install docker.io docker-compose
+    1. sudo apt-get update
+    2. sudo apt install docker.io docker-compose
 4. 安装caddy2
     1. sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
     2. curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
