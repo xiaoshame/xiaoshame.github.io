@@ -29,6 +29,8 @@ badge = false
 
 {{< friend name="洋同学的宏观笔记" url="https://zhengceku.fun/" desc="个人非商用、仅作交流使用的政策数据库、投资笔记、分析工具" logo="https://zhengceku.fun/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa3abaf5a-23a0-4792-9958-3f1f6d1e8068%2F16ED03C5-A54C-4316-9715-CC11456AA040.jpeg?table=block&id=27e67825-25ab-41e1-88cb-81510803d95b&spaceId=6c376e85-26f0-4147-a310-0844cfbf4875&width=250&userId=&cache=v2" >}}
 
+{{< friend name="刑辩人在路上" url="https://xingbianren.cn" desc="80后刑辩律师的办案手记。反抗者的灵魂从未远去。" logo="https://xingbianren.cn/zb_users/upload/2023/05/202305231684818664504571.png" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
