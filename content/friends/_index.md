@@ -31,6 +31,8 @@ badge = false
 
 {{< friend name="刑辩人在路上" url="https://xingbianren.cn" desc="80后刑辩律师的办案手记。反抗者的灵魂从未远去。" logo="https://xingbianren.cn/zb_users/upload/2023/05/202305231684818664504571.png" >}}
 
+{{< friend name="CodeSky 代码之空" url="https://www.codesky.me/" desc="一个代码盒子，记录学习点滴" logo="https://avatars.githubusercontent.com/u/8280645?v=4" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
