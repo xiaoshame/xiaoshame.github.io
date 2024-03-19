@@ -5,6 +5,9 @@ badge = false
 +++
 
 {{< moments >}}
+{{< moment date = "2024/3/19" content = "小朋友这几天咳嗽，希望早点恢复">}}
+{{< /moment >}}
+
 {{< moment date = "2024/3/11" content = "GIPHY动图发到微信方法：下载GIPHY APP，打开APP保存想要的动图到相册，微信选中图片发送">}}
 {{< /moment >}}
 
