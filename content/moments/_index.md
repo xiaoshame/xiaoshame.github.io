@@ -5,6 +5,10 @@ badge = false
 +++
 
 {{< moments >}}
+
+{{< moment date = "2024/3/20" content = "小朋友高烧，我也无心睡眠，难道真是老了，开始回忆往昔">}}
+{{< /moment >}}
+
 {{< moment date = "2024/3/19" content = "小朋友这几天咳嗽，希望早点恢复">}}
 {{< /moment >}}
 
