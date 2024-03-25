@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/3/25" content = "原以为小朋友感冒快好了，今天又开始疯狂大喷嚏，愿早日康复">}}
+{{< /moment >}}
+
 {{< moment date = "2024/3/22" content = "想找朋友聊聊天，打开微信，完全不知道找谁，然后又把微信关了">}}
 {{< /moment >}}
 
