@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-03-25T13:44:16&#43;08:00</updated>
+    <updated>2024-03-26T16:09:09&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -3296,137 +3296,6 @@
                             
                             
                                 <category scheme="https://xiaoshame.github.io/tags/tips/" term="tips" label="tips" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">收藏夹</title>
-            <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/favorites/" />
-            <id>https://xiaoshame.github.io/posts/favorites/</id>
-            <updated>2023-12-06T15:34:31&#43;08:00</updated>
-            <published>2023-12-06T15:34:31&#43;08:00</published>
-            <author>
-                    <name>阿松</name>
-                    <uri>https://xiaoshame.github.io/</uri>
-                    <email>xiaoshame1209@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">收藏日常工作生活中对自己有益的文档，方便后期查阅</summary>
-            
-                <content type="html">&lt;h3 id=&#34;建站&#34;&gt;建站&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://lewky233.top/categories/hugo%E7%B3%BB%E5%88%97/&#34;&gt;Hugo系列- LoveIt主题美化与博客功能增强&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo Quick start&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://gohugo.io/hosting-and-deployment/hosting-on-github/&#34;&gt;Hugo Host on GitHub Pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://maling.io/posts/get-github-repo-id/&#34;&gt;Github 如何获取仓库的 repo_id 和 category_id&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://juejin.cn/post/7148734326438363166&#34;&gt;Hugo博客使用giscus作为评论系统&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://51.ruyo.net/17863.html&#34;&gt;人人都可申请拥有EU.org免费域名&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.bmpi.dev/dev/guide-to-setup-blog-site-with-zero-cost/1/&#34;&gt;零成本搭建现代博客之搭建篇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.yandaojiang.com/posts/others/hugo_shortcodes%E7%A4%BA%E4%BE%8B&#34;&gt;Hugo Shortcodes 示例&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://guanqr.com/tech/website/hugo-shortcodes-customization/&#34;&gt;自定义 Hugo Shortcodes 简码&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;信息&#34;&gt;信息&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.t9t.io/headllines-2020-09-03/&#34;&gt;通过 GitHub 订阅 Hacker News 每日 top 10&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.lucida.me/blog/developer-reading-list/#more-64&#34;&gt;程序员必读书单 1.0&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ruanyf/free-books&#34;&gt;free-books&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;工具&#34;&gt;工具&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://meledee.com/2023/10/4339.html&#34;&gt;如何实现一键批量屏蔽黄推&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzU0MzkzOTYzOQ==&amp;amp;mid=2247488117&amp;amp;idx=1&amp;amp;sn=fbef7bbcab977e17c0200638a58fdd23&amp;amp;chksm=fb029f2dcc75163b9e9305e350b35288151c911e9233fe58fa53c2ec75d008fbab5597d56f8d&amp;amp;scene=58&amp;amp;subscene=0#rd&#34;&gt;SBSCAN -Spring一套带走&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.xiaohack.org/4854.html&#34;&gt;终于实现了照片备份到 NAS 的终极方案&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.misaka.rest/2023/07/29/cf-wkrs-vless/&#34;&gt;在 CloudFlare Workers 部署 VLESS 节点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.iiiam.in/articles/server/deploy-hysteria2&#34;&gt;使用 Docker 部署 Hysteria2&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;cv&#34;&gt;CV&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=Mzg3Njc0NTgwMg==&amp;amp;mid=2247496515&amp;amp;idx=1&amp;amp;sn=f92b17b0ce4ea7d55488fc04f520cdf9&amp;amp;chksm=cf2f3666f858bf70d113e8d3a0642199d45001a98f15572f3c4bbc8d79a83d69b24ca87d2d81&amp;amp;scene=58&amp;amp;subscene=0#rd%3C/&#34;&gt;B站无参视频画质评价的研究与应用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/v_JULY_v/article/details/131552592&#34;&gt;基于LangChain+LLM的本地知识库问答：从企业单文档问答到批量文档问答&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.livevideostack.cn/news/application-and-landing-of-video-content-understanding-in-mobile-shopping/&#34;&gt;视频内容理解在手淘逛逛中的应用与落地&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;基础&#34;&gt;基础&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://deerchao.cn/tutorials/regex/regex.htm&#34;&gt;正则表达式30分钟入门教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MzI4NjI2OTI0Nw==&amp;amp;mid=2247484279&amp;amp;idx=1&amp;amp;sn=009c3955243823cd554faf6524cd59c7&amp;amp;chksm=ebdec927dca9403117ec7c866828a2127d1397890c578c45fb55e2e4a30695c63b68859aa452&amp;amp;scene=58&amp;amp;subscene=0#rd&#34;&gt;你是否经常陷入这些思维误区？&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.qin.news/wang-luo-qing-qiu-you-hua-de-yi-xie-fang-an/&#34;&gt;优化网络请求的一些方案&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.52txr.cn/2023/CPytonCython.html&#34;&gt;瞎科普的文章太多，甚至以为CPython和Cython是一回事&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/bOnW8gDJ-dXp4KbAjhDw9A&#34;&gt;左耳朵耗子的话&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://qiuyedx.com/?p=1837&#34;&gt;Linux配置V2ray作为客户端来访问GitHub等服务&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://yeasy.gitbook.io/docker_practice/&#34;&gt;Docker-从入门到实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/pengpengboshi/p/13282986.html&#34;&gt;centos7 下 yum安装与卸载python3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://developer.aliyun.com/article/1133875&#34;&gt;centos7 如何安装与使用 Anaconda&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;理财&#34;&gt;理财&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://daimajia.com/2022/05/23/what-is-flash-loans#more-1116&#34;&gt;Flash Loans (闪电贷) 是什么？&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;娱乐&#34;&gt;娱乐&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sspai.com/post/76046&#34;&gt;在 IOS 上用模拟器寻回童年感动&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/categories/%E6%94%B6%E8%97%8F/" term="收藏" label="收藏" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E5%BB%BA%E7%AB%99/" term="建站" label="建站" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E4%BF%A1%E6%81%AF/" term="信息" label="信息" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E5%B7%A5%E5%85%B7/" term="工具" label="工具" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/cv/" term="CV" label="CV" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E5%9F%BA%E7%A1%80/" term="基础" label="基础" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E7%90%86%E8%B4%A2/" term="理财" label="理财" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://xiaoshame.github.io/tags/%E5%A8%B1%E4%B9%90/" term="娱乐" label="娱乐" />
                             
                         
                     

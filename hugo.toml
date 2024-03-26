@@ -232,10 +232,16 @@ uglyURLs = false
         pre = "internal"
         post = "link"
     [[menu.main]]
+        pageref = "/favorites/"
+        name = "收藏夹"
         weight = 8
-        identifier = "theme-switcher"
+        pre = "internal"
+        post = "folder"
     [[menu.main]]
         weight = 9
+        identifier = "theme-switcher"
+    [[menu.main]]
+        weight = 10
         identifier = "search"
         post = "search"
 

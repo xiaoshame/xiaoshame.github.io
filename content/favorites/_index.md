@@ -1,11 +1,11 @@
 ---
 title : "收藏夹" 
-date : "2023-12-06T15:34:31+08:00" 
-lastmod : "2023-12-06T15:34:31+08:00" 
-tags : ["建站","信息","工具","CV","基础","理财","娱乐"] 
-categories : ["收藏"]
+date : "2024-03-26T15:59:26+08:00" 
+lastmod : "2024-03-26T15:59:26+08:00" 
 draft : false
-summary : "收藏日常工作生活中对自己有益的文档，方便后期查阅"
+featuredImage : "/images/friend/friend.jpg"
+displayCopyright : false
+badge : false
 ---
 
 ### 建站
