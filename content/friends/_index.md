@@ -33,6 +33,10 @@ badge = false
 
 {{< friend name="CodeSky 代码之空" url="https://www.codesky.me/" desc="一个代码盒子，记录学习点滴" logo="https://avatars.githubusercontent.com/u/8280645?v=4" >}}
 
+{{< friend name="代码家" url="https://www.daimajia.com/" desc="善存于心，世界和平。" logo="https://avatars.githubusercontent.com/u/8280645?v=4" >}}
+
+
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
@@ -44,4 +48,4 @@ badge = false
 - 网站logo：https://xiaoshame.github.io/images/logo.png
 - 网站描述：一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活
 {{< /notice >}}
-- 将你的网站信息按照上述格式在 issues 中留言，审核通过后将会添加至该页面中。请勿在文章评论区进行友链申请。
+- 将你的网站信息按照上述格式在 issues 中留言，审核通过后将会添加至该页面中，请勿在文章评论区进行友链申请。
