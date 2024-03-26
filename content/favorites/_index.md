@@ -1,9 +1,7 @@
 ---
 title : "收藏夹" 
-date : "2024-03-26T15:59:26+08:00" 
-lastmod : "2024-03-26T15:59:26+08:00" 
+date : "2024-03-26T15:59:26+08:00"
 draft : false
-featuredImage : "/images/friend/friend.jpg"
 displayCopyright : false
 badge : false
 ---
@@ -59,3 +57,14 @@ badge : false
 ### 娱乐
 
 * [在 IOS 上用模拟器寻回童年感动](https://sspai.com/post/76046)
+
+### 开源项目
+
+* [Aria2-Pro-Docker](https://github.com/P3TERX/Aria2-Pro-Docker)
+* [aria2-ariang-docker](https://github.com/wahyd4/aria2-ariang-docker)
+* [filebrowser-docker](https://github.com/hurlenko/filebrowser-docker)
+* [Wechat2RSS](https://github.com/ttttmr/Wechat2RSS)
+* [hysteria](https://github.com/apernet/hysteria)
+* [v2rayN](https://github.com/2dust/v2rayN)
+* [v2ray](https://github.com/233boy/v2ray)
+* [oci-help](https://github.com/lemoex/oci-help)
