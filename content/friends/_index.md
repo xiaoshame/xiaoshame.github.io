@@ -33,9 +33,7 @@ badge = false
 
 {{< friend name="CodeSky 代码之空" url="https://www.codesky.me/" desc="一个代码盒子，记录学习点滴" logo="https://avatars.githubusercontent.com/u/8280645?v=4" >}}
 
-{{< friend name="代码家" url="https://www.daimajia.com/" desc="善存于心，世界和平。" logo="https://avatars.githubusercontent.com/u/8280645?v=4" >}}
-
-
+{{< friend name="代码家" url="https://www.daimajia.com/" desc="善存于心，世界和平。" logo="https://avatars.githubusercontent.com/u/2503423?v=4" >}}
 
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
