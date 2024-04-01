@@ -70,3 +70,7 @@ badge : false
 * [v2rayN](https://github.com/2dust/v2rayN)
 * [v2ray](https://github.com/233boy/v2ray)
 * [oci-help](https://github.com/lemoex/oci-help)
+
+### 商业
+
+* [专家社区的演变](https://lcamtuf.substack.com/p/the-evolution-of-expert-communities)
