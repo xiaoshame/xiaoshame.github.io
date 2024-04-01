@@ -49,6 +49,7 @@ badge : false
 * [Docker-从入门到实践](https://yeasy.gitbook.io/docker_practice/)
 * [centos7 下 yum安装与卸载python3](https://www.cnblogs.com/pengpengboshi/p/13282986.html)
 * [centos7 如何安装与使用 Anaconda](https://developer.aliyun.com/article/1133875)
+* [PyInstaller打包Python项目详解](https://www.cnblogs.com/bbiu/p/13209612.html)
 
 ### 理财
 
