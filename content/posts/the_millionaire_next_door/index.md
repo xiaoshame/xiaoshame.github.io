@@ -6,7 +6,7 @@ tags : ["读书笔记"]
 categories : ["生活"]
 draft : false
 featuredImage : /images/posts/the_millionaire_next_door/featuredImage.jpg
-summary : '富人的成功并非偶然，学习他们的理念和方法，才能开启财富之路'
+summary : '“Wealth consists not in having great possessions, but in having few wants.” – Epictetus'
 ---
 
 《邻家的百万富翁》是今年阅读计划的第一本书，整体阅读70%。书中的统计数据和案例，揭开了富人生活的一角，有两个案例给我留下了深刻的印象。
