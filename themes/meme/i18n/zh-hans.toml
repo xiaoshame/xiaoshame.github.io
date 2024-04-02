@@ -1,3 +1,5 @@
+# NOTE: COPIED FROM zh-cn.toml
+
 [ellipsis]
 other = "……"
 
@@ -5,35 +7,35 @@ other = "……"
 other = "："
 
 [minute]
-one = "分鐘"
-other = "分鐘"
+one = "分钟"
+other = "分钟"
 
 [tocTitle]
-other = "目錄"
+other = "目录"
 
 [readMore]
-other = "閱讀更多"
+other = "阅读更多"
 
 [prevPage]
-other = "上一頁"
+other = "上一页"
 
 [nextPage]
-other = "下一頁"
+other = "下一页"
 
 [copy]
-other = "複製"
+other = "复制"
 
 [copied]
-other = "已複製"
+other = "已复制"
 
 [copyrightAuthor]
 other = "作者"
 
 [copyrightLink]
-other = "連結"
+other = "链接"
 
 [copyrightLicense]
-other = "許可"
+other = "许可"
 
 [shareOn]
 other = "分享："
@@ -42,26 +44,26 @@ other = "分享："
 other = "分享到"
 
 [shareViaTitle]
-other = "透過"
+other = "通过"
 
 [relatedPosts]
-other = "相關文章："
+other = "相关文章："
 
 [loadComments]
-other = "載入評論"
+other = "加载评论"
 
 [pageNotFound]
-other = "404 - 頁面不存在"
+other = "404 - 页面不存在"
 
 [fofLinkText]
-other = "送我回起始頁面"
+other = "送我回主页"
 
 [searchResultsTitle]
-one = "找到 1 條關於「{{ .Term }}」的結果"
-other = "找到 {{ .Count }} 條關於「{{ .Term }}」的結果"
+one = "找到 1 条关于「{{ .Term }}」的结果"
+other = "找到 {{ .Count }} 条关于「{{ .Term }}」的结果"
 
 [searchResultsNone]
-other = "沒有找到關於「{{ .Term }}」的結果"
+other = "没有找到关于「{{ .Term }}」的结果"
 
 
 # Socials
@@ -94,7 +96,7 @@ other = "「豆瓣」"
 other = "「QQ」"
 
 [qzone]
-other = "「QQ 空間」"
+other = "「QQ 空间」"
 
 [pocket]
 other = "「Pocket」"
@@ -103,34 +105,34 @@ other = "「Pocket」"
 other = "Hacker News"
 
 [qrcode]
-other = "「二維碼」"
+other = "「二维码」"
 
 [email]
-other = "「電子郵件」"
+other = "「电子邮件」"
 
 
 # Share on Fediverse page
 
 [javascriptRequired]
-other = "此功能需要啟用 JavaScript！"
+other = "此功能需要启用 JavaScript！"
 
 [fedishareTitleLabel]
-other = "貼文標題"
+other = "帖子标题"
 
 [fedishareDescriptionLabel]
 other = "描述（可以在下一步中更改）"
 
 [fedishareUrlLabel]
-other = "連結"
+other = "链接"
 
 [fedishareInstanceLabel]
-other = "Fediverse 實例"
+other = "Fediverse 实例"
 
 [fedishareRememberInstance]
-other = "這是設備上記住該實例"
+other = "在此设备上记住该实例"
 
 [fedishareSubmitLabel]
-other = "前往實例"
+other = "前往实例"
 
 
 # Months
