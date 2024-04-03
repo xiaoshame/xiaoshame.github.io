@@ -35,6 +35,8 @@ badge = false
 
 {{< friend name="代码家" url="https://www.daimajia.com/" desc="善存于心，世界和平。" logo="https://avatars.githubusercontent.com/u/2503423?v=4" >}}
 
+{{< friend name="Architecting Life" url="https://xujiwei.com/blog/" desc="Just do it" logo="https://avatars.githubusercontent.com/u/120170?v=4" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}

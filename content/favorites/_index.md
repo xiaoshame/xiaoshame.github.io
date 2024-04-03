@@ -23,6 +23,7 @@ badge : false
 * [通过 GitHub 订阅 Hacker News 每日 top 10](https://blog.t9t.io/headllines-2020-09-03/)
 * [程序员必读书单 1.0](https://blog.lucida.me/blog/developer-reading-list/#more-64)
 * [free-books](https://github.com/ruanyf/free-books)
+* [](https://xujiwei.com/blog/2024/01/a-diy-summary-in-2023/)
 
 ### 工具
 
