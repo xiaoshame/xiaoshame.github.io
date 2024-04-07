@@ -3,7 +3,7 @@ title : "《邻家的百万富翁》读后感"
 date : "2024-04-02T14:30:02+08:00" 
 lastmod : "2024-04-02T14:30:02+08:00" 
 tags : ["读书笔记"]
-categories : ["生活"]
+categories : ["财商"]
 draft : false
 featuredImage : /images/posts/the_millionaire_next_door/featuredImage.jpg
 summary : '“财富不在于拥有大量财产，而在于拥有很少的欲望” -- 比克泰德'
