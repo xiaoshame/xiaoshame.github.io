@@ -1,3 +1,17 @@
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+<text class="poem_sentence">正在加载今日诗词</text>
+<text class="poem_info">....</text>
+<script type="text/javascript">
+  jinrishici.load(function(result) {
+
+    if(result && result.data && result.data.origin && result.data.origin.author) {
+        document.querySelector(".poem_sentence").innerHTML = result.data.content;
+        document.querySelector(".poem_info").innerHTML = "——" + result.data.origin.author;
+    }
+    
+  });
+</script>
+
 <div class="footer-line">
     <span id="run-time"></span>
 </div>
