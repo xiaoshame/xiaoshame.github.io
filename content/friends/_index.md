@@ -37,6 +37,8 @@ badge = false
 
 {{< friend name="Architecting Life" url="https://xujiwei.com/blog/" desc="Just do it" logo="https://avatars.githubusercontent.com/u/120170?v=4" >}}
 
+{{< friend name="明天的乌云" url="https://blog.xlab.app/" desc="随便写点东西的地方，主要是编程开发和安全技术，还有一些笔记和思考" logo="https://avatars.githubusercontent.com/u/32825326?v=4" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}

@@ -69,7 +69,7 @@ def get_list_name_url(html):
     # 提取博客名称和RSS地址内容
     name_list = []
     url_list = []
-    paragraph = soup.find_all('div', class_='post-content')
+    paragraph = soup.find_all('div', class_='vp-doc _list_all')
     for parent in paragraph:
         span_a_content = parent.find_all(name='p')
         for a_content in span_a_content:
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     ## 定时查询
     start_time = end_time - timedelta(hours=4)
     ## 获取最近4H内发表的文章
-    get_blog_list("https://wechat2rss.xlab.app/posts/list/",start_time,end_time)
+    get_blog_list("https://wechat2rss.xlab.app/list/all.html",start_time,end_time)
     up_data_minio('rss')
 
 ```
@@ -240,5 +240,5 @@ A console 主机IP
 ## 最后
 
 1. 这种方式具备可行性的基础是开源项目[wechat2rss](https://github.com/ttttmr/wechat2rss)持续的维护，谢谢ttttmr大佬
-2. [公众号订阅list](https://wechat2rss.xlab.app/posts/list/)中包含众多公众号，可以自行选择想订阅的公众号
+2. [公众号订阅list](https://wechat2rss.xlab.app/list/all.html)中包含众多公众号，可以自行选择想订阅的公众号
 3. 可基于本文方案调整为只生成喜欢的公众号文章
