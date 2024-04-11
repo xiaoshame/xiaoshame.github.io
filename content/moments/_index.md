@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/4/11" content = "ipad上部署个aria2服务+文件服务，支持手机离线下载和在线观看，然后想了下为啥不直接在ipad上观看，鉴定为伪需求">}}
+{{< /moment >}}
+
 {{< moment date = "2024/3/25" content = "给自己定个任务，写个清明期间记录">}}
 {{< /moment >}}
 
