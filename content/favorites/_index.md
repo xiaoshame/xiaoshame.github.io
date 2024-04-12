@@ -51,6 +51,7 @@ badge : false
 * [centos7 下 yum安装与卸载python3](https://www.cnblogs.com/pengpengboshi/p/13282986.html)
 * [centos7 如何安装与使用 Anaconda](https://developer.aliyun.com/article/1133875)
 * [PyInstaller打包Python项目详解](https://www.cnblogs.com/bbiu/p/13209612.html)
+* [每个程序员都应该了解的硬件知识](https://mp.weixin.qq.com/s/Ol9J1ZWevHSjP2ZIyidK-g)
 
 ### 理财
 
