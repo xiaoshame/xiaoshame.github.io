@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/4/12" content = "小朋友马上5岁生日了，准备送给她一个爸爸变身成奥特曼的视频作为礼物">}}
+{{< /moment >}}
+
 {{< moment date = "2024/4/12" content = "好多年五一没有安排出行，今年准备安排下，但是不知道去哪">}}
 {{< /moment >}}
 
