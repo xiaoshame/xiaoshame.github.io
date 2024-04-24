@@ -9,6 +9,9 @@ badge = false
 {{< moment date = "2024/4/24" content = "昨天老婆参加小朋友幼儿园讲故事活动，老婆准备的故事和ppt非常用心，反思下自己">}}
 {{< /moment >}}
 
+{{< moment date = "2024/4/19" content = "小朋友养的蜘蛛死了，哭的很伤心">}}
+{{< /moment >}}
+
 {{< moment date = "2024/4/18" content = "这两天值得纪念，小朋友的一个里程碑">}}
 {{< /moment >}}
 
