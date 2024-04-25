@@ -7,6 +7,10 @@ badge = false
 {{< moments >}}
 
 {{< moment date = "2024/4/24" content = "昨天老婆参加小朋友幼儿园讲故事活动，老婆准备的故事和ppt非常用心，反思下自己">}}
+{{< moment_image url = "/images/moments/24/4/20240222101911.jpg">}}
+{{< moment_image url = "/images/moments/24/4/20240222101912.jpg">}}
+{{< moment_image url = "/images/moments/24/4/20240222101913.jpg">}}
+{{< moment_image url = "/images/moments/24/4/20240222101914.jpg">}}
 {{< /moment >}}
 
 {{< moment date = "2024/4/19" content = "小朋友养的蜘蛛死了，哭的很伤心">}}
@@ -64,8 +68,8 @@ badge = false
 {{< /moment >}}
 
 {{< moment date = "2024/2/22" content = "学名: 霰(xiàn)">}}
-{{< moment_image url = "/images/moments/24/20240222101914.jpg">}}
-{{< moment_image url = "/images/moments/24/20240222101918.jpg">}}
+{{< moment_image url = "/images/moments/24/2/20240222101914.jpg">}}
+{{< moment_image url = "/images/moments/24/2/20240222101918.jpg">}}
 {{< /moment >}}
 
 {{< moment date = "2024/2/19" content = "每个人无论是谁都有温柔的部分，只看他温柔的部分就喜欢上他是不行的">}}
@@ -78,8 +82,8 @@ badge = false
 {{< /moment >}}
 
 {{< moment date = "2024/2/5" content = "武汉降雪，快乐与痛苦并存">}}
-{{< moment_image url = "/images/moments/sleet.jpg">}}
-{{< moment_image url = "/images/moments/snowman.jpg">}}
+{{< moment_image url = "/images/moments/2/sleet.jpg">}}
+{{< moment_image url = "/images/moments/2/snowman.jpg">}}
 {{< /moment >}}
 
 {{< moment date = "2024/2/5" content = "现在慢慢开始看书了，虽然看的有点慢。博客总是不知道写什么，书籍的读后感是个挺好的主题">}}
@@ -146,7 +150,7 @@ badge = false
 {{< /moment >}}
 
 {{< moment date = "2023/12/05" content = "第一条">}}
-{{< moment_image url = "/images/moments/laugh.png">}}
+{{< moment_image url = "/images/moments/23/12/laugh.png">}}
 {{< /moment >}}
 
 {{< /moments >}}
