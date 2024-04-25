@@ -7,10 +7,10 @@ badge = false
 {{< moments >}}
 
 {{< moment date = "2024/4/24" content = "昨天老婆参加小朋友幼儿园讲故事活动，老婆准备的故事和ppt非常用心，反思下自己">}}
-{{< moment_image url = "/images/moments/24/4/20240222101911.jpg">}}
-{{< moment_image url = "/images/moments/24/4/20240222101912.jpg">}}
-{{< moment_image url = "/images/moments/24/4/20240222101913.jpg">}}
-{{< moment_image url = "/images/moments/24/4/20240222101914.jpg">}}
+{{< moment_image url = "/images/moments/24/4/20240423101911.png">}}
+{{< moment_image url = "/images/moments/24/4/20240423101912.png">}}
+{{< moment_image url = "/images/moments/24/4/20240423101913.png">}}
+{{< moment_image url = "/images/moments/24/4/20240423101914.png">}}
 {{< /moment >}}
 
 {{< moment date = "2024/4/19" content = "小朋友养的蜘蛛死了，哭的很伤心">}}
