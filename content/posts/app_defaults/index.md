@@ -57,20 +57,20 @@ summary : '常用软件list'
 | 6    | 微信             | 聊天                             |
 | 7    | 支付宝           | 买基金                           |
 | 8    | 招商银行         | 银行                             |
-| 9    | 国家医保服务平台  | 医保                            |
+| 9    | 国家医保服务平台 | 医保                             |
 | 10   | 快捷指令         | 自动化                           |
 | 11   | 文件             | 文件管理                         |
 | 12   | 翻译             | 本地翻译                         |
 | 13   | 播客             | 听播客                           |
 | 14   | Feedly           | RSS 阅读器                       |
 | 15   | Shadowrocket     | 上网工具                         |
-| 16   | Microsoft To Do  | to do                            |
+| 16   | Microsoft To Do  | 待办事项                         |
 | 17   | youtube          | 看视频                           |
 | 18   | Gmail            | 邮箱                             |
 | 19   | Stream           | 抓包                             |
 | 20   | VLC              | 本地视频播放                     |
 | 21   | a-Shell          | 配合快捷指令                     |
 | 22   | PikPak           | 网盘，离线下载                   |
-| 23   | X                | twitter                          |
+| 23   | X                | 新闻                             |
 | 24   | OneNote          | 在线笔记                         |
 | 25   | Slay the Spire   | 杀戮尖塔 肉鸽卡牌                |
