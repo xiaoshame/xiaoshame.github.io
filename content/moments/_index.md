@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/4/29" content = "51假期即将到来，目前没有任何安排">}}
+{{< /moment >}}
+
 {{< moment date = "2024/4/28" content = "昨天做了把蚕丝扇，扇子不结实积累了经验，算成功一半">}}
 {{< moment_image url = "/images/moments/24/4/20240428092252.png">}}
 {{< /moment >}}
