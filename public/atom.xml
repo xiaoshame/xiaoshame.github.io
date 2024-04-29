@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-04-29T16:20:16&#43;08:00</updated>
+    <updated>2024-04-29T17:50:42&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -16,6 +16,60 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.120.3">Hugo</generator>
+        <entry>
+            <title type="text">购房</title>
+            <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/house/" />
+            <id>https://xiaoshame.github.io/posts/house/</id>
+            <updated>2024-04-29T17:49:50&#43;08:00</updated>
+            <published>2024-04-29T17:49:50&#43;08:00</published>
+            <author>
+                    <name>阿松</name>
+                    <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">时代的一粒灰，落在个人头上，就是一座山</summary>
+            
+                <content type="html">&lt;p&gt;结婚后生活趋向稳定，日常生活都围绕小孩展开。随着小孩年龄的增长，学区房也提上了议程。最终决定将老婆婚前房产置换为学区房。开始卖房买房的旅途。&lt;/p&gt;
+&lt;h2 id=&#34;卖房&#34;&gt;卖房&lt;/h2&gt;
+&lt;p&gt;20年下半年就计划购买学区房，刚把房子挂到贝壳上，没过几天就有人要买，当时觉得卖便宜了，没有同意。后续因老婆工作变动，卖房计划就暂停了。&lt;/p&gt;
+&lt;p&gt;转眼来到22年下半年，卖房计划又重新启动，计划23年底之前要卖掉，最终在24年1月成交。中间多次有买家报价，都低于我们预期价格，同时距离我们认为的截止时间还有很长时间，最终都没有成交。买家出价一次比一次低，我们也越发不甘心。&lt;/p&gt;
+&lt;p&gt;没想到23年10月小区价格出现踩踏，最终成交价相比20年跌幅接近40%。时代的一粒灰，落在个人头上，就是一座山。所幸房子购买较早，基本没有亏损本金，利息就不提了。&lt;/p&gt;
+&lt;p&gt;整个卖房过程就像一个赌徒，充满了不甘心和无可奈何。也像极了炒股，最终割肉出局。&lt;/p&gt;
+&lt;h2 id=&#34;买房&#34;&gt;买房&lt;/h2&gt;
+&lt;p&gt;所幸我们是置换，我们购买的学区房相对高点跌幅也高达30%多。&lt;/p&gt;
+&lt;p&gt;根据小学和初中对口信息先圈选了小区，最终只有2个小区符合要求。一个已有20多年历史还没有电梯，另外一个也快20年。考虑到购房后居住的时间，重点考察新一点的小区。
+23年把该小区在售意向户型房源全部实地考察了一遍，等房子尾款到手后，4月完成了买房所有流程。&lt;/p&gt;
+&lt;p&gt;买房过程中非常担心后续继续下跌，但是学区对口真是把人拿捏的死死的，完全无法挣脱，无可奈何。&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/" term="生活" label="生活" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E8%B4%AD%E6%88%BF/" term="购房" label="购房" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">与家人共度美好清明假期</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/qingming/" />
