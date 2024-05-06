@@ -317,3 +317,4 @@ if __name__ == '__main__':
 1. 此方案同样可以封装阿里云和百度云的TTS服务，只需要增加想要云服务API调用代码。
 2. 代码比较简单，云API调用按照官方文档的步骤来，fastapi相关代码借助GPT完成。
 3. 查看他人源可以比较快熟悉香色源的编写规则，转换成json后调整效率更高。
+4. 相关代码可以在[Github](https://github.com/xiaoshame/script/tree/main/xs)上查看。

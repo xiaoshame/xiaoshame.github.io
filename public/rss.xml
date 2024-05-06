@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 06 May 2024 17:38:01 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 06 May 2024 17:43:11 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -597,6 +597,7 @@
 &lt;li&gt;此方案同样可以封装阿里云和百度云的TTS服务，只需要增加想要云服务API调用代码。&lt;/li&gt;
 &lt;li&gt;代码比较简单，云API调用按照官方文档的步骤来，fastapi相关代码借助GPT完成。&lt;/li&gt;
 &lt;li&gt;查看他人源可以比较快熟悉香色源的编写规则，转换成json后调整效率更高。&lt;/li&gt;
+&lt;li&gt;相关代码可以在&lt;a href=&#34;https://github.com/xiaoshame/script/tree/main/xs&#34;&gt;Github&lt;/a&gt;上查看。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
                 
