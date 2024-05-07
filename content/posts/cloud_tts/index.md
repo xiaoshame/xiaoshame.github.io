@@ -1,29 +1,32 @@
 ---
-title : "使用微软TTS服务进行小说朗读" 
+title : "利用Azure TTS服务进行小说朗读" 
 date : "2024-05-06T17:36:56+08:00" 
 lastmod : "2024-05-06T17:36:56+08:00" 
-tags : ["tts","python"] 
+tags : ["tts","python","azure"] 
 categories : ["技术"]
 draft : flase
-featuredImage :
-summary : '借助GPT封装Auzre TTS服务，实现自定义朗读功能'
+featuredImage : /images/posts/cloud_tts/featuredImage.jpg
+summary : '借助GPT封装云厂商TTS服务，手机APP实现自定义朗读功能'
 ---
 
 ## 需求
 
-iOS系统自带语音效果不佳，最近接触到Auzre TTS服务效果良好。想在读书软件香色闺阁中加入Auzre tts音色。
+iOS系统自带语音效果不佳，最近接触到Azure TTS服务效果良好。想在读书软件香色闺阁中加入Azure tts音色。
 
 ## 方案
 
-在服务端对Auzre tts服务进行封装，对外提供接口。
+在服务端对Azure tts服务进行封装，对外提供接口。香色闺阁中调用接口，实现朗读。
 
-### Auzre tts
+### Azure tts
 
-1. 先注册Auzre账号，Azure AI services|语音服务中创建项目，获取秘钥和区域。
-2. 参考[官方文档](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-text-to-speech?tabs=linux%2Cterminal&pivots=programming-language-python)编写文本转语音相关代码。
-3. 密钥和区域写入环境变量中，在代码中读取。
+1. 先注册Azure账号，Azure AI services|语音服务中创建项目，获取秘钥和区域。密钥和区域写入环境变量中，方便使用。
+2. 安装python SDK，pip install azure-cognitiveservices-speech
+3. 参考[官方文档](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-text-to-speech?tabs=linux%2Cterminal&pivots=programming-language-python)
+4. 获取音色配置文件，完成文本转语音功能。
 
 #### 音色列表
+
+- 获取音色列表形成音色配置文件config.ini。
 
 ```python
 import requests
@@ -65,7 +68,7 @@ else:
 
 #### 文本转语音
 
-config.ini文件与下面代码放在同一目录下。
+- config.ini文件与下面代码放在同一目录下。
 
 ```python
 import azure.cognitiveservices.speech as speechsdk
@@ -93,7 +96,7 @@ if __name__ == "__main__":
 
 #### 对外接口
 
-基于fastapi编写对外服务接口。
+- 基于fastapi编写对外服务接口。
 
 ```python
 from fastapi import FastAPI,Query
@@ -144,10 +147,11 @@ if __name__ == "__main__":
 
 1. 服务器用的ubuntu，将上面python代码和config.ini放到/home/ubuntu/tts中
 2. python执行代码提供服务
+3. 配置域名，将域名指向服务器
 
 ### 编写香色tts源
 
-为了方便写源，可以从香色中导出一个语音源，使用下列代码转换成json格式。修改json中内容，然后再转换成xbs在香色中导入即可。
+- 可以从香色中导出一个语音源，使用下列代码转换成json格式。修改json中内容，然后再转换成xbs在香色中导入即可。
 
 ```python
 import xxtea
@@ -235,7 +239,8 @@ if __name__ == '__main__':
     json_to_xbs('D:\\workspace\\script\\xs\\test\\azure_tts1.json' , 'D:\\workspace\\script\\xs\\test\\azure_tts1.xbs')
 ```
 
-修改点为requestInfo中url调整为自己服务的域名，body只保留voice_id参数。requestFilters调整为Azure TTS音色信息，与上面config中id对应。
+- 修改点为requestInfo中url调整为自己服务的域名，body只保留voice_id参数。
+- requestFilters调整为Azure TTS音色信息，与上面config.ini中id对应。
 
 ```plaintext
 {
@@ -314,7 +319,7 @@ if __name__ == '__main__':
 
 ## 总结
 
-1. 此方案同样可以封装阿里云和百度云的TTS服务，只需要增加想要云服务API调用代码。
+1. 此方案同样可以封装阿里云和百度云的TTS服务，只需要增加相应云服务API调用代码。
 2. 代码比较简单，云API调用按照官方文档的步骤来，fastapi相关代码借助GPT完成。
-3. 查看他人源可以比较快熟悉香色源的编写规则，转换成json后调整效率更高。
+3. 查看他人香色语音源可以比较快熟悉的编写规则，转换成json后编写效率更高。
 4. 相关代码可以在[Github](https://github.com/xiaoshame/script/tree/main/xs)上查看。

@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 06 May 2024 17:43:11 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 07 May 2024 09:09:49 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
         
             <item>
-                <title>使用微软TTS服务进行小说朗读</title>
-                <link>https://xiaoshame.github.io/posts/auzre_tts/</link>
-                <guid isPermaLink="true">https://xiaoshame.github.io/posts/auzre_tts/</guid>
+                <title>利用Azure TTS服务进行小说朗读</title>
+                <link>https://xiaoshame.github.io/posts/cloud_tts/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/cloud_tts/</guid>
                 <pubDate>Mon, 06 May 2024 17:36:56 &#43;0800</pubDate>
                 
                     <author>xiaoshame1209@gmail.com (阿松)</author>
@@ -39,16 +39,20 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;需求&#34;&gt;需求&lt;/h2&gt;
-&lt;p&gt;iOS系统自带语音效果不佳，最近接触到Auzre TTS服务效果良好。想在读书软件香色闺阁中加入Auzre tts音色。&lt;/p&gt;
+&lt;p&gt;iOS系统自带语音效果不佳，最近接触到Azure TTS服务效果良好。想在读书软件香色闺阁中加入Azure tts音色。&lt;/p&gt;
 &lt;h2 id=&#34;方案&#34;&gt;方案&lt;/h2&gt;
-&lt;p&gt;在服务端对Auzre tts服务进行封装，对外提供接口。&lt;/p&gt;
-&lt;h3 id=&#34;auzre-tts&#34;&gt;Auzre tts&lt;/h3&gt;
+&lt;p&gt;在服务端对Azure tts服务进行封装，对外提供接口。香色闺阁中调用接口，实现朗读。&lt;/p&gt;
+&lt;h3 id=&#34;azure-tts&#34;&gt;Azure tts&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;先注册Auzre账号，Azure AI services|语音服务中创建项目，获取秘钥和区域。&lt;/li&gt;
-&lt;li&gt;参考&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-text-to-speech?tabs=linux%2Cterminal&amp;amp;pivots=programming-language-python&#34;&gt;官方文档&lt;/a&gt;编写文本转语音相关代码。&lt;/li&gt;
-&lt;li&gt;密钥和区域写入环境变量中，在代码中读取。&lt;/li&gt;
+&lt;li&gt;先注册Azure账号，Azure AI services|语音服务中创建项目，获取秘钥和区域。密钥和区域写入环境变量中，方便使用。&lt;/li&gt;
+&lt;li&gt;安装python SDK，pip install azure-cognitiveservices-speech&lt;/li&gt;
+&lt;li&gt;参考&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-text-to-speech?tabs=linux%2Cterminal&amp;amp;pivots=programming-language-python&#34;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;获取音色配置文件，完成文本转语音功能。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;音色列表&#34;&gt;音色列表&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;获取音色列表形成音色配置文件config.ini。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -126,7 +130,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;文本转语音&#34;&gt;文本转语音&lt;/h4&gt;
-&lt;p&gt;config.ini文件与下面代码放在同一目录下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;config.ini文件与下面代码放在同一目录下。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -176,7 +182,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h4 id=&#34;对外接口&#34;&gt;对外接口&lt;/h4&gt;
-&lt;p&gt;基于fastapi编写对外服务接口。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于fastapi编写对外服务接口。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -271,9 +279,12 @@
 &lt;ol&gt;
 &lt;li&gt;服务器用的ubuntu，将上面python代码和config.ini放到/home/ubuntu/tts中&lt;/li&gt;
 &lt;li&gt;python执行代码提供服务&lt;/li&gt;
+&lt;li&gt;配置域名，将域名指向服务器&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;编写香色tts源&#34;&gt;编写香色tts源&lt;/h3&gt;
-&lt;p&gt;为了方便写源，可以从香色中导出一个语音源，使用下列代码转换成json格式。修改json中内容，然后再转换成xbs在香色中导入即可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以从香色中导出一个语音源，使用下列代码转换成json格式。修改json中内容，然后再转换成xbs在香色中导入即可。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -446,7 +457,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;json_to_xbs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;D:&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;workspace&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;xs&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;azure_tts1.json&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;D:&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;workspace&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;xs&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;azure_tts1.xbs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;修改点为requestInfo中url调整为自己服务的域名，body只保留voice_id参数。requestFilters调整为Azure TTS音色信息，与上面config中id对应。&lt;/p&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;修改点为requestInfo中url调整为自己服务的域名，body只保留voice_id参数。&lt;/li&gt;
+&lt;li&gt;requestFilters调整为Azure TTS音色信息，与上面config.ini中id对应。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -594,9 +608,9 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;此方案同样可以封装阿里云和百度云的TTS服务，只需要增加想要云服务API调用代码。&lt;/li&gt;
+&lt;li&gt;此方案同样可以封装阿里云和百度云的TTS服务，只需要增加相应云服务API调用代码。&lt;/li&gt;
 &lt;li&gt;代码比较简单，云API调用按照官方文档的步骤来，fastapi相关代码借助GPT完成。&lt;/li&gt;
-&lt;li&gt;查看他人源可以比较快熟悉香色源的编写规则，转换成json后调整效率更高。&lt;/li&gt;
+&lt;li&gt;查看他人香色语音源可以比较快熟悉的编写规则，转换成json后编写效率更高。&lt;/li&gt;
 &lt;li&gt;相关代码可以在&lt;a href=&#34;https://github.com/xiaoshame/script/tree/main/xs&#34;&gt;Github&lt;/a&gt;上查看。&lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -628,6 +642,12 @@
                                 
                                 
                                     <category domain="https://xiaoshame.github.io/tags/python/">python</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/azure/">azure</category>
                                 
                             
                         
