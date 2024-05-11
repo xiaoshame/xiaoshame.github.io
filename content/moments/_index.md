@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/5/11" content = "前几天给小朋友洗澡，脱下衣服后她说了一句耍流氓了，然后带上衣服自己回房间穿，一不小心小朋友就长大了">}}
+{{< /moment >}}
+
 {{< moment date = "2024/4/29" content = "51假期即将到来，目前没有任何安排">}}
 {{< /moment >}}
 

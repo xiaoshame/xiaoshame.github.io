@@ -57,6 +57,7 @@ badge : false
 
 * [Flash Loans (闪电贷) 是什么？](https://daimajia.com/2022/05/23/what-is-flash-loans#more-1116)
 * [教孩子理財：用紅包投資啟動人生的第一桶金](https://fintastic.trading/%e7%90%86%e8%b2%a1/%e6%95%99%e5%ad%a9%e5%ad%90%e7%90%86%e8%b2%a1%ef%bc%9a%e7%94%a8%e7%b4%85%e5%8c%85%e6%8a%95%e8%b3%87%e5%95%9f%e5%8b%95%e4%ba%ba%e7%94%9f%e7%9a%84%e7%ac%ac%e4%b8%80%e6%a1%b6%e9%87%91/)
+* [Vancouvered Weblog](https://www.marc.cn/)
 
 ### 娱乐
 
