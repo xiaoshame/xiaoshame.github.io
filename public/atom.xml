@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-05-14T19:54:57&#43;08:00</updated>
+    <updated>2024-05-14T20:01:44&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -32,7 +32,7 @@
                 <content type="html">&lt;p&gt;因老婆上班和小孩上学，在媳妇单位附近购买了一套房子。最近两周都在寻找合适的装修公司，防止自己逻辑不清晰，写个文章梳理下。&lt;/p&gt;
 &lt;p&gt;购买的是二手房，与媳妇商量考虑后期居住时间，决定全屋推翻重新装修。&lt;/p&gt;
 &lt;h3 id=&#34;居住需求&#34;&gt;居住需求&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;%5Cimages%5Cposts%5Cfitment%5C1%5C1.jpg&#34; alt=&#34;户型图&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaoshame.github.io/posts/fitment/1/1.jpg&#34; alt=&#34;户型图&#34;&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;三个大人，一个小女孩,居住15年左右&lt;/li&gt;
 &lt;li&gt;房间
