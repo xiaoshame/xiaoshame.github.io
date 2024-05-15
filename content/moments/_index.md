@@ -22,7 +22,7 @@ badge = false
 {{< /moment >}}
 
 {{< moment date = "2024/4/28" content = "昨天做了把蚕丝扇，扇子不结实积累了经验，算成功一半">}}
-{{< moment_image url = "/images/moments/24/4/20240428092252.png">}}
+{{< moment_image url = "/images/moments/24/4/20240428092252.jpg">}}
 {{< /moment >}}
 
 {{< moment date = "2024/4/24" content = "昨天老婆参加小朋友幼儿园讲故事活动，老婆准备的故事和ppt非常用心，反思下自己">}}
