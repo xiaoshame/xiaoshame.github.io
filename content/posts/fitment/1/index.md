@@ -5,7 +5,7 @@ lastmod : "2024-05-14T17:30:41+08:00"
 tags : ["装修"] 
 categories : ["生活"]
 draft : flase
-featuredImage :
+featuredImage : /images/posts/fitment/1/featuredImage.jpg
 summary : '明确个人装修需求和装修公司选择标准'
 ---
 
@@ -15,7 +15,7 @@ summary : '明确个人装修需求和装修公司选择标准'
 
 ### 户型图
 
-![户型图](/posts/fitment/1/1.jpg)
+![户型图](/images/posts/fitment/1/1.jpg)
 
 ### 居住需求
 
@@ -116,7 +116,7 @@ summary : '明确个人装修需求和装修公司选择标准'
 
 ### 平面图
 
-![户型图](/posts/fitment/1/2.png)
+![户型图](/images/posts/fitment/1/2.png)
 
 ### 顾虑
 
