@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/5/20" content = "6点半起床骑动感单车，感觉还不错，不知道能坚持多久">}}
+{{< /moment >}}
+
 {{< moment date = "2024/5/17" content = "年前买了一辆自行车，最快乐是买的瞬间，现在已经闲置，要骑起来">}}
 {{< /moment >}}
 
