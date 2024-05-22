@@ -6,7 +6,10 @@ badge = false
 
 {{< moments >}}
 
-{{< moment date = "2024/5/20" content = "装修启动，今天开始拆除">}}
+{{< moment date = "2024/5/22" content = "今天带小木子拍生日照">}}
+{{< /moment >}}
+
+{{< moment date = "2024/5/21" content = "装修启动，今天开始拆除">}}
 {{< /moment >}}
 
 {{< moment date = "2024/5/20" content = "6点半起床骑动感单车，感觉还不错，不知道能坚持多久">}}
