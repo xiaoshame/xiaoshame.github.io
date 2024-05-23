@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/5/24" content = "连续4天早起骑动感单车，感觉腿部力量有点跟不上">}}
+{{< /moment >}}
+
 {{< moment date = "2024/5/22" content = "今天带小木子拍生日照">}}
 {{< /moment >}}
 
