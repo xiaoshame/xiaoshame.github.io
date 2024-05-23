@@ -39,6 +39,8 @@ badge = false
 
 {{< friend name="苏洋博客" url="https://soulteary.com/" desc="我是一个觉得代码有趣，并打算把写代码作为事业奋斗一辈子的普通程序员" logo="https://avatars.githubusercontent.com/u/1500781?v=4" >}}
 
+{{< friend name="Elizen" url="https://elizen.me/" desc="There is only one thing in the world worse than being talked about, and that is not being talked about." logo="https://r2.elizen.me/2024/04/16e912e006fe8d3963a378eabbb8c242.jpg" >}}
+
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博客人的朋友圈，博客收录与文章 RSS 聚合网站。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
