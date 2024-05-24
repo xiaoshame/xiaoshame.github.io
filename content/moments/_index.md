@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/5/25" content = "一晃自己已经35了，还感觉像一个孩子。人际关系还是处理不好。">}}
+{{< /moment >}}
+
 {{< moment date = "2024/5/24" content = "连续4天早起骑动感单车，感觉腿部力量有点跟不上">}}
 {{< /moment >}}
 
