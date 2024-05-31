@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 31 May 2024 11:38:51 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 31 May 2024 11:58:01 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -129,6 +129,7 @@
 &lt;li&gt;核心加密代码中p就是解密后的数据，整体代码不复杂，核心是输入参数，即上面代码。&lt;/li&gt;
 &lt;li&gt;咨询comate提示是对一段base64编码数据使用splic(&#39;|&#39;)函数。使用base64进行解码失败。&lt;/li&gt;
 &lt;li&gt;继续在网页中分析，将上面代码单独执行，单步进入F11执行得到如下代码，意外的惊喜。&lt;/li&gt;
+&lt;li&gt;整体代码运行后得到解密后的数据。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
