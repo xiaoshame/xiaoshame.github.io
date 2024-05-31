@@ -52,6 +52,7 @@ badge : false
 * [centos7 如何安装与使用 Anaconda](https://developer.aliyun.com/article/1133875)
 * [PyInstaller打包Python项目详解](https://www.cnblogs.com/bbiu/p/13209612.html)
 * [每个程序员都应该了解的硬件知识](https://mp.weixin.qq.com/s/Ol9J1ZWevHSjP2ZIyidK-g)
+* [网页F12调试陷入无限断点(Debugger)的解决方法](https://blog.csdn.net/wxtcstt/article/details/129906561)
 
 ### 理财
 
