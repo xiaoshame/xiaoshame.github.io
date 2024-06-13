@@ -6,6 +6,9 @@ badge = false
 
 {{< moments >}}
 
+{{< moment date = "2024/6/3" content = "小朋友感冒才好又发烧了，头疼">}}
+{{< /moment >}}
+
 {{< moment date = "2024/6/3" content = "带老婆和小木子外出度过了一个休闲的周末">}}
 {{< /moment >}}
 
