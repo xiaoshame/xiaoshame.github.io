@@ -47,8 +47,6 @@ badge = false
 
 {{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博友圈是博客人的专属朋友圈，提供博客收录、文章聚合展示等功能" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
-{{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
-
 - 添加友链首先将本站链接添加至你的网站，信息如下：
 {{< notice notice-tip >}}
 - 网站名称：阿松的博客
