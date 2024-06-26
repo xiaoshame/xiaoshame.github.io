@@ -9,6 +9,9 @@ badge = false
 {{< moment date = "2024/6/25" content = "感觉啥事都提不起兴趣">}}
 {{< /moment >}}
 
+{{< moment date = "2024/6/25" content = "感觉啥事都提不起兴趣">}}
+{{< /moment >}}
+
 {{< moment date = "2024/6/21" content = "我不记得读过的书，就像不记得吃过的饭一样；即便如此，它们还是造就了我 --爱默生。看书计划停滞好久了，要重启">}}
 {{< /moment >}}
 
