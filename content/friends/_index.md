@@ -43,7 +43,9 @@ badge = false
 
 {{< friend name="博弈" url="https://retire50blog.wang/" desc="这是一个记录投资的博客" logo="https://xavatar.imedao.com/community/20193/1554729056514-1554729056814.jpg!240x240.jpg" >}}
 
-{{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="这是一个记录投资的博客。" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
+{{< friend name="DIYgod" url="https://diygod.cc/" desc="写代码是热爱，写到世界充满爱！" logo="https://avatars.githubusercontent.com/u/8266075?v=4" >}}
+
+{{< friend name="博友圈" url="https://www.boyouquan.com/home" desc="博友圈是博客人的专属朋友圈，提供博客收录、文章聚合展示等功能" logo="https://www.boyouquan.com/assets/images/sites/logo/logo-medium-dark.png" >}}
 
 {{< friend name="川流" url="https://chuanliu.org/" desc="真的，很高兴，遇见你。" logo="https://chuanliu.org/assets/images/favicon.ico" >}}
 
