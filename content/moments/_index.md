@@ -6,7 +6,7 @@ badge = false
 
 {{< moments >}}
 
-{{< moment date = "2024/6/25" content = "感觉啥事都提不起兴趣">}}
+{{< moment date = "2024/7/1" content = "最近了解到xlog.app，本想把博客迁过去，仔细想想文章写不出来，折腾博客位置有什么意义，遂放弃">}}
 {{< /moment >}}
 
 {{< moment date = "2024/6/25" content = "感觉啥事都提不起兴趣">}}
