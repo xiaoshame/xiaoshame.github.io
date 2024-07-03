@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xiaoshame.github.io/tags/js/</loc>
-    <lastmod>2024-06-04T19:10:48+08:00</lastmod>
-  </url><url>
     <loc>https://xiaoshame.github.io/posts/</loc>
-    <lastmod>2024-06-04T19:10:48+08:00</lastmod>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/</loc>
-    <lastmod>2024-06-04T19:10:48+08:00</lastmod>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/</loc>
-    <lastmod>2024-06-26T11:55:46+08:00</lastmod>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/%E6%B0%B4%E5%8D%B0/</loc>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/%E9%9A%90%E5%86%99%E6%9C%AF/</loc>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/posts/watermark/</loc>
+    <lastmod>2024-07-03T15:48:32+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/js/</loc>
     <lastmod>2024-06-04T19:10:48+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/%E7%A0%B4%E8%A7%A3/</loc>
@@ -210,6 +219,6 @@
     <lastmod>2023-12-31T14:31:02+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/moments/</loc>
-    <lastmod>2024-06-26T11:55:46+08:00</lastmod>
+    <lastmod>2024-07-01T11:08:55+08:00</lastmod>
   </url>
 </urlset>
