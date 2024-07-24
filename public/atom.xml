@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-07-09T13:40:19&#43;08:00</updated>
+    <updated>2024-07-24T18:10:03&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -16,6 +16,66 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.120.3">Hugo</generator>
+        <entry>
+            <title type="text">装修自我反思</title>
+            <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/fitment/2/" />
+            <id>https://xiaoshame.github.io/posts/fitment/2/</id>
+            <updated>2024-07-22T14:58:48&#43;08:00</updated>
+            <published>2024-07-22T14:58:48&#43;08:00</published>
+            <author>
+                    <name>阿松</name>
+                    <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">装修过程中的自我反思，避坑</summary>
+            
+                <content type="html">&lt;p&gt;目前已装修快2个月，总结下这期间正确和失误决策&lt;/p&gt;
+&lt;h3 id=&#34;正确&#34;&gt;正确&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;制作预算表，梳理个人生活习惯转换成装修需求&lt;/li&gt;
+&lt;li&gt;花钱请外部监理（装修公司安排的监理就是骗子）&lt;/li&gt;
+&lt;li&gt;寻找本地靠谱的装修资源品控人，对相关资源和商家进行品控（我找的一个本地小红书装修博主）&lt;/li&gt;
+&lt;li&gt;没有找熟人，不限于亲戚和以前装修认识的人（现在回想第一次装修，真是啥都不懂，对人的判断也不准）&lt;/li&gt;
+&lt;li&gt;长辈参与环节较少，只参与验收&lt;/li&gt;
+&lt;li&gt;没有和装修公司签合同，与工长（项目经理）签合同&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;失误&#34;&gt;失误&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;没有请设计师&lt;/li&gt;
+&lt;li&gt;没有提前和楼下打好招呼，二手房容易出现下水不畅，疏通需要与楼下协商&lt;/li&gt;
+&lt;li&gt;错过了口碑最好的项目经理&lt;/li&gt;
+&lt;li&gt;厨房和卫生间门定的比较随意&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/" term="生活" label="生活" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E8%A3%85%E4%BF%AE/" term="装修" label="装修" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">RSShub自制路由</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/rsshub/" />

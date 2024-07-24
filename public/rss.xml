@@ -23,10 +23,67 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 09 Jul 2024 13:40:20 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 24 Jul 2024 18:10:03 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
+        
+            <item>
+                <title>装修自我反思</title>
+                <link>https://xiaoshame.github.io/posts/fitment/2/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/fitment/2/</guid>
+                <pubDate>Mon, 22 Jul 2024 14:58:48 &#43;0800</pubDate>
+                
+                    <author>xiaoshame1209@gmail.com (阿松)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;目前已装修快2个月，总结下这期间正确和失误决策&lt;/p&gt;
+&lt;h3 id=&#34;正确&#34;&gt;正确&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;制作预算表，梳理个人生活习惯转换成装修需求&lt;/li&gt;
+&lt;li&gt;花钱请外部监理（装修公司安排的监理就是骗子）&lt;/li&gt;
+&lt;li&gt;寻找本地靠谱的装修资源品控人，对相关资源和商家进行品控（我找的一个本地小红书装修博主）&lt;/li&gt;
+&lt;li&gt;没有找熟人，不限于亲戚和以前装修认识的人（现在回想第一次装修，真是啥都不懂，对人的判断也不准）&lt;/li&gt;
+&lt;li&gt;长辈参与环节较少，只参与验收&lt;/li&gt;
+&lt;li&gt;没有和装修公司签合同，与工长（项目经理）签合同&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;失误&#34;&gt;失误&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;没有请设计师&lt;/li&gt;
+&lt;li&gt;没有提前和楼下打好招呼，二手房容易出现下水不畅，疏通需要与楼下协商&lt;/li&gt;
+&lt;li&gt;错过了口碑最好的项目经理&lt;/li&gt;
+&lt;li&gt;厨房和卫生间门定的比较随意&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/%E8%A3%85%E4%BF%AE/">装修</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>RSShub自制路由</title>
