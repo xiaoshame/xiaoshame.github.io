@@ -218,34 +218,28 @@ uglyURLs = false
         pre = "internal"
         post = "tags"
     [[menu.main]]
-        pageref = "/moments/"
-        name = "说说"
-        weight = 5
-        pre = "internal"
-        post = "weibo"
-    [[menu.main]]
         pageref = "/comments/"
         name = "留言板"
-        weight = 6
+        weight = 5
         pre = "internal"
         post = "edit"
     [[menu.main]]
         pageref = "/friends/"
         name = "友链"
-        weight = 7
+        weight = 6
         pre = "internal"
         post = "link"
     [[menu.main]]
         pageref = "/favorites/"
         name = "收藏夹"
-        weight = 8
+        weight = 7
         pre = "internal"
         post = "folder"
     [[menu.main]]
-        weight = 9
+        weight = 8
         identifier = "theme-switcher"
     [[menu.main]]
-        weight = 10
+        weight = 9
         identifier = "search"
         post = "search"
 
