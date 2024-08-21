@@ -63,7 +63,12 @@
     hr {
         border: none;
         margin: 2.427em 0 1.5em;
-        border-top: 1px dashed black; 
+        text-align: center;
+        &::after {
+            content: "...";
+            letter-spacing: 2em;
+            padding-left: 2em;
+        }
     }
 }
 

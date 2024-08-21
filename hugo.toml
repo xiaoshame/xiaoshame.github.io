@@ -695,7 +695,7 @@ uglyURLs = false
     # 说明：https://github.com/gitalk/gitalk
 
     ## Giscus
-    enableGiscus = true
+    enableGiscus = false
     giscusRepo = "xiaoshame/xiaoshame.github.io"
     giscusRepoId = "R_kgDOK_Tbew"
     giscusCategory = "Announcements"
