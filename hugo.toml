@@ -616,7 +616,7 @@ uglyURLs = false
     #      的优先级高于此处
 
     # 直接加载评论，不需要手动点击按钮加载
-    autoLoadComments = true
+    autoLoadComments = false
 
     ## Disqus
     enableDisqus = false
@@ -695,7 +695,7 @@ uglyURLs = false
     # 说明：https://github.com/gitalk/gitalk
 
     ## Giscus
-    enableGiscus = false
+    enableGiscus = true
     giscusRepo = "xiaoshame/xiaoshame.github.io"
     giscusRepoId = "R_kgDOK_Tbew"
     giscusCategory = "Announcements"
