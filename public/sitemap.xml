@@ -2,14 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://xiaoshame.github.io/tags/llm/</loc>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
+  </url><url>
     <loc>https://xiaoshame.github.io/posts/</loc>
-    <lastmod>2024-07-22T14:58:48+08:00</lastmod>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/</loc>
-    <lastmod>2024-07-22T14:58:48+08:00</lastmod>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/</loc>
-    <lastmod>2024-07-22T14:58:48+08:00</lastmod>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/posts/llm/</loc>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
+  </url><url>
+    <loc>https://xiaoshame.github.io/tags/%E7%A7%91%E6%99%AE/</loc>
+    <lastmod>2024-09-05T19:58:30+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-07-22T14:58:48+08:00</lastmod>
@@ -27,9 +42,6 @@
     <lastmod>2024-07-09T10:33:07+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/posts/rsshub/</loc>
-    <lastmod>2024-07-09T10:33:07+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaoshame.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-07-09T10:33:07+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/tags/%E6%B0%B4%E5%8D%B0/</loc>
@@ -100,9 +112,6 @@
   </url><url>
     <loc>https://xiaoshame.github.io/posts/ios_download/</loc>
     <lastmod>2024-03-15T17:30:27+08:00</lastmod>
-  </url><url>
-    <loc>https://xiaoshame.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
-    <lastmod>2024-03-04T11:28:02+08:00</lastmod>
   </url><url>
     <loc>https://xiaoshame.github.io/posts/gzh_chat/</loc>
     <lastmod>2024-03-04T11:28:02+08:00</lastmod>
