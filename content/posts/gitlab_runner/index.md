@@ -31,6 +31,8 @@ ERROR: Preparation failed: adding cache volume: set volume permissions: running 
 docker pull centos:7
 ### 启动centos容器，进入安装环境cppcheck cpplint
 docker run -it centos:7 /bin/bash
+### 更换yum 源
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 ### 安装基础编译工具
 yum install wget
 yum install gcc
@@ -46,16 +48,18 @@ cd cppcheck-2.12.1 && \
     cmake .. && \
     cmake --build . && \
     make install SRCDIR={解压的cppcheck路径}/cppcheck-2.12.1/build CFGDIR={解压的cppcheck路径}/cppcheck-2.12.1/cfg FILESDIR=/usr/bin
-    sudo ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
+ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
 ## 安装cpplint
 yum install python3
 rm -rf /usr/bin/python
-sudo ln -s /usr/bin/python3 /usr/bin/python
+ln -s /usr/bin/python3 /usr/bin/python
 pip3 install cpplint -i https://pypi.tuna.tsinghua.edu.cn/simple
 ### 退出容器
 exit
+### 查看容器ID
+docker ps -a
 ### 容器导出
-docker export centos > container.tar
+docker export 79362966cbdc > container.tar
 ### tar导入为镜像命名为10.1.107.12:5000/dy/cppcheck
 docker import container.tar 10.1.107.12:5000/dy/cppcheck
 ```

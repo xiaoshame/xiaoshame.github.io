@@ -65,7 +65,7 @@
         "description": "总结了使用github-runner进行代码规范检测碰到的问题和排查、解决的过程。问题出在镜像文件找不到，通过恢复镜像和注册Gitlab-Runner解决。文章提供了详细的步骤和参考资料供读者参考。",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  1927 ,
+        "wordCount":  1950 ,
         "image": ["https://xiaoshame.github.io/images/posts/gitlab_runner/1.png"],
         "author": {
             "@type": "Person",
@@ -281,7 +281,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1927</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1950</span>
     
     
         
@@ -369,12 +369,18 @@
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">### 下载centos镜像</span>
 </span></span><span class="line"><span class="cl">docker pull centos:7
 </span></span><span class="line"><span class="cl"><span class="c1">### 启动centos容器，进入安装环境cppcheck cpplint</span>
 </span></span><span class="line"><span class="cl">docker run -it centos:7 /bin/bash
+</span></span><span class="line"><span class="cl"><span class="c1">### 更换yum 源</span>
+</span></span><span class="line"><span class="cl">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 </span></span><span class="line"><span class="cl"><span class="c1">### 安装基础编译工具</span>
 </span></span><span class="line"><span class="cl">yum install wget
 </span></span><span class="line"><span class="cl">yum install gcc
@@ -390,16 +396,18 @@
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    cmake .. <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    cmake --build . <span class="o">&amp;&amp;</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl"><span class="se"></span>    make install <span class="nv">SRCDIR</span><span class="o">={</span>解压的cppcheck路径<span class="o">}</span>/cppcheck-2.12.1/build <span class="nv">CFGDIR</span><span class="o">={</span>解压的cppcheck路径<span class="o">}</span>/cppcheck-2.12.1/cfg <span class="nv">FILESDIR</span><span class="o">=</span>/usr/bin
-</span></span><span class="line"><span class="cl">    sudo ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
+</span></span><span class="line"><span class="cl">ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
 </span></span><span class="line"><span class="cl"><span class="c1">## 安装cpplint</span>
 </span></span><span class="line"><span class="cl">yum install python3
 </span></span><span class="line"><span class="cl">rm -rf /usr/bin/python
-</span></span><span class="line"><span class="cl">sudo ln -s /usr/bin/python3 /usr/bin/python
+</span></span><span class="line"><span class="cl">ln -s /usr/bin/python3 /usr/bin/python
 </span></span><span class="line"><span class="cl">pip3 install cpplint -i https://pypi.tuna.tsinghua.edu.cn/simple
 </span></span><span class="line"><span class="cl"><span class="c1">### 退出容器</span>
 </span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### 查看容器ID</span>
+</span></span><span class="line"><span class="cl">docker ps -a
 </span></span><span class="line"><span class="cl"><span class="c1">### 容器导出</span>
-</span></span><span class="line"><span class="cl">docker <span class="nb">export</span> centos &gt; container.tar
+</span></span><span class="line"><span class="cl">docker <span class="nb">export</span> 79362966cbdc &gt; container.tar
 </span></span><span class="line"><span class="cl"><span class="c1">### tar导入为镜像命名为10.1.107.12:5000/dy/cppcheck</span>
 </span></span><span class="line"><span class="cl">docker import container.tar 10.1.107.12:5000/dy/cppcheck
 </span></span></code></pre></td></tr></table></div>
