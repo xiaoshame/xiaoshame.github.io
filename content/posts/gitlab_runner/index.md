@@ -22,6 +22,25 @@ Using Docker executor with image 10.1.107.12:5000/dy/cppcheck ...
 ERROR: Preparation failed: adding cache volume: set volume permissions: running permission container "a192958483eb385c5a19432a82b4bfd20d54a7a7cd28a35e3c3f85938bc8ab31" for volume "runner-bcvnjjb9-project-11377-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70": starting permission container: Error response from daemon: error evaluating symlinks from mount source "/dy_video1/docker-data/volumes/runner-bcvnjjb9-project-11377-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70/_data": lstat /dy_video1/docker-data/volumes/runner-bcvnjjb9-project-11377-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70: no such file or directory (linux_set.go:105:5s)
 ```
 
+#### docker 源
+
+docker 官方源被墙，调整为国内源
+```bash
+sudo mkdir -p /etc/docker
+sudo vim /etc/docker/daemon.json
+{
+    "registry-mirrors": [
+        "https://do.nark.eu.org",
+        "https://dc.j8.work",
+        "https://docker.m.daocloud.io",
+        "https://dockerproxy.com",
+        "https://docker.mirrors.ustc.edu.cn",
+        "https://docker.nju.edu.cn"
+    ]
+}
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
 #### 恢复镜像
 
 通过centos镜像安装cppcheck和cpplint,安装完成后导出镜像，重新导入并修改名称
