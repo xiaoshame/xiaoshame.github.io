@@ -242,3 +242,7 @@ A console 主机IP
 1. 这种方式具备可行性的基础是开源项目[wechat2rss](https://github.com/ttttmr/wechat2rss)持续的维护，谢谢ttttmr大佬
 2. [公众号订阅list](https://wechat2rss.xlab.app/list/all.html)中包含众多公众号，可以自行选择想订阅的公众号
 3. 可基于本文方案调整为只生成喜欢的公众号文章
+4. 最近本来在使用freshrss,最近wecath2rss的作者给了一个follow的邀请码，就迁移使用follow。初步使用最大的感受就是很流畅，目前还在体验中，很期待X timeline订阅的功能
+```
+This message is used to verify that this feed (feedId:59973439614099456) belongs to me (userId:69568391214442496). Join me in enjoying the next generation information browser https://follow.is.
+```

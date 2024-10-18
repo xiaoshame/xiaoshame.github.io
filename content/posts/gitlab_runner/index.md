@@ -68,7 +68,7 @@ cd cppcheck-2.12.1 && \
     cmake --build . && \
     make install SRCDIR={解压的cppcheck路径}/cppcheck-2.12.1/build CFGDIR={解压的cppcheck路径}/cppcheck-2.12.1/cfg FILESDIR=/usr/bin
 ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
-## 安装cpplint
+## 安装cpplint，注意python3的版本需要3.8及以上
 yum install python3
 rm -rf /usr/bin/python
 ln -s /usr/bin/python3 /usr/bin/python

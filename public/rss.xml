@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 11 Oct 2024 16:57:09 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 18 Oct 2024 11:18:07 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -3733,8 +3733,10 @@
 &lt;li&gt;这种方式具备可行性的基础是开源项目&lt;a href=&#34;https://github.com/ttttmr/wechat2rss&#34;&gt;wechat2rss&lt;/a&gt;持续的维护，谢谢ttttmr大佬&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wechat2rss.xlab.app/list/all.html&#34;&gt;公众号订阅list&lt;/a&gt;中包含众多公众号，可以自行选择想订阅的公众号&lt;/li&gt;
 &lt;li&gt;可基于本文方案调整为只生成喜欢的公众号文章&lt;/li&gt;
+&lt;li&gt;最近本来在使用freshrss,最近wecath2rss的作者给了一个follow的邀请码，就迁移使用follow。初步使用最大的感受就是很流畅，目前还在体验中，很期待X timeline订阅的功能&lt;/li&gt;
 &lt;/ol&gt;
-</description>
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This message is used to verify that this feed (feedId:59973439614099456) belongs to me (userId:69568391214442496). Join me in enjoying the next generation information browser https://follow.is.
+&lt;/code&gt;&lt;/pre&gt;</description>
                 
                 
                 
@@ -7522,7 +7524,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    cmake --build . &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    make install &lt;span class=&#34;nv&#34;&gt;SRCDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;解压的cppcheck路径&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/cppcheck-2.12.1/build &lt;span class=&#34;nv&#34;&gt;CFGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;解压的cppcheck路径&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;/cppcheck-2.12.1/cfg &lt;span class=&#34;nv&#34;&gt;FILESDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/bin
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 安装cpplint&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 安装cpplint，注意python3的版本需要3.8及以上&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install python3
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf /usr/bin/python
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /usr/bin/python3 /usr/bin/python
