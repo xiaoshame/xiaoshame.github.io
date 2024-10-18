@@ -53,11 +53,7 @@ docker run -it centos:7 /bin/bash
 ### 更换yum 源
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 ### 安装基础编译工具
-yum install wget
-yum install gcc
-yum install gcc-c++
-yum install make
-yum install cmake
+yum install wget gcc gcc-c++ make cmake
 ### 下载cppcheck源码编译
 wget -O cppcheck.tar.gz https://github.com/danmar/cppcheck/archive/refs/tags/2.12.1.tar.gz
 tar -xvzf cppcheck.tar.gz
@@ -68,10 +64,16 @@ cd cppcheck-2.12.1 && \
     cmake --build . && \
     make install SRCDIR={解压的cppcheck路径}/cppcheck-2.12.1/build CFGDIR={解压的cppcheck路径}/cppcheck-2.12.1/cfg FILESDIR=/usr/bin
 ln -s /usr/local/bin/cppcheck /usr/bin/cppcheck
-## 安装cpplint，注意python3的版本需要3.8及以上
-yum install python3
+## 安装cpplint，注意需先安装python3 版本需要3.8及以上
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make
+yum install libffi-devel -y
+wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz
+tar -xzvf Python-3.8.12.tgz
+cd Python-3.8.12/
+./configure
+make&&make install
 rm -rf /usr/bin/python
-ln -s /usr/bin/python3 /usr/bin/python
+ln -s /usr/local/bin/python3 /usr/bin/python
 pip3 install cpplint -i https://pypi.tuna.tsinghua.edu.cn/simple
 ### 退出容器
 exit
