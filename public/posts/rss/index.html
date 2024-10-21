@@ -15,7 +15,7 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>RSShub自制路由 | 阿松的博客</title>
+    <title>自建FreshRSS和RSSHub服务 | 阿松的博客</title>
 
     <link rel="stylesheet" href="/css/meme.min.eb6cce5338ddf75c8ef2aa4602d138f3af68d3d509d0f2ce3b1d9ac34f802618.css"/>
 
@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="阿松" /><meta name="description" content="RSSHub路由和阅读等书源制作，都是对html信息的解析，区别是一个是服务端处理，一个是在客户端处理。" />
+    <meta name="author" content="阿松" /><meta name="description" content="自建FreshRSS服务，使用vercel部署RSSHub服务提升使用体验" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -51,21 +51,21 @@
     
 
     
-        <link rel="canonical" href="https://xiaoshame.github.io/posts/rsshub/" />
+        <link rel="canonical" href="https://xiaoshame.github.io/posts/rss/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2024-07-09T10:33:07+08:00",
-        "dateModified": "2024-07-09T10:33:07+08:00",
-        "url": "https://xiaoshame.github.io/posts/rsshub/",
-        "headline": "RSShub自制路由",
-        "description": "RSSHub路由和阅读等书源制作，都是对html信息的解析，区别是一个是服务端处理，一个是在客户端处理。",
+        "datePublished": "2024-10-21T10:50:07+08:00",
+        "dateModified": "2024-10-21T10:50:07+08:00",
+        "url": "https://xiaoshame.github.io/posts/rss/",
+        "headline": "自建FreshRSS和RSSHub服务",
+        "description": "自建FreshRSS服务，使用vercel部署RSSHub服务提升使用体验",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  905 ,
+        "wordCount":  901 ,
         "image": "https://xiaoshame.github.io/images/logo.png",
         "author": {
             "@type": "Person",
@@ -103,14 +103,14 @@
 
 
 
-<meta property="og:title" content="RSShub自制路由" />
-<meta property="og:description" content="RSSHub路由和阅读等书源制作，都是对html信息的解析，区别是一个是服务端处理，一个是在客户端处理。" />
-<meta property="og:url" content="https://xiaoshame.github.io/posts/rsshub/" />
+<meta property="og:title" content="自建FreshRSS和RSSHub服务" />
+<meta property="og:description" content="自建FreshRSS服务，使用vercel部署RSSHub服务提升使用体验" />
+<meta property="og:url" content="https://xiaoshame.github.io/posts/rss/" />
 <meta property="og:site_name" content="阿松的博客" />
 <meta property="og:locale" content="zh-cn" /><meta property="og:image" content="https://xiaoshame.github.io/images/logo.png" />
     <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2024-07-09T10:33:07&#43;08:00" />
-    <meta property="article:modified_time" content="2024-07-09T10:33:07&#43;08:00" />
+    <meta property="article:published_time" content="2024-10-21T10:50:07&#43;08:00" />
+    <meta property="article:modified_time" content="2024-10-21T10:50:07&#43;08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -248,7 +248,7 @@
 
         <article class="content post h-entry" data-align="justify" data-type="posts">
 
-            <h1 class="post-title p-name">RSShub自制路由</h1>
+            <h1 class="post-title p-name">自建FreshRSS和RSSHub服务</h1>
 
             
 
@@ -262,11 +262,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2024-07-09T10:33:07&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2024.7.9</time>
+        <time datetime="2024-10-21T10:50:07&#43;08:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2024.10.21</time>
     
     
         
-        <time datetime="2024-07-09T10:33:07&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2024.7.9</time>
+        <time datetime="2024-10-21T10:50:07&#43;08:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2024.10.21</time>
     
     
     
@@ -280,7 +280,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;905</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;901</span>
     
     
         
@@ -294,30 +294,32 @@
 
             <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
-    <li>
-      <ol>
-        <li><a id="contents:原理" href="#原理">原理</a></li>
-        <li><a id="contents:制作路由" href="#制作路由">制作路由</a></li>
-      </ol>
-    </li>
+    <li><a id="contents:freshrss-dockercompose-部署" href="#freshrss-dockercompose-部署">FreshRSS dockercompose 部署</a></li>
+    <li><a id="contents:vercel-rsshub-部署" href="#vercel-rsshub-部署">Vercel RSSHub 部署</a></li>
+    <li><a id="contents:其他" href="#其他">其他</a></li>
   </ol>
 </nav><div class="post-body e-content">
-                <p>平时主要使用RSS看资讯信息，日常使用RSSHub Radar浏览器插件查询网站RSS链接，很多网站都无法发现RSS链接，一度认为这个插件很鸡肋。最近研究了下，这个插件确实很鸡肋，核心是RSSHub这个开源项目，通过搭建自定义路由，将网站信息转换成RSS信息流。然后使用RSS 阅读器进行订阅阅读。</p>
-<h3 id="原理"><a href="#原理" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:原理" class="headings">原理</a></h3>
+                <p>之前使用他人提供的<a href="https://github.com/FreshRSS/FreshRSS" target="_blank" rel="noopener">FreshRSS</a>服务，因为网站证书过期导致使用不便。有一台可以使用的服务器，就考虑自建FreshRSS服务。同时日常使用官方<a href="https://github.com/DIYgod/RSSHub" target="_blank" rel="noopener">RSSHub</a>服务过程中，订阅源非常不稳定，经常不可用。发现vercel可以部署RSSHub，完成相应部署后，整体使用感受大幅提升，记录下过程，方便以后使用。</p>
+<h2 id="freshrss-dockercompose-部署"><a href="#freshrss-dockercompose-部署" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:freshrss-dockercompose-部署" class="headings">FreshRSS dockercompose 部署</a></h2>
 <ol>
-<li>网站内容都是html信息，通过对网站html内容解析，按照RSS规范生成RSS文件。即可使用RSS 阅读器订阅阅读。</li>
-<li><a href="https://github.com/DIYgod/RSSHub" target="_blank" rel="noopener">RSSHub项目地址</a>，使用RSSHub只用关注网站html内容的解析，制作路由就是按照规范对内容进行解析。</li>
-<li>参考项目中他人编写的路由，借助大模型，不懂JS也可以很简单完成网站路由制作。</li>
-<li>使用RSS阅读网站内容和书源工具阅读小说思想上一致的，都是对网站内容进行解析，只留下重要的内容信息展示。区别是一个对源网站数据的处理在服务端进行，一个在客户端进行。</li>
+<li>自备一个服务器</li>
+<li>安装docker 和 docker-compose, 配置docker-compose.yml</li>
+<li>启动指令docker-compose up -d</li>
+<li>配置caddy配置文件caddyfile,方便使用域名访问</li>
+<li>通过域名访问freshRSS,创建管理员账户和配置数据库
+<ol>
+<li>数据库信息对应Docker Compose 配置文件中的 POSTGRES_USER、POSTGRES_PASSWORD、POSTGRES_DB、表前缀任意填</li>
+<li>主机名要稍微注意一下，要用容器的 IP(docker inspect <container id>)</li>
 </ol>
-<h3 id="制作路由"><a href="#制作路由" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:制作路由" class="headings">制作路由</a></h3>
+</li>
+<li>手机上使用Reeder登录FreshRSS
 <ol>
-<li><a href="https://docs.rsshub.app/zh/joinus/" target="_blank" rel="noopener">开发路由官方文档</a>，参考官方文档下载配置好开发环境。</li>
-<li>打开想制作的网站F12,查看网站html结构，找到需要解析的元素。</li>
-<li>参考下述代码，最重要是handler函数，其他都是配置信息。handler中解析html标签，获取需要的信息。主要就是标题，链接，描述，发布时间。如果想在RSS阅读器中直接阅读完整的内容，可以将文章内容放在描述(description)中。</li>
-<li>开发过程中不懂的就问大模型，云厂商都提供了免费服务，能力都差不多。完成相应开发后，将代码部署到服务器上，配置好端口转发就可以通过域名订阅。</li>
-<li>如果使用官方提供的RSSHub服务，需要提交PR到RSSHub项目，等待审核通过后才能使用。</li>
-<li>可以阅读路由中他人制作的路由，发现感兴趣的网站，查看Route结构，使用官方服务，直接订阅使用。</li>
+<li>freshRSS 设置-&gt;认证-&gt;允许API访问</li>
+<li>freshRSS 设置-&gt;账户-&gt;API管理-&gt;设置AIP密码</li>
+<li>Reeder中使用API管理下的地址+用户名+API密码进行登录</li>
+</ol>
+</li>
+<li><a href="https://blog.ichr.me/post/docker-freshrss-setup/" target="_blank" rel="noopener">参考文档</a></li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
@@ -354,74 +356,67 @@
 </span><span class="lnt">31
 </span><span class="lnt">32
 </span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Route</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@/types&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">parseDate</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@/utils/parse-date&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">got</span> <span class="nx">from</span> <span class="s1">&#39;@/utils/got&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">load</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;cheerio&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">route</span><span class="o">:</span> <span class="nx">Route</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">categories</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;blog&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">example</span><span class="o">:</span> <span class="s1">&#39;/imhcg&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">radar</span><span class="o">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">source</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;https://infos.imhcg.cn/&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Engineering blogs&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">maintainers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;xiaoshame&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">handler</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://infos.imhcg.cn/&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;https://infos.imhcg.cn/&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">got</span><span class="p">({</span> <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="nx">url</span> <span class="p">});</span>
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">$</span> <span class="o">=</span> <span class="nx">load</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">link</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">description</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;p.text&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">().</span><span class="nx">trim</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">dateraw</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;p.time&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">title</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">description</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">link</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">pubDate</span><span class="o">:</span> <span class="nx">parseDate</span><span class="p">(</span><span class="nx">dateraw</span><span class="p">,</span> <span class="s1">&#39;YYYY 年 MM 月 DD 日&#39;</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="p">};</span>
-</span></span><span class="line"><span class="cl">        <span class="p">})</span>
-</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Engineering blogs&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">link</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">item</span><span class="o">:</span> <span class="nx">list</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">freshrss-db</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">postgres:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss-db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss-db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">freshrss-db:/var/lib/postgresql/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_USER</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">POSTGRES_DB</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">freshrss-app</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss/freshrss:latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss-app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hostname</span><span class="p">:</span><span class="w"> </span><span class="l">freshrss-app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;7080:80&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">freshrss-db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./data:/var/www/FreshRSS/data</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./extensions:/var/www/FreshRSS/extensions</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">CRON_MIN</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;*/45&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="l">Asia/Shanghai</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">freshrss-db</span><span class="p">:</span><span class="w">
+</span></span></span></code></pre></td></tr></table></div>
 </div>
-</div>
+</div><h2 id="vercel-rsshub-部署"><a href="#vercel-rsshub-部署" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:vercel-rsshub-部署" class="headings">Vercel RSSHub 部署</a></h2>
+<ol>
+<li>因为vercel nodejs 最高版本只能选择 20.x，导致无法使用RSSHub master分支部署，使用legacy 分支进行部署,操作流程见参考文档</li>
+<li>legacy 相比master分支缺少很多路由，需要自己按需添加路由
+<ol>
+<li>在master分支找到缺少的路由，复制到legacy分支，修改文件名尾缀ts为js,参考其他路由调整代码格式</li>
+<li>在\RSSHub\lib\router.js中添加新增的路由地址</li>
+<li>如果需要使用环境变量，在\RSSHub\lib\config.js中添加，并在vercel 对应的项目-&gt;设置-&gt;Environment Variables添加相同环境变量</li>
+</ol>
+</li>
+<li>使用vercel 部署的好处有
+<ol>
+<li>国内外网站的信息都可以直接抓取</li>
+<li>无需服务器可以免费使用</li>
+</ol>
+</li>
+<li><a href="https://cloud.tencent.com/developer/article/2432561" target="_blank" rel="noopener">参考文档</a></li>
+</ol>
+<h2 id="其他"><a href="#其他" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:其他" class="headings">其他</a></h2>
+<ol>
+<li><a href="https://xiaoshame.github.io/posts/ios_download/" target="_blank" rel="noopener">caddy的安装参考文档</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/630011467" target="_blank" rel="noopener">永久免费域名PP.UA最新注册指南</a></li>
+</ol>
+
             </div>
 
             
@@ -434,7 +429,7 @@
                 
                 
                 
-                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/rsshub/" target="_blank" rel="noopener">https://xiaoshame.github.io/posts/rsshub/</a></li>
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/rss/" target="_blank" rel="noopener">https://xiaoshame.github.io/posts/rss/</a></li>
             
             <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
             
@@ -451,8 +446,6 @@
 
 
         
-    
-
 
 
         
@@ -466,7 +459,7 @@
             <ul class="related-list">
                 
                     <li class="related-item">
-                        <a href="/posts/rss/" class="related-link">自建FreshRSS和RSSHub服务</a>
+                        <a href="/posts/rsshub/" class="related-link">RSShub自制路由</a>
                     </li>
                 
                     <li class="related-item">
@@ -511,6 +504,14 @@
                     <a href="/tags/rsshub/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>RSSHub</a>
                 
             
+                
+                
+                
+                
+                    
+                    <a href="/tags/freshrss/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>FreshRSS</a>
+                
+            
         </div>
     
 
@@ -532,13 +533,9 @@
     
         <ul class="post-nav">
             
-                <li class="post-nav-prev">
-                    <a href="/posts/fitment/2/" rel="prev">&lt; 装修自我反思</a>
-                </li>
-            
             
                 <li class="post-nav-next">
-                    <a href="/posts/watermark/" rel="next">语音隐写术之LSB &gt;</a>
+                    <a href="/posts/llm/" rel="next">大模型科普 &gt;</a>
                 </li>
             
         </ul>
