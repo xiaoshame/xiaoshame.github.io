@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 21 Oct 2024 11:53:19 &#43;0800</lastBuildDate>
+        <lastBuildDate>Mon, 21 Oct 2024 12:07:02 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
@@ -58,7 +58,7 @@
 &lt;li&gt;Reeder中使用API管理下的地址+用户名+API密码进行登录&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.ichr.me/post/docker-freshrss-setup/&#34;&gt;参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.ichr.me/post/docker-freshrss-setup/&#34;&gt;Freshrss参考文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -148,7 +148,7 @@
 &lt;li&gt;无需服务器可以免费使用&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/article/2432561&#34;&gt;参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.tencent.com/developer/article/2432561&#34;&gt;vercel rsshub部署参考文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;其他&#34;&gt;其他&lt;/h2&gt;
 &lt;ol&gt;

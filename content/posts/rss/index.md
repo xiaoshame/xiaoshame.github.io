@@ -23,7 +23,7 @@ summary : '自建FreshRSS服务，使用vercel部署RSSHub服务提升使用体�
     1. freshRSS 设置->认证->允许API访问
     2. freshRSS 设置->账户->API管理->设置AIP密码
     3. Reeder中使用API管理下的地址+用户名+API密码进行登录
-7. [参考文档](https://blog.ichr.me/post/docker-freshrss-setup/)
+7. [Freshrss参考文档](https://blog.ichr.me/post/docker-freshrss-setup/)
 
 ```yaml
 version: "3"
@@ -70,7 +70,7 @@ volumes:
 3. 使用vercel 部署的好处有
     1. 国内外网站的信息都可以直接抓取
     2. 无需服务器可以免费使用
-4. [参考文档](https://cloud.tencent.com/developer/article/2432561)
+4. [vercel rsshub部署参考文档](https://cloud.tencent.com/developer/article/2432561)
 
 ## 其他
 1. [caddy的安装参考文档](https://xiaoshame.github.io/posts/ios_download/)
