@@ -4,11 +4,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-11-01T15:22:35&#43;08:00</updated>
+    <updated>2024-11-01T16:02:55&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
-    
+    <author>
+            <name>阿松</name>
+            <uri>https://xiaoshame.github.io/</uri>
+            
+                <email>xiaoshame1209@gmail.com</email>
+            </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.136.5">Hugo</generator>
         <entry>
@@ -18,7 +23,9 @@
             <updated>2024-10-21T10:50:07&#43;08:00</updated>
             <published>2024-10-21T10:50:07&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">自建FreshRSS服务，使用vercel部署RSSHub服务提升使用体验</summary>
             
@@ -188,7 +195,9 @@
             <updated>2024-09-06T10:30:30&#43;08:00</updated>
             <published>2024-09-05T19:58:30&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">大模型原理科普和大模型可以做些什么事</summary>
             
@@ -277,7 +286,9 @@
             <updated>2024-07-22T14:58:48&#43;08:00</updated>
             <published>2024-07-22T14:58:48&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">装修过程中的自我反思，避坑</summary>
             
@@ -335,7 +346,9 @@
             <updated>2024-07-09T10:33:07&#43;08:00</updated>
             <published>2024-07-09T10:33:07&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">RSSHub路由和阅读等书源制作，都是对html信息的解析，区别是一个是服务端处理，一个是在客户端处理。</summary>
             
@@ -501,7 +514,9 @@
             <updated>2024-07-03T15:48:32&#43;08:00</updated>
             <published>2024-07-03T15:48:32&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">使用LSB隐写术实现音频水印功能</summary>
             
@@ -807,7 +822,9 @@
             <updated>2024-06-04T19:10:48&#43;08:00</updated>
             <published>2024-06-04T19:10:48&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">js中常见混淆案例解析</summary>
             
@@ -1286,7 +1303,9 @@
             <updated>2024-05-30T16:49:11&#43;08:00</updated>
             <published>2024-05-30T16:49:11&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">JS破解思路记录</summary>
             
@@ -1782,7 +1801,9 @@
             <updated>2024-05-14T17:30:41&#43;08:00</updated>
             <published>2024-05-14T17:30:41&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">明确个人装修需求和装修公司选择标准</summary>
             
@@ -1957,7 +1978,9 @@
             <updated>2024-05-06T17:36:56&#43;08:00</updated>
             <published>2024-05-06T17:36:56&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">借助GPT封装云厂商TTS服务，手机APP实现自定义朗读功能</summary>
             
@@ -2585,7 +2608,9 @@
             <updated>2024-04-29T17:49:50&#43;08:00</updated>
             <published>2024-04-29T17:49:50&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">时代的一粒灰，落在个人头上，就是一座山</summary>
             
@@ -2637,7 +2662,9 @@
             <updated>2024-04-07T15:00:14&#43;08:00</updated>
             <published>2024-04-07T15:00:14&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">清明时节雨纷纷，路上行人欲断魂，借问酒家何处有，牧童遥指杏花村。</summary>
             
@@ -2692,7 +2719,9 @@
             <updated>2024-04-02T14:30:02&#43;08:00</updated>
             <published>2024-04-02T14:30:02&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">“财富不在于拥有大量财产，而在于拥有很少的欲望” -- 比克泰德</summary>
             
@@ -2742,7 +2771,9 @@
             <updated>2024-03-15T17:30:27&#43;08:00</updated>
             <published>2024-03-15T17:30:27&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文章提供了一个在苹果手机上实现离线下载和实时观看电影的方案</summary>
             
@@ -3030,7 +3061,9 @@
             <updated>2024-03-04T11:28:02&#43;08:00</updated>
             <published>2024-03-01T19:28:02&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">该文指导如何搭建一个微信公众号机器人使用阿里云通义千问模型，步骤包括注册和配置域名、vercel部署代码、设置公众号服务器配置，并提供了相关步骤和所需资源。</summary>
             
@@ -3170,7 +3203,9 @@
             <updated>2024-02-02T11:10:50&#43;08:00</updated>
             <published>2024-02-02T11:10:50&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">常用软件list</summary>
             
@@ -3480,7 +3515,9 @@
             <updated>2024-01-18T17:40:30&#43;08:00</updated>
             <published>2024-01-18T17:40:30&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">使用python编写的脚本可以将公众号的最新文章保存到本地，但本地阅读并不方便。作者通过使用feedly来订阅文章的方式解决了这个问题。</summary>
             
@@ -3959,7 +3996,9 @@
             <updated>2024-01-11T13:44:14&#43;08:00</updated>
             <published>2024-01-11T13:44:14&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">基于wxPython编写的加解密工具，支持Base64、MD5、AES、DES等算法。使用GPT4生成大致的GUI代码后，通过对比测试修正bug。使用pyinstaller.exe打包。总耗时1天，Python和GPT搭配能极大提高效率。</summary>
             
@@ -4771,7 +4810,9 @@
             <updated>2024-01-08T17:53:54&#43;08:00</updated>
             <published>2024-01-08T17:53:54&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">23年个人总结</summary>
             
@@ -4838,7 +4879,9 @@
             <updated>2024-01-02T10:15:29&#43;08:00</updated>
             <published>2024-01-02T10:15:29&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">搭建个人书城，可选择使用talebook或copyBook开源项目，前者简洁支持多种格式上传，后者类似网络小说网站，需要将章节信息写入数据库。爬虫复用copyBook项目，添加解析文件即可，还可添加代理和在python中运行js</summary>
             
@@ -5087,7 +5130,9 @@
             <updated>2023-12-18T15:34:23&#43;08:00</updated>
             <published>2023-12-18T15:34:23&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">文章介绍了如何给Giscus系统增加一个机器人通知功能的方案和实现方式。使用github的webhook和cloudflare的worker服务，可以将新增的discussion和comment信息转发给企业微信或飞书。</summary>
             
@@ -5607,7 +5652,9 @@
             <updated>2023-01-23T20:16:00&#43;08:00</updated>
             <published>2023-12-09T11:11:06&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文总结了使用hugo建立博客需要的前端和hugo知识。同时，还给出了三个具体的案例，分别是使用Giscus进行评论、修复Lunr搜索不支持中文的问题和如何在博客中添加说说功能的步骤。本文重点强调阐述解决问题的思维方式。</summary>
             
@@ -6010,10 +6057,12 @@
             <title type="text">懒人必备，自动发小红书</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/publish_xhs/" />
             <id>https://xiaoshame.github.io/posts/publish_xhs/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-11-24T13:53:21&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">通过将文章保存为html文件，然后利用selenium将html转换为图片，再通过selenium模拟点击小红书的发布流程，实现了将文章自动发布到小红书的功能。</summary>
             
@@ -6627,10 +6676,12 @@
             <title type="text">写个视频下载器送给老婆</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/download_video/" />
             <id>https://xiaoshame.github.io/posts/download_video/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-11-21T15:09:07&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">为自己的老婆开发了一款支持下载B站和好看视频的GUI软件。基于一个开源项目，核心下载器是yt-dlp.exe，并使用PyInstaller将程序打包成exe文件</summary>
             
@@ -6956,10 +7007,12 @@
             <title type="text">Hugo&#43;Github零成本搭建博客流程记录2</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/hugo_blog2/" />
             <id>https://xiaoshame.github.io/posts/hugo_blog2/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-11-08T11:38:20&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">文章提到了创建博客过程中对敏感信息的保护方法。hugo.toml中的敏感信息使用私有仓库和Actions来改进。git提交记录中的敏感信息更改配置实现。对自动投稿公众号的key保护，通过系统环境变量来保存敏感信息</summary>
             
@@ -7140,10 +7193,12 @@
             <title type="text">文章自动同步到公众号2</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/article_auto_push_gzh2/" />
             <id>https://xiaoshame.github.io/posts/article_auto_push_gzh2/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-10-30T15:38:16&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">介绍了在将文章同步到微信公众号时出现的排版问题，并提出了解决方案。作者将markdown文件转化为html的项目与文章同步项目进行了整合，并对部分代码进行了修改。最后，作者总结了使用过程中的注意事项和一些使用技巧。完整的代码已上传到GitHub。</summary>
             
@@ -7514,10 +7569,12 @@
             <title type="text">文章自动同步到公众号</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/article_auto_push_gzh/" />
             <id>https://xiaoshame.github.io/posts/article_auto_push_gzh/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-10-24T19:09:53&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">通过将Markdown文件转换为HTML文件，利用微信开发者API将文章同步到公众号的草稿箱中。文章还提到了一些操作记录和运行前提，但是存在的不足是无法直接发布文章，只能通过手动群发让粉丝看到。</summary>
             
@@ -7579,10 +7636,12 @@
             <title type="text">解决存储迁移导致的Gitlab Runner问题</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/gitlab_runner/" />
             <id>https://xiaoshame.github.io/posts/gitlab_runner/</id>
-            <updated>2024-10-18T16:44:27&#43;08:00</updated>
+            <updated>2024-10-18T16:43:11&#43;08:00</updated>
             <published>2023-10-19T15:02:51&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">总结了使用github-runner进行代码规范检测碰到的问题和排查、解决的过程。问题出在镜像文件找不到，通过恢复镜像和注册Gitlab-Runner解决。文章提供了详细的步骤和参考资料供读者参考。</summary>
             
@@ -7955,10 +8014,12 @@
             <title type="text">Hugo&#43;Github零成本搭建博客流程记录</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/hugo_blog/" />
             <id>https://xiaoshame.github.io/posts/hugo_blog/</id>
-            <updated>2023-12-31T14:31:02&#43;08:00</updated>
+            <updated>2024-05-29T18:56:34&#43;08:00</updated>
             <published>2023-10-11T10:06:03&#43;08:00</published>
             <author>
+                    <name>阿松</name>
                     <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">文章介绍了使用Hugo和GitHub搭建博客的流程，包括安装Hugo、配置主题、部署到GitHub、添加评论系统、创建收藏页和增加封面图等。还介绍了如何添加站点运行时间和二级菜单。通过简化操作和利用现有资源，可以实现零成本搭建现代博客。</summary>
             

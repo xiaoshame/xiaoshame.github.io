@@ -35,13 +35,10 @@ enableEmoji = false
 footnoteReturnLinkContents = "↩"
 
 # 是否启用 Git 版本信息
-enableGitInfo = true
+enableGitInfo = false
 
 # 是否生成 robots.txt 文件
 enableRobotsTXT = true
-
-# 每一分页的文章数（仅对「文章摘要」首页布局有效）
-paginate = 5
 
 # URL 相关
 disablePathToLower = false
@@ -61,6 +58,12 @@ uglyURLs = false
 # 修改时间
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+
+[pagination]
+    disableAliases = false
+    # 每一分页的文章数（仅对「文章摘要」首页布局有效）
+    pagerSize = 5
+    path = 'page'
 
 # Markdown 渲染器
 [markup]
@@ -96,21 +99,6 @@ uglyURLs = false
 # 压缩 HTML
 [minify.tdewolff.html]
     keepWhitespace = false
-
-# 作者信息
-[author]
-    # 名字
-    name = "阿松"
-    # 邮箱
-    email = "xiaoshame1209@gmail.com"
-    # 座右铭或简介
-    motto = "一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活"
-    # 头像
-    avatar = "/images/avatar.png"
-    # 网站（默认值：baseURL）
-    website = "https://xiaoshame.github.io/"
-    # 推特
-    twitter = "xiaoqian713"
 
 # 相关文章
 [related]
@@ -926,7 +914,7 @@ uglyURLs = false
     enableCaption = true
 
     # 说明文字的前缀
-    captionPrefix = "◎ "
+    captionPrefix = "※ "
 
 
     ######################################
@@ -1034,7 +1022,7 @@ uglyURLs = false
     ######################################
     ## 字号（单位：px）
 
-    fontSize = 16
+    fontSize = 18
 
     ######################################
     ## 制表符的宽度
@@ -1131,7 +1119,7 @@ uglyURLs = false
     # 文章更新徽章
 
     # 是否开启
-    enablePostUpdatedBadge = false
+    enablePostUpdatedBadge = true
 
     # 是否显示（全局设置）
     displayUpdatedBadge = true
@@ -1202,7 +1190,7 @@ uglyURLs = false
     postShareItems = ["facebook", "mastodon", "fediverse", "twitter", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
 
     # 从网络获取 Fediverse 实例列表用于输入建议
-    fetchFediverseInstances = true
+    fetchFediverseInstances = false
     # 说明：当开启 mastodon 或 fediverse 分享项
     #      时建议开启。开启后构建时，数据需要从网
     #      络下载，会带来额外的构建时间。
@@ -1492,3 +1480,21 @@ uglyURLs = false
         valine = "/npm/valine@1.4.14/dist/Valine.min.js"
         busuanzi = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
         utterances = "https://utteranc.es/client.js"
+
+
+    ######################################
+    # 作者信息
+    [params.author]
+        # 名字
+        name = "阿松"
+        # 邮箱
+        email = "xiaoshame1209@gmail.com"
+        # 座右铭或简介
+        motto = "一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活"
+        # 头像
+        avatar = "/images/avatar.png"
+        # 网站（默认值：baseURL）
+        website = "https://xiaoshame.github.io/"
+        # 推特
+        twitter = "xiaoqian713"
+

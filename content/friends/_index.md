@@ -15,8 +15,6 @@ badge = false
 
 {{< friend name="程序员的喵" url="https://catcoding.me/"  desc="coding and writing, don't panic" logo="https://catcoding.me/css/images/logo.png" >}}
 
-{{< friend name="雨临Lewis的博客" url="https://lewky233.top"  desc="不想当写手的码农不是好咸鱼_(xз」∠)_" logo="https://lewky233.top/images/avatar.jpg" >}}
-
 {{< friend name="荷戟独彷徨" url="https://guanqr.com/"  desc="爱光学，爱生活，爱创造" logo="https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png" >}}
 
 {{< friend name="Memory" url="https://blog.yandaojiang.com/" desc="yandaojiang" logo="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/memos_img/2306/header.webp" >}}
