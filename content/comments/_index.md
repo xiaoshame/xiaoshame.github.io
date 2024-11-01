@@ -1,11 +1,8 @@
 +++
 title = "留言板"
 date = "2023-10-13T11:05:00+08:00"
-displayCopyright = false
-badge = false
-gitinfo = false
-toc = false
 draft = false
+comments = true
 +++
 
 ## 留言板

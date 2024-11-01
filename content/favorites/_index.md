@@ -1,10 +1,9 @@
----
-title : "收藏夹" 
-date : "2024-03-26T15:59:26+08:00"
-draft : false
-displayCopyright : false
-badge : false
----
++++
+title = "收藏夹" 
+date = "2024-03-26T15:59:26+08:00"
+draft = false
+comments = true
++++
 
 ### 建站
 

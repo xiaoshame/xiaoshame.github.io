@@ -1490,7 +1490,7 @@ uglyURLs = false
         # 邮箱
         email = "xiaoshame1209@gmail.com"
         # 座右铭或简介
-        motto = "一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活"
+        motto = "Growth is usually painful to some degree. That’s because growth requires loss—a loss of your oldvalues, your old behaviors, your old loves, your old identity."
         # 头像
         avatar = "/images/avatar.png"
         # 网站（默认值：baseURL）

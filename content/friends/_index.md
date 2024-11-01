@@ -2,9 +2,7 @@
 title = "友情链接"
 date = "2023-10-20T14:41:40+08:00"
 draft = false
-featuredImage = "/images/friend/friend.jpg"
-displayCopyright = false
-badge = false
+comments = true
 +++
 
 {{< friend-css >}}
