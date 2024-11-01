@@ -207,16 +207,16 @@ hugo-theme-moments主题生成的网页中使用到的css和js信息：
 ```javascript
 //moments.html内容
 {{ $options := (dict "targetPath" "/css/style-refractored.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style := resources.Get "/scss/style-refractored.scss" | resources.ToCSS $options }}
+{{ $style := resources.Get "/scss/style-refractored.scss" | css.Sass $options }}
 
 {{ $options1 := (dict "targetPath" "/css/grids-min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style1 := resources.Get "/scss/grids-min.scss" | resources.ToCSS $options1 }}
+{{ $style1 := resources.Get "/scss/grids-min.scss" | css.Sass $options1 }}
 
 {{ $options2 := (dict "targetPath" "/css/grids-responsive-min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style2 := resources.Get "/scss/grids-responsive-min.scss" | resources.ToCSS $options2 }}
+{{ $style2 := resources.Get "/scss/grids-responsive-min.scss" | css.Sass $options2 }}
 
 {{ $options3 := (dict "targetPath" "/css/fancybox.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $style3 := resources.Get "/scss/fancybox.scss" | resources.ToCSS $options3 }}
+{{ $style3 := resources.Get "/scss/fancybox.scss" | css.Sass $options3 }}
 
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 <link rel="stylesheet" href="{{ $style1.RelPermalink }}">

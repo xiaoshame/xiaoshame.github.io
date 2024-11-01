@@ -16,11 +16,11 @@
     {{ with .OutputFormats.Get "SectionsAtom" -}}
         <link rel="self" type="{{ .MediaType }}" href="{{ .Permalink }}" />
     {{ end -}}
-    {{ with .Site.Author.name -}}
+    {{ with .Site.Params.author.name -}}
         <author>
             <name>{{ . }}</name>
             <uri>{{ "" | absLangURL }}</uri>
-            {{ with $.Site.Author.email }}
+            {{ with $.Site.Params.author.email }}
                 <email>{{ . }}</email>
             {{ end -}}
         </author>
@@ -55,9 +55,10 @@
                 <rights>{{ . | plainify | htmlUnescape }}</rights>
             {{- end }}
             {{- $summary := .Description | default (partial "utils/summary.html" $page) -}}
+            {{- $content := (partial "utils/content.html" $page) -}}
             <summary type="html">{{ partial "utils/make-links-absolute.html" (dict "$" . "content" $summary) | html }}</summary>
             {{ if $.Site.Params.includeContent }}
-                <content type="html">{{ partial "utils/make-links-absolute.html" (dict "$" . "content" .Content) | html }}</content>
+                <content type="html">{{ partial "utils/make-links-absolute.html" (dict "$" . "content" $content) | html }}</content>
             {{ end }}
             <!-- Sections -->
             {{ if eq $.Site.Params.categoryBy "sections" }}

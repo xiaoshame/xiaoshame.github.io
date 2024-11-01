@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.120.3"><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.136.5"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,12 +17,12 @@
 
     <title>花2毛钱给微信公众号接入阿里云通义千问大模型 | 阿松的博客</title>
 
-    <link rel="stylesheet" href="/css/meme.min.eb6cce5338ddf75c8ef2aa4602d138f3af68d3d509d0f2ce3b1d9ac34f802618.css"/>
+    <link rel="stylesheet" href="/css/meme.min.823b0a283d95edb7e80106d7766e7a2438679ee696947bea22d956c019968df1.css"/>
 
     
     
         
-            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.c4fed54a58a7ec3413c12a17da229a2886b6e47dd5a5d662ca29c1f011b3708b.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.ae50ea7e30eae3f0fe17ec390f60d720cb7ab33f6756faaac0604ef8690d2134.js"></script>
 
         
     
@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="阿松" /><meta name="description" content="该文指导如何搭建一个微信公众号机器人使用阿里云通义千问模型，步骤包括注册和配置域名、vercel部署代码、设置公众号服务器配置，并提供了相关步骤和所需资源。" />
+    <meta name="author" content="" /><meta name="description" content="该文指导如何搭建一个微信公众号机器人使用阿里云通义千问模型，步骤包括注册和配置域名、vercel部署代码、设置公众号服务器配置，并提供了相关步骤和所需资源。" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -69,11 +69,8 @@
         "image": ["https://xiaoshame.github.io/images/posts/gzh_chat/1.png","https://xiaoshame.github.io/images/posts/gzh_chat/2.png"],
         "author": {
             "@type": "Person",
-            "description": "一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活",
-            "email": "xiaoshame1209@gmail.com",
-            "image": "https://xiaoshame.github.io/images/avatar.png",
             "url": "https://xiaoshame.github.io/",
-            "name": "阿松"
+            
         },
         "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
         "publisher": {
@@ -98,7 +95,6 @@
 
 
 <meta name="twitter:site" content="@xiaoqian713" />
-<meta name="twitter:creator" content="@xiaoqian713" />
 
     
 
@@ -343,40 +339,40 @@
 <li>注册vercel账号后，创建项目，选择Import Git Repository从github仓库导入。在Environment Variables选项卡，增加环境变量把下面的变量一项一项的加进去</li>
 </ol>
 <div class="table-container"><table>
-<thead>
-<tr>
-<th style="text-align:center">序列</th>
-<th style="text-align:left">变量</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:left">API_KEY=sk-xxxx</td>
-<td style="text-align:left">阿里云中创建的apikey</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:left">KEYWORD_REPLAY={&quot;千问&quot;:&quot;大模型回答&quot;}</td>
-<td style="text-align:left">自定义关键词，咨询问题包含千问 才由大模型回答</td>
-</tr>
-<tr>
-<td style="text-align:center">3</td>
-<td style="text-align:left">API_MODEL=qwen-72b-chat</td>
-<td style="text-align:left">大模型类型</td>
-</tr>
-<tr>
-<td style="text-align:center">4</td>
-<td style="text-align:left">WX_TOKEN=53acb98d1dac49969b45797129f504f8</td>
-<td style="text-align:left">32位字符，后续公众号服务器配置会用到</td>
-</tr>
-<tr>
-<td style="text-align:center">5</td>
-<td style="text-align:left">SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，咨询我问题请以千问开头，例如：千问，你好</td>
-<td style="text-align:left">关注自动回复</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">序列</th>
+          <th style="text-align: left">变量</th>
+          <th style="text-align: left">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">1</td>
+          <td style="text-align: left">API_KEY=sk-xxxx</td>
+          <td style="text-align: left">阿里云中创建的apikey</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2</td>
+          <td style="text-align: left">KEYWORD_REPLAY={&quot;千问&quot;:&quot;大模型回答&quot;}</td>
+          <td style="text-align: left">自定义关键词，咨询问题包含千问 才由大模型回答</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3</td>
+          <td style="text-align: left">API_MODEL=qwen-72b-chat</td>
+          <td style="text-align: left">大模型类型</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">4</td>
+          <td style="text-align: left">WX_TOKEN=53acb98d1dac49969b45797129f504f8</td>
+          <td style="text-align: left">32位字符，后续公众号服务器配置会用到</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5</td>
+          <td style="text-align: left">SUBSCRIBE_REPLY=欢迎关注，我已经接入了阿里千问智能AI，咨询我问题请以千问开头，例如：千问，你好</td>
+          <td style="text-align: left">关注自动回复</td>
+      </tr>
+  </tbody>
 </table></div>
 <h3 id="绑定域名"><a href="#绑定域名" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:绑定域名" class="headings">绑定域名</a></h3>
 <ol>
@@ -412,19 +408,6 @@
 
             
     
-    
-        <ul class="post-copyright">
-            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://xiaoshame.github.io/" class="p-author h-card" target="_blank" rel="noopener">阿松</a></li>
-            
-                
-                
-                
-                
-                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/gzh_chat/" target="_blank" rel="noopener">https://xiaoshame.github.io/posts/gzh_chat/</a></li>
-            
-            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
-            
-        </ul>
     
 
 

@@ -74,6 +74,9 @@ badge : false
 * [v2rayN](https://github.com/2dust/v2rayN)
 * [v2ray](https://github.com/233boy/v2ray)
 * [oci-help](https://github.com/lemoex/oci-help)
+* [vercel RSSHub](https://github.com/xiaoshame/RSSHub)
+* [RSSHub](https://github.com/DIYgod/RSSHub)
+* [FreshRSS](https://github.com/FreshRSS/FreshRSS)
 
 ### 商业
 
