@@ -744,13 +744,13 @@ uglyURLs = false
     googleAdClient = "ca-pub-7733775252337975"
 
     ## 自动广告
-    enableGoogleAutoAds = false
+    enableGoogleAutoAds = true
 
     ## 广告单元
-    enableGoogleAdUnits = true
-    googleAdSlot = "4788811378"
-    googleAdSlotInArticle = "true"
-    googleAdSlotAutoRelaxed = "true"
+    enableGoogleAdUnits = false
+    googleAdSlot = ""
+    googleAdSlotInArticle = ""
+    googleAdSlotAutoRelaxed = ""
 
 
     ######################################
