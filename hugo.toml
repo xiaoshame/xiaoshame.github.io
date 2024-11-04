@@ -747,10 +747,10 @@ uglyURLs = false
     enableGoogleAutoAds = false
 
     ## 广告单元
-    enableGoogleAdUnits = false
-    googleAdSlot = ""
-    googleAdSlotInArticle = ""
-    googleAdSlotAutoRelaxed = ""
+    enableGoogleAdUnits = true
+    googleAdSlot = "4788811378"
+    googleAdSlotInArticle = "true"
+    googleAdSlotAutoRelaxed = "true"
 
 
     ######################################
