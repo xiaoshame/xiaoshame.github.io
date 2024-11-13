@@ -218,16 +218,10 @@ uglyURLs = false
         pre = "internal"
         post = "link"
     [[menu.main]]
-        pageref = "/favorites/"
-        name = "收藏夹"
         weight = 7
-        pre = "internal"
-        post = "folder"
-    [[menu.main]]
-        weight = 8
         identifier = "theme-switcher"
     [[menu.main]]
-        weight = 9
+        weight = 8
         identifier = "search"
         post = "search"
 
