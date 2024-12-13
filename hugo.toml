@@ -26,7 +26,7 @@ titleCaseStyle = "none"
 pluralizeListTitles = false
 
 # 摘要的字数限制
-summaryLength = 200
+summaryLength = 100
 
 # 是否开启 GitHub 风格的 Emoji 书写方式
 enableEmoji = false
