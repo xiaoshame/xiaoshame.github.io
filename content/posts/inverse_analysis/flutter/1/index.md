@@ -28,7 +28,7 @@ summary : '利用blutter和frida分析Flutter APP获取加密key'
 ### 分析流程
 #### blutter获取APP函数符号
 
-使用flutter 开发的APP，程序代码都编译到libapp.so中，使用ida打开函数名经过混淆不利于分析，blutter通过编译Dart AOT 运行时来分析应用程序获取相应的函数名。
+使用flutter 开发的APP，程序代码都编译到libapp.so中，使用ida分析libapp.so，函数名经过混淆不利于分析。blutter通过编译Dart AOT 运行时来分析应用程序获取相应的函数名。
 
 1. 在本文编写时间点，blutter只持分析Dart 3.6.0以下版本，dart 3.6.0-0.0.dev 以上版本编译报错
 2. 小技巧:如果待分析的APP使用dart 3.6.0以上的版本编译，dart3.6.0 版本2024年7月2号发布，寻找此时间点前APP的历史版本进行分析，可以规避此问题
