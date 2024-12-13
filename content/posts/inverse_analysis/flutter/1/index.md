@@ -33,16 +33,17 @@ summary : '利用blutter和frida分析Flutter APP获取加密key'
 1. 在本文编写时间点，blutter只持分析Dart 3.6.0以下版本，dart 3.6.0-0.0.dev 以上版本编译报错
 2. 小技巧:如果待分析的APP使用dart 3.6.0以上的版本编译，dart3.6.0 版本2024年7月2号发布，寻找此时间点前APP的历史版本进行分析，可以规避此问题
 3. 管理员权限打开x64 Native Tools Command Prompt
-    1. 执行python .\blutter.py D:\workspace\app\lib\arm64-v8a D:\workspace\app\lib\arm64-v8a\output
-    2. D:\workspace\app\lib\arm64-v8a 中存放apk解压后，lib 中的libapp.so和libflutter.so
+    1. D:\workspace\app\lib\arm64-v8a 中存放apk解压后lib中的libapp.so和libflutter.so
+    2. 执行python .\blutter.py D:\workspace\app\lib\arm64-v8a D:\workspace\app\lib\arm64-v8a\output
     3. D:\workspace\app\lib\arm64-v8a\output中为blutter分析完成后内容
     4. 全程使用代理
 
 #### ida 静态分析
 
-1. ida打开libapp.so
+1. ida打开libapp.so，获取反汇编内容，此时函数名都是没有意义
 2. file -> Script file 加载blutter环节获得的output\ida_script\addNames.py脚本，还原混淆后的函数名
 3. 根据需要分析的内容，猜测可能使用的函数名，进行分析
+    1. 我猜测加密函数是xxtea，搜索对应函数，使用F5获取伪代码进行阅读
 
 #### frida hook
 
@@ -56,7 +57,6 @@ frida --version    #我使用的版本16.5.9
 adb shell
 su
 getprop ro.product.cpu.abi   #查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，
-
 ```
 5. 手机上启动frida_server服务
 ```
@@ -121,7 +121,7 @@ function dumpArgs(step, address, bufSize) {
 }
 
 function onLibappLoaded() {
-    const fn_addr = 0x966e24;
+    const fn_addr = 0x966e24;   ## 此处修改为你想hook的函数地址
     Interceptor.attach(libapp.add(fn_addr), {
         onEnter: function () {
             init(this.context);
