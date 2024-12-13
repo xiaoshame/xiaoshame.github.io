@@ -90,7 +90,8 @@ frida -U -f 包名 -l blutter_frida.js
 #### 打印hook函数信息
 
 1. blutter_frida.js中增加onLeave，调用dumpArgs函数用于打印函数返回信息
-2. hook的函数如果有多个入参，可以再blutter_frida.js中onEnter代码进行打印
+2. hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印
+
 ```js
 function dumpArgs(step, address, bufSize) {
 
@@ -148,7 +149,7 @@ function onLibappLoaded() {
 3. 尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终以失败结束，直接使用手机可以提高幸福指数
 
 ### 参考文档
-[frida安装正确流程](https://www.cnblogs.com/fuxuqiannian/p/17930851.html#)
-[【flutter对抗】blutter使用+ACTF习题](https://juejin.cn/post/7311254319323889699)
-[CTT2023 Hflag — 200 pts](https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f)
-[解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题](https://blog.csdn.net/qq_65474192/article/details/138916083)
+1. [frida安装正确流程](https://www.cnblogs.com/fuxuqiannian/p/17930851.html#)
+2. [【flutter对抗】blutter使用+ACTF习题](https://juejin.cn/post/7311254319323889699)
+3. [CTT2023 Hflag — 200 pts](https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f)
+4. [解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题](https://blog.csdn.net/qq_65474192/article/details/138916083)
