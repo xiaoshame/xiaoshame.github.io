@@ -19,10 +19,10 @@ summary : '利用blutter和frida分析Flutter APP获取加密key'
 2. frida，hook工具
     1. pip install frida -i https://pypi.tuna.tsinghua.edu.cn/simple
     2. pip install frida-tools -i https://pypi.tuna.tsinghua.edu.cn/simple
-3. root android手机(尝试使用模拟器，hook so时报错)
-4. adb 组件，android 调试工具
-5. ida，查看汇编内容
-6. WinHex ，查看文件二进制
+3. root Android手机(尝试使用模拟器，hook so时报错)
+4. adb，Android调试工具
+5. ida，查看反汇编内容
+6. WinHex，查看文件二进制
 7. 代理工具，方便blutter编译
 
 ### 分析流程
