@@ -5,7 +5,7 @@ lastmod : "2024-12-13T17:20:06+08:00"
 tags : ["Flutter","逆向","Android","blutter","frida"] 
 categories : ["技术"]
 draft : flase
-featuredImage : /images/posts/inverse_analysis/flutte/1/featuredImage.jpg
+featuredImage : /images/posts/inverse_analysis/flutter/1/featuredImage.jpg
 summary : '利用blutter和frida分析Flutter APP获取加密key'
 ---
 
