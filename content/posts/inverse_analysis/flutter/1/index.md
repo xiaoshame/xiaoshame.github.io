@@ -17,8 +17,7 @@ summary : '利用blutter和frida分析Flutter APP获取加密key'
         3. 安装 Visual Studio时，勾选"Desktop development with C++" 和 "windows C++ CMake tools"
         4. 在blutter代码目录执行python scripts\init_env_win.py (安装libcapstone and libicu4c库)
 2. frida，hook工具
-    1. pip install frida -i https://pypi.tuna.tsinghua.edu.cn/simple
-    2. pip install frida-tools -i https://pypi.tuna.tsinghua.edu.cn/simple
+    1. 安装参考：[frida安装正确流程](https://www.cnblogs.com/fuxuqiannian/p/17930851.html#)
 3. root Android手机(尝试使用模拟器，hook so时报错)
 4. adb，Android调试工具
 5. ida，查看反汇编内容
@@ -52,17 +51,17 @@ summary : '利用blutter和frida分析Flutter APP获取加密key'
 3. 手机开启开发模式，打开adb调试，非常重要
 4. 查看frida版本和查看手机架构,下载[frida_server](https://github.com/frida/frida/releases)
     1. 我下载的frida-server-16.5.9-android-arm64.xz解压获得frida-server-16.5.9-android-arm64
-```
+```shell
 frida --version    #我使用的版本16.5.9 
 adb shell
 su
 getprop ro.product.cpu.abi   #查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，
 ```
 5. 手机上启动frida_server服务
-```
-## 将frida-server-16.5.9-android-arm64放入手机磁盘
+```shell
+### 将frida-server-16.5.9-android-arm64放入手机磁盘
 adb push ./frida-server-16.5.9-android-arm64 /data/local/tmp
-## 启动frida-server-16.5.9-android-arm64服务
+### 启动frida-server-16.5.9-android-arm64服务
 adb shell
 su
 cd /data/local/tmp
@@ -72,25 +71,23 @@ chmod 777 frida-server
 ```
 6. 使用frida脚本hook 函数，查看信息
     1. 附加成功后，手机上操作APP,触发hook函数执行，即可看到hook打印的信息
+```shell
+frida-ps -U    ##查看应用进程ID，
+frida-ps -Uai   ##查看应用的包名和进程ID, 
+### 方法一
+frida -U -f 包名 -l blutter_frida.js   ##如果APP已启动,-f会导致APP重启，libapp.app 没有加载成功导致hook失败
+### 方法二
+frida -U -n 应用名 -l blutter_frida.js ## 先启动APP
+### 方法三：
+frida -U -p 进程ID -l blutter_frida.js  ## 采用的此方法成功
 ```
-1. 查看应用进程ID，frida-ps -U
-2. 查看应用的包名和进程ID,frida-ps -Uai
-方法一: 
-frida -U -f 包名 -l blutter_frida.js
--f 启动APP,会导致已启动的APP重启，libapp.app 没有加载成功，会导致hook失败
-方法二：
-1. 启动APP
-2. frida -U -n 应用名 -l blutter_frida.js
-3. -N 可能会失败，原因未分析
-方法三：
-1. 启动APP
-2. frida -U -p 进程ID -l blutter_frida.js
-3. 我采用的此方法
-```
+7. 操作流程参考：[【flutter对抗】blutter使用+ACTF习题](https://juejin.cn/post/7311254319323889699)
+
 #### 打印hook函数信息
 
 1. blutter_frida.js中增加onLeave，调用dumpArgs函数用于打印函数返回信息
 2. hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印
+    1. 参考:[CTT2023 Hflag — 200 pts](https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f)
 
 ```js
 function dumpArgs(step, address, bufSize) {
@@ -146,10 +143,6 @@ function onLibappLoaded() {
 
 1. 本次分析APP的目标是获取加密函数的KEY,相对简单，因而只使用frida 进行hook就可以达到目的，如果分析的内容较为复杂需要搭配ida调试功能
 2. 最初使用模拟器进行hook，始终无法获取到libapp.so的地址，原因是模拟器开辟了一片新空间存储arm的so文件
-3. 尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终以失败结束，直接使用手机可以提高幸福指数
-
-### 参考文档
-1. [frida安装正确流程](https://www.cnblogs.com/fuxuqiannian/p/17930851.html#)
-2. [【flutter对抗】blutter使用+ACTF习题](https://juejin.cn/post/7311254319323889699)
-3. [CTT2023 Hflag — 200 pts](https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f)
-4. [解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题](https://blog.csdn.net/qq_65474192/article/details/138916083)
+3. 尝试在手机中安装手机模拟器来模拟root环境,最终失败
+4. 尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终失败，直接使用手机可以提高幸福指数
+    1. 参考：[解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题](https://blog.csdn.net/qq_65474192/article/details/138916083)，无用

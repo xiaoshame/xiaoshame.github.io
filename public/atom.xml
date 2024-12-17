@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2024-12-13T19:22:34&#43;08:00</updated>
+    <updated>2024-12-17T11:22:04&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -45,8 +45,7 @@
 &lt;/li&gt;
 &lt;li&gt;frida，hook工具
 &lt;ol&gt;
-&lt;li&gt;pip install frida -i &lt;a href=&#34;https://pypi.tuna.tsinghua.edu.cn/simple&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pypi.tuna.tsinghua.edu.cn/simple&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;pip install frida-tools -i &lt;a href=&#34;https://pypi.tuna.tsinghua.edu.cn/simple&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pypi.tuna.tsinghua.edu.cn/simple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;安装参考：&lt;a href=&#34;https://www.cnblogs.com/fuxuqiannian/p/17930851.html#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;frida安装正确流程&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;li&gt;root Android手机(尝试使用模拟器，hook so时报错)&lt;/li&gt;
@@ -91,46 +90,87 @@
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;frida --version    #我使用的版本16.5.9 
-adb shell
-su
-getprop ro.product.cpu.abi   #查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida --version    &lt;span class=&#34;c1&#34;&gt;#我使用的版本16.5.9 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;getprop ro.product.cpu.abi   &lt;span class=&#34;c1&#34;&gt;#查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;5&#34;&gt;
 &lt;li&gt;手机上启动frida_server服务&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;## 将frida-server-16.5.9-android-arm64放入手机磁盘
-adb push ./frida-server-16.5.9-android-arm64 /data/local/tmp
-## 启动frida-server-16.5.9-android-arm64服务
-adb shell
-su
-cd /data/local/tmp
-mv frida-server-16.5.9-android-arm64 frida-server
-chmod 777 frida-server
-./frida-server &amp;amp;   
-&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### 将frida-server-16.5.9-android-arm64放入手机磁盘&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb push ./frida-server-16.5.9-android-arm64 /data/local/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### 启动frida-server-16.5.9-android-arm64服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /data/local/tmp
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv frida-server-16.5.9-android-arm64 frida-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; frida-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./frida-server &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;使用frida脚本hook 函数，查看信息
 &lt;ol&gt;
 &lt;li&gt;附加成功后，手机上操作APP,触发hook函数执行，即可看到hook打印的信息&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. 查看应用进程ID，frida-ps -U
-2. 查看应用的包名和进程ID,frida-ps -Uai
-方法一: 
-frida -U -f 包名 -l blutter_frida.js
--f 启动APP,会导致已启动的APP重启，libapp.app 没有加载成功，会导致hook失败
-方法二：
-1. 启动APP
-2. frida -U -n 应用名 -l blutter_frida.js
-3. -N 可能会失败，原因未分析
-方法三：
-1. 启动APP
-2. frida -U -p 进程ID -l blutter_frida.js
-3. 我采用的此方法
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;打印hook函数信息&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#打印hook函数信息&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#contents:打印hook函数信息&#34; class=&#34;headings&#34;&gt;打印hook函数信息&lt;/a&gt;&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida-ps -U    &lt;span class=&#34;c1&#34;&gt;##查看应用进程ID，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida-ps -Uai   &lt;span class=&#34;c1&#34;&gt;##查看应用的包名和进程ID, &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### 方法一&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida -U -f 包名 -l blutter_frida.js   &lt;span class=&#34;c1&#34;&gt;##如果APP已启动,-f会导致APP重启，libapp.app 没有加载成功导致hook失败&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### 方法二&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida -U -n 应用名 -l blutter_frida.js &lt;span class=&#34;c1&#34;&gt;## 先启动APP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### 方法三：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;frida -U -p 进程ID -l blutter_frida.js  &lt;span class=&#34;c1&#34;&gt;## 采用的此方法成功&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;操作流程参考：&lt;a href=&#34;https://juejin.cn/post/7311254319323889699&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【flutter对抗】blutter使用+ACTF习题&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;打印hook函数信息&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#打印hook函数信息&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#contents:打印hook函数信息&#34; class=&#34;headings&#34;&gt;打印hook函数信息&lt;/a&gt;&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;blutter_frida.js中增加onLeave，调用dumpArgs函数用于打印函数返回信息&lt;/li&gt;
-&lt;li&gt;hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印&lt;/li&gt;
+&lt;li&gt;hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印
+&lt;ol&gt;
+&lt;li&gt;参考:&lt;a href=&#34;https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CTT2023 Hflag — 200 pts&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -238,14 +278,12 @@ frida -U -f 包名 -l blutter_frida.js
 &lt;ol&gt;
 &lt;li&gt;本次分析APP的目标是获取加密函数的KEY,相对简单，因而只使用frida 进行hook就可以达到目的，如果分析的内容较为复杂需要搭配ida调试功能&lt;/li&gt;
 &lt;li&gt;最初使用模拟器进行hook，始终无法获取到libapp.so的地址，原因是模拟器开辟了一片新空间存储arm的so文件&lt;/li&gt;
-&lt;li&gt;尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终以失败结束，直接使用手机可以提高幸福指数&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;参考文档&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#参考文档&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/inverse_analysis/flutter/1/#contents:参考文档&#34; class=&#34;headings&#34;&gt;参考文档&lt;/a&gt;&lt;/h3&gt;
+&lt;li&gt;尝试在手机中安装手机模拟器来模拟root环境,最终失败&lt;/li&gt;
+&lt;li&gt;尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终失败，直接使用手机可以提高幸福指数
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.cnblogs.com/fuxuqiannian/p/17930851.html#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;frida安装正确流程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://juejin.cn/post/7311254319323889699&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;【flutter对抗】blutter使用+ACTF习题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CTT2023 Hflag — 200 pts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/qq_65474192/article/details/138916083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考：&lt;a href=&#34;https://blog.csdn.net/qq_65474192/article/details/138916083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题&lt;/a&gt;，无用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </content>
             

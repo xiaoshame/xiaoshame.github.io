@@ -22,7 +22,7 @@
     
     
         
-            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.31e74245a16e4946289ee30428156c85264c2ac8d3f0378538ba485dc0e1b424.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/lunr-zh-cn@0.7.1/lunr.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js" defer></script><script src="/js/meme.min.ae50ea7e30eae3f0fe17ec390f60d720cb7ab33f6756faaac0604ef8690d2134.js"></script>
 
         
     
@@ -65,7 +65,7 @@
         "description": "利用blutter和frida分析Flutter APP获取加密key",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  1969 ,
+        "wordCount":  1997 ,
         "image": "https://xiaoshame.github.io/images/logo.png",
         "author": {
             "@type": "Person",
@@ -285,7 +285,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1969</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1997</span>
     
     
         
@@ -311,7 +311,6 @@
           </ol>
         </li>
         <li><a id="contents:总结" href="#总结">总结</a></li>
-        <li><a id="contents:参考文档" href="#参考文档">参考文档</a></li>
       </ol>
     </li>
   </ol>
@@ -332,8 +331,7 @@
 </li>
 <li>frida，hook工具
 <ol>
-<li>pip install frida -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
-<li>pip install frida-tools -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
+<li>安装参考：<a href="https://www.cnblogs.com/fuxuqiannian/p/17930851.html#" target="_blank" rel="noopener">frida安装正确流程</a></li>
 </ol>
 </li>
 <li>root Android手机(尝试使用模拟器，hook so时报错)</li>
@@ -378,46 +376,87 @@
 </ol>
 </li>
 </ol>
-<pre tabindex="0"><code>frida --version    #我使用的版本16.5.9 
-adb shell
-su
-getprop ro.product.cpu.abi   #查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，
-</code></pre><ol start="5">
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">frida --version    <span class="c1">#我使用的版本16.5.9 </span>
+</span></span><span class="line"><span class="cl">adb shell
+</span></span><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl">getprop ro.product.cpu.abi   <span class="c1">#查看手机架构，真机一般是arm64-v8a，模拟器一般是x86_64，</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><ol start="5">
 <li>手机上启动frida_server服务</li>
 </ol>
-<pre tabindex="0"><code>## 将frida-server-16.5.9-android-arm64放入手机磁盘
-adb push ./frida-server-16.5.9-android-arm64 /data/local/tmp
-## 启动frida-server-16.5.9-android-arm64服务
-adb shell
-su
-cd /data/local/tmp
-mv frida-server-16.5.9-android-arm64 frida-server
-chmod 777 frida-server
-./frida-server &amp;   
-</code></pre><ol start="6">
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">### 将frida-server-16.5.9-android-arm64放入手机磁盘</span>
+</span></span><span class="line"><span class="cl">adb push ./frida-server-16.5.9-android-arm64 /data/local/tmp
+</span></span><span class="line"><span class="cl"><span class="c1">### 启动frida-server-16.5.9-android-arm64服务</span>
+</span></span><span class="line"><span class="cl">adb shell
+</span></span><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /data/local/tmp
+</span></span><span class="line"><span class="cl">mv frida-server-16.5.9-android-arm64 frida-server
+</span></span><span class="line"><span class="cl">chmod <span class="m">777</span> frida-server
+</span></span><span class="line"><span class="cl">./frida-server <span class="p">&amp;</span>   
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><ol start="6">
 <li>使用frida脚本hook 函数，查看信息
 <ol>
 <li>附加成功后，手机上操作APP,触发hook函数执行，即可看到hook打印的信息</li>
 </ol>
 </li>
 </ol>
-<pre tabindex="0"><code>1. 查看应用进程ID，frida-ps -U
-2. 查看应用的包名和进程ID,frida-ps -Uai
-方法一: 
-frida -U -f 包名 -l blutter_frida.js
--f 启动APP,会导致已启动的APP重启，libapp.app 没有加载成功，会导致hook失败
-方法二：
-1. 启动APP
-2. frida -U -n 应用名 -l blutter_frida.js
-3. -N 可能会失败，原因未分析
-方法三：
-1. 启动APP
-2. frida -U -p 进程ID -l blutter_frida.js
-3. 我采用的此方法
-</code></pre><h4 id="打印hook函数信息"><a href="#打印hook函数信息" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:打印hook函数信息" class="headings">打印hook函数信息</a></h4>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">frida-ps -U    <span class="c1">##查看应用进程ID，</span>
+</span></span><span class="line"><span class="cl">frida-ps -Uai   <span class="c1">##查看应用的包名和进程ID, </span>
+</span></span><span class="line"><span class="cl"><span class="c1">### 方法一</span>
+</span></span><span class="line"><span class="cl">frida -U -f 包名 -l blutter_frida.js   <span class="c1">##如果APP已启动,-f会导致APP重启，libapp.app 没有加载成功导致hook失败</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### 方法二</span>
+</span></span><span class="line"><span class="cl">frida -U -n 应用名 -l blutter_frida.js <span class="c1">## 先启动APP</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### 方法三：</span>
+</span></span><span class="line"><span class="cl">frida -U -p 进程ID -l blutter_frida.js  <span class="c1">## 采用的此方法成功</span>
+</span></span></code></pre></td></tr></table></div>
+</div>
+</div><ol start="7">
+<li>操作流程参考：<a href="https://juejin.cn/post/7311254319323889699" target="_blank" rel="noopener">【flutter对抗】blutter使用+ACTF习题</a></li>
+</ol>
+<h4 id="打印hook函数信息"><a href="#打印hook函数信息" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:打印hook函数信息" class="headings">打印hook函数信息</a></h4>
 <ol>
 <li>blutter_frida.js中增加onLeave，调用dumpArgs函数用于打印函数返回信息</li>
-<li>hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印</li>
+<li>hook的函数如果有多个入参，可以在blutter_frida.js中onEnter添加代码进行打印
+<ol>
+<li>参考:<a href="https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f" target="_blank" rel="noopener">CTT2023 Hflag — 200 pts</a></li>
+</ol>
+</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
@@ -525,14 +564,12 @@ frida -U -f 包名 -l blutter_frida.js
 <ol>
 <li>本次分析APP的目标是获取加密函数的KEY,相对简单，因而只使用frida 进行hook就可以达到目的，如果分析的内容较为复杂需要搭配ida调试功能</li>
 <li>最初使用模拟器进行hook，始终无法获取到libapp.so的地址，原因是模拟器开辟了一片新空间存储arm的so文件</li>
-<li>尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终以失败结束，直接使用手机可以提高幸福指数</li>
-</ol>
-<h3 id="参考文档"><a href="#参考文档" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:参考文档" class="headings">参考文档</a></h3>
+<li>尝试在手机中安装手机模拟器来模拟root环境,最终失败</li>
+<li>尝试在x86_64 windows 电脑上运行arm架构的模拟器，最终失败，直接使用手机可以提高幸福指数
 <ol>
-<li><a href="https://www.cnblogs.com/fuxuqiannian/p/17930851.html#" target="_blank" rel="noopener">frida安装正确流程</a></li>
-<li><a href="https://juejin.cn/post/7311254319323889699" target="_blank" rel="noopener">【flutter对抗】blutter使用+ACTF习题</a></li>
-<li><a href="https://medium.com/@fnnnr/ctt2023-hflag-200-pts-4be08927769f" target="_blank" rel="noopener">CTT2023 Hflag — 200 pts</a></li>
-<li><a href="https://blog.csdn.net/qq_65474192/article/details/138916083" target="_blank" rel="noopener">解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题</a></li>
+<li>参考：<a href="https://blog.csdn.net/qq_65474192/article/details/138916083" target="_blank" rel="noopener">解决无法在x86模拟器上frida-hook掉arm的Native层方法的问题</a>，无用</li>
+</ol>
+</li>
 </ol>
 
             </div>
