@@ -4,7 +4,7 @@ date : "2025-01-23T14:55:24+08:00"
 lastmod : "2025-01-23T14:55:24+08:00" 
 tags : ["理财","总结"] 
 categories : ["生活"]
-draft : true
+draft : false
 featuredImage : /images/posts/financial/lessons_learned/featuredImage.jpg
 summary : '一个小白慢慢认识理财，慢慢提高财商'
 ---
