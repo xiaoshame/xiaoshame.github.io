@@ -60,6 +60,22 @@ services:
 volumes:
   freshrss-db:
 ```
+### 补充内容
+- FreshRSS 镜像和容器升级后，无法访问
+  - 报错内容提示为```Access to database is denied for `freshrss`: SQLSTATE[08006] [7] connection to server at "172.21.0.3", port 5432 failed: Connection refused ```, 怀疑是容器重启后，ip变更导致
+  - 查看容器ip,发现ip 变成了172.21.0.2
+
+```text
+# 进入容器 Shell
+docker exec -it <容器名称或ID> /bin/bash
+
+# 查看 IP 地址（容器内执行）
+apt-get update && apt-get install -y iputils-ping net-tools  # 如果容器无 ifconfig/ip 命令，先安装
+ifconfig
+```
+
+- 修改配置文件，位于docker-compose.yml 同目录data/config.php，调整pgsql的host为172.21.0.2
+- 重启freshrss 容器，问题解决
 
 ## Vercel RSSHub 部署
 1. 因为vercel nodejs 最高版本只能选择 20.x，导致无法使用RSSHub master分支部署，使用legacy 分支进行部署,操作流程见参考文档
