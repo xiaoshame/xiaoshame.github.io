@@ -1,7 +1,7 @@
 ---
 title : "自建FreshRSS和RSSHub服务"
 date : "2024-10-21T10:50:07+08:00" 
-lastmod : "2024-10-21T10:50:07+08:00" 
+lastmod : "2025-03-18T16:05:07+08:00" 
 tags : ["RSS","RSSHub","FreshRSS"] 
 categories : ["技术"]
 draft : false

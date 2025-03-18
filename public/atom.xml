@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2025-03-18T16:05:14&#43;08:00</updated>
+    <updated>2025-03-18T16:05:42&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -861,7 +861,7 @@
             <title type="text">自建FreshRSS和RSSHub服务</title>
             <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/rss/" />
             <id>https://xiaoshame.github.io/posts/rss/</id>
-            <updated>2024-10-21T10:50:07&#43;08:00</updated>
+            <updated>2025-03-18T16:05:07&#43;08:00</updated>
             <published>2024-10-21T10:50:07&#43;08:00</published>
             <author>
                     <name>阿松</name>
