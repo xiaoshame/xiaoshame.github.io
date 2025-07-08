@@ -6,7 +6,7 @@ tags : ["白嫖","RSS"]
 categories : ["技术"]
 draft : false
 featuredImage : /images/posts/claw_cloud/featuredImage.jpg
-summary : 'todo'
+summary : '互联网有很多免费的资源，合理利用可以省时省力省心'
 ---
 
 本文记录使用[claw cloud](https://us-east-1.run.claw.cloud/)免费资源，部署[wewe_rss](https://github.com/cooderl/wewe-rss)的操作流程。
