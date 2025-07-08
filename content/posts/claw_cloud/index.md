@@ -1,11 +1,11 @@
 ---
-title : "claw_cloud" 
+title : "使用claw cloud免费部署wewe rss" 
 date : "2025-07-08T17:08:56+08:00" 
 lastmod : "2025-07-08T17:08:56+08:00" 
 tags : ["白嫖","RSS"] 
 categories : ["技术"]
-draft : true
-featuredImage :
+draft : false
+featuredImage : /images/posts/claw_cloud/featuredImage.jpg
 summary : 'todo'
 ---
 
@@ -33,5 +33,9 @@ docker run -d \
     2. 环境变量DATABASE_TYPE=sqlite和AUTH_CODE=123567
     3. 挂载目录/data
     4. 端口
-4. 在claw cloud中点击App Launchpad -> Create App，然后按照下图将第三点中信息填入响应位置
-![tree](/images/posts/claw_cloud/1.png) 
+4. 在claw cloud中点击App Launchpad -> Create App，然后按照下图将第三点中信息填入相应位置，点击部署即可。
+    1. ![部署](/images/posts/claw_cloud/1.png) 
+5. cpu和内存根据需要进行调节，左边有一天预估费用，保证月费用不超5美元，即可长时间使用
+
+### 总结
+互联网上有很多免费的资源，利用好可以极大方便个人日常使用。推荐几个我使用的服务，vercel/cloudflare/nic.ua/aws.amazon.com。

@@ -23,10 +23,105 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 08 Jul 2025 17:38:36 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 08 Jul 2025 17:46:51 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
+        
+            <item>
+                <title>使用claw cloud免费部署wewe rss</title>
+                <link>https://xiaoshame.github.io/posts/claw_cloud/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/claw_cloud/</guid>
+                <pubDate>Tue, 08 Jul 2025 17:08:56 &#43;0800</pubDate>
+                
+                    <author>xiaoshame1209@gmail.com (阿松)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                <description>&lt;p&gt;本文记录使用&lt;a href=&#34;https://us-east-1.run.claw.cloud/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;claw cloud&lt;/a&gt;免费资源，部署&lt;a href=&#34;https://github.com/cooderl/wewe-rss&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wewe_rss&lt;/a&gt;的操作流程。&lt;/p&gt;
+&lt;h3 id=&#34;优势&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#优势&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#contents:优势&#34; class=&#34;headings&#34;&gt;优势&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;claw cloud使用github账号(注册超过 180 天)登录，免费送5美元/月额度&lt;/li&gt;
+&lt;li&gt;可以使用&lt;a href=&#34;https://hub.docker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dockerhub&lt;/a&gt;中镜像进行部署&lt;/li&gt;
+&lt;li&gt;基于本文操作流程可以部署支持镜像部署的服务，例如：freshrss,qinglong等&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;操作步骤&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#操作步骤&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#contents:操作步骤&#34; class=&#34;headings&#34;&gt;操作步骤&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;使用github账号登录，如果无法登录可以切换选择其他区域&lt;/li&gt;
+&lt;li&gt;在dockerhub中寻找想部署服务的镜像,查看对应服务的启动脚本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-plaintext&#34; data-lang=&#34;plaintext&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  --name wewe-rss \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -p 4000:4000 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e DATABASE_TYPE=sqlite \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -e AUTH_CODE=123567 \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  -v $(pwd)/data:/app/data \
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cooderl/wewe-rss-sqlite:latest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;从上述脚本可以获取三个信息
+&lt;ol&gt;
+&lt;li&gt;镜像名，cooderl/wewe-rss-sqlite&lt;/li&gt;
+&lt;li&gt;环境变量DATABASE_TYPE=sqlite和AUTH_CODE=123567&lt;/li&gt;
+&lt;li&gt;挂载目录/data&lt;/li&gt;
+&lt;li&gt;端口&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;在claw cloud中点击App Launchpad -&amp;gt; Create App，然后按照下图将第三点中信息填入相应位置，点击部署即可。
+&lt;ol&gt;
+&lt;li&gt;&lt;img src=&#34;https://xiaoshame.github.io/images/posts/claw_cloud/1.png&#34; alt=&#34;部署&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;cpu和内存根据需要进行调节，左边有一天预估费用，保证月费用不超5美元，即可长时间使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#总结&#34; class=&#34;anchor-link&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34; class=&#34;icon anchor-icon&#34;&gt;&lt;path d=&#34;M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z&#34;/&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&#34;https://xiaoshame.github.io/posts/claw_cloud/#contents:总结&#34; class=&#34;headings&#34;&gt;总结&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;互联网上有很多免费的资源，利用好可以极大方便个人日常使用。推荐几个我使用的服务，vercel/cloudflare/nic.ua/aws.amazon.com。&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/%E7%99%BD%E5%AB%96/">白嫖</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/rss/">RSS</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>2024年总结</title>
