@@ -63,11 +63,17 @@ other = "Найдено {{ .Count }} результатов для “{{ .Term }
 [searchResultsNone]
 other = "Ничего не найдено для “{{ .Term }}”"
 
+[backToTop]
+other = "Вернуться наверх"
+
+[themeSwitcher]
+other = "Переключить тему"
+
 
 # Socials
 
-[twitter]
-other = "Twitter"
+[x]
+other = "𝕏"
 
 [facebook]
 other = "Facebook"

@@ -63,11 +63,17 @@ other = "Ditemukan {{ .Count }} hasil dari “{{ .Term }}”"
 [searchResultsNone]
 other = "Tidak ditemukan hasil dari “{{ .Term }}”"
 
+[backToTop]
+other = "Kembali ke atas"
+
+[themeSwitcher]
+other = "Ganti tema"
+
 
 # Socials
 
-[twitter]
-other = "Twitter"
+[x]
+other = "𝕏"
 
 [facebook]
 other = "Facebook"

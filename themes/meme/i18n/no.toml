@@ -63,11 +63,17 @@ other = "Fant {{ .Count }} resultater for “{{ .Term }}”"
 [searchResultsNone]
 other = "Ingen er funnet for “{{ .Term }}”"
 
+[backToTop]
+other = "Tilbake til toppen"
+
+[themeSwitcher]
+other = "Bytt tema"
+
 
 # Socials
 
-[twitter]
-other = "Twitter"
+[x]
+other = "𝕏"
 
 [facebook]
 other = "Facebook"

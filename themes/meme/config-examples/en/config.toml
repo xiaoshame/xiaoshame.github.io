@@ -359,7 +359,7 @@ uglyURLs = false
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "reuixiy"
+    siteTwitter = "yixiuer"
     # Note: used for Twitter Cards
 
 
@@ -521,6 +521,10 @@ uglyURLs = false
     #       custom Atom & RSS template of
     #       MemE.
 
+    # Custom Footer (Supports Template and Markdown syntax)
+    feedFooter = """> Read original: <{{ .Permalink }}>  
+> Notice: This blog now offers email subscriptions—feel free to [subscribe via Substack](https://username.substack.com) to support my work!"""
+
 
     ######################################
     # Dark Mode
@@ -554,24 +558,29 @@ uglyURLs = false
 
     # Note: go to https://realfavicongenerator.net/
     #       to generate related icons and
-    #       files, unzip after downloading,
-    #       and keep only android-chrome-512x512.png,
-    #       apple-touch-icon.png, mstile-150x150.png,
-    #       safari-pinned-tab.svg, favicon.ico,
-    #       site.webmanifest these files,
-    #       delete the rest. Then move
-    #       these files to the ~/blog/static/icons/
-    #       directory, move favicon.ico,
-    #       site.webmanifest to the ~/blog/static/
-    #       directory, and finally rename
-    #       site.webmanifest to manifest.json,
-    #       and check and modify related
-    #       content (the path of the icons).
+    #       files, unzip after downloading.
+    #       Then move these files to the
+    #       ~/blog/static/icons/ directory,
+    #       move favicon.ico, site.webmanifest
+    #       to the ~/blog/static/ directory,
+    #       and finally rename site.webmanifest
+    #       to manifest.json, and check
+    #       and modify related content
+    #       (the path of the icons).
+
+    # ATTENTION: To check your favicon, plese
+    #            go to https://realfavicongenerator.net/favicon-checker.
+    #            If any problems are detected,
+    #            check the filename differences
+    #            between the generated files
+    #            and the related files in the
+    #            ~/blog/themes/meme/static/ directory.
+    #            If there are any differences,
+    #            it means some files may be outdated.
+    #            Please create an issue if necessary.
 
     themeColor = "#fff"
     themeColorDark = "#16171d"
-    safariMaskColor = "#2a6df4"
-    msApplicationTileColor = "#fff"
 
 
     ######################################
@@ -1147,8 +1156,8 @@ uglyURLs = false
     ######################################
     ## Emphasis Point (Chinese)
 
-    # Note: new Markdown syntax created by MemE
-    #       `..文本..`
+    # Note: syntax defined by MemE `..文本..`
+    #       https://www.w3.org/International/clreq/#id84
 
     enableEmphasisPoint = false
 
@@ -1225,7 +1234,7 @@ uglyURLs = false
 
     displayShareOnText = false
 
-    postShareItems = ["facebook", "mastodon", "fediverse", "twitter", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
+    postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
 
     # Fetch fediverse instances list for
     # input suggestions
@@ -1522,6 +1531,6 @@ uglyURLs = false
         # Personal website, default: baseURL
         website = "https://io-oi.me/"
         # Twitter
-        twitter = "reuixiy"
+        twitter = "yixiuer"
         # Fediverse
-        fediverse = "@reuixiy@bird.makeup"
+        fediverse = "@yixiuer@mastodon.social"

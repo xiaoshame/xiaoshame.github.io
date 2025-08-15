@@ -1,61 +1,156 @@
-// Reactive Dark Mode
-// https://web.dev/prefers-color-scheme/#reacting-on-dark-mode-changes
-// https://twitter.com/ChromeDevTools/status/1197175265643745282
+// Reactive Dark Mode with Three-Mode Support (Light → Dark → System)
+// https://web.dev/prefers-color-scheme/#reacting-on-dark-mode-changes (old reference)
+// https://twitter.com/ChromeDevTools/status/1197175265643745282 (old reference)
 
-const userPrefers = localStorage.getItem('theme');
-if (userPrefers === 'dark') {
-    changeModeMeta('dark');
-} else if (userPrefers === 'light') {
-    changeModeMeta('light');
+// Check if system preferences should be overridden
+const enableDarkMode = {{ if .Site.Params.enableDarkMode }}true{{ else }}false{{ end }};
+const overrideSystemPreferences = {{ if .Site.Params.overrideSystemPreferences }}true{{ else }}false{{ end }};
+const defaultTheme = '{{ .Site.Params.defaultTheme | default "light" }}';
+
+// Helper function to check if system preferences should be overridden
+function shouldOverrideSystemPreferences() {
+    return enableDarkMode && overrideSystemPreferences;
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    changeMode();
+// Helper function to check if theme switching is allowed
+function isThemeSwitchingAllowed() {
+    return !shouldOverrideSystemPreferences();
+}
+
+// Initialize theme based on user preference or site configuration
+let userPreference;
+if (shouldOverrideSystemPreferences()) {
+    // When overrideSystemPreferences is enabled, use defaultTheme and ignore localStorage and system preferences
+    userPreference = defaultTheme;
+} else {
+    userPreference = localStorage.getItem('theme') || 'system';
+}
+applyThemeFromPreference(userPreference);
+
+// Listen for system preference changes
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+mediaQuery.addEventListener('change', () => {
+    // Only apply system changes if user preference is 'system' and overrideSystemPreferences is not enabled
+    if (getUserPreference() === 'system' && isThemeSwitchingAllowed()) {
+        applyThemeFromPreference('system');
+        changeMode();
+    }
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     // Update meta tags and code highlighting
     changeMode();
+    
+    // Set initial icon based on user preference
+    updateThemeIcons(getUserPreference());
 
-    // Theme Switcher
-    // https://derekkedziora.com/blog/dark-mode
-
+    // Theme Switcher with three-mode support (new implementation)
+    // https://derekkedziora.com/blog/dark-mode (old reference)
     const themeSwitcher = document.getElementById('theme-switcher');
 
     if (themeSwitcher) {
         themeSwitcher.addEventListener('click', (e) => {
             e.preventDefault();
-            if (getCurrentTheme() == "dark") {
-                changeModeMeta('light');
-            } else {
-                changeModeMeta('dark');
+            // Don't allow theme cycling if overrideSystemPreferences is enabled
+            if (isThemeSwitchingAllowed()) {
+                cycleTheme();
+                changeMode();
             }
-            changeMode();
-            storePrefers();
         });
     }
 }, {once: true});
 
 // Sync Across Tabs
-// https://codepen.io/tevko/pen/GgWYpg
-
+// https://codepen.io/tevko/pen/GgWYpg (old reference)
 window.addEventListener('storage', function (event) {
     if (event.key !== 'theme') {
-      return;
+        return;
     }
-
-    if (event.newValue === 'dark') {
-        changeModeMeta('dark');
-    } else {
-        changeModeMeta('light');
+    
+    // Don't sync if overrideSystemPreferences is enabled
+    if (isThemeSwitchingAllowed()) {
+        applyThemeFromPreference(event.newValue || 'system');
+        changeMode();
     }
-    changeMode();
 });
 
 // Functions
 
+function getUserPreference() {
+    if (shouldOverrideSystemPreferences()) {
+        return defaultTheme;
+    }
+    return localStorage.getItem('theme') || 'system';
+}
+
+function getSystemPreference() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
 function getCurrentTheme() {
-    return JSON.parse(window.getComputedStyle(document.documentElement, null).getPropertyValue("--theme-name"));
+    return document.documentElement.getAttribute('data-theme') || getSystemPreference();
+}
+
+function applyThemeFromPreference(preference) {
+    let actualTheme;
+    
+    if (shouldOverrideSystemPreferences()) {
+        // When overrideSystemPreferences is enabled, always use defaultTheme
+        actualTheme = defaultTheme;
+    } else if (preference === 'system') {
+        actualTheme = getSystemPreference();
+    } else {
+        actualTheme = preference;
+    }
+    
+    changeModeMeta(actualTheme);
+    updateThemeIcons(preference);
+}
+
+function cycleTheme() {
+    // Don't allow cycling if overrideSystemPreferences is enabled
+    if (!isThemeSwitchingAllowed()) {
+        return;
+    }
+    
+    const currentPreference = getUserPreference();
+    let newPreference;
+    
+    // Cycle: light → dark → system → light...
+    switch (currentPreference) {
+        case 'light':
+            newPreference = 'dark';
+            break;
+        case 'dark':
+            newPreference = 'system';
+            break;
+        case 'system':
+        default:
+            newPreference = 'light';
+            break;
+    }
+    
+    localStorage.setItem('theme', newPreference);
+    applyThemeFromPreference(newPreference);
+}
+
+function updateThemeIcons(preference) {
+    // Hide all icons first
+    const icons = document.querySelectorAll('.theme-icon-light, .theme-icon-dark, .theme-icon-system');
+    icons.forEach(icon => icon.style.display = 'none');
+    
+    // Show the appropriate icon based on user preference (not actual theme)
+    let iconClass;
+    if (shouldOverrideSystemPreferences()) {
+        iconClass = `.theme-icon-${defaultTheme}`;
+    } else {
+        iconClass = `.theme-icon-${preference}`;
+    }
+    
+    const iconToShow = document.querySelector(iconClass);
+    if (iconToShow) {
+        iconToShow.style.display = 'inline-block';
+    }
 }
 
 function changeModeMeta(theme) {
@@ -138,8 +233,4 @@ function changeMode() {
             mermaid.init();
         }
     }
-}
-
-function storePrefers() {
-    window.localStorage.setItem('theme', getCurrentTheme());
 }

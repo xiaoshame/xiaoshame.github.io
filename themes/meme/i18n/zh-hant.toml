@@ -65,11 +65,17 @@ other = "找到 {{ .Count }} 條關於「{{ .Term }}」的結果"
 [searchResultsNone]
 other = "沒有找到關於「{{ .Term }}」的結果"
 
+[backToTop]
+other = "回到頂部"
+
+[themeSwitcher]
+other = "切換主題"
+
 
 # Socials
 
-[twitter]
-other = "「Twitter」"
+[x]
+other = "「𝕏」"
 
 [facebook]
 other = "「Facebook」"

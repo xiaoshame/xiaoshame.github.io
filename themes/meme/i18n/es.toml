@@ -63,11 +63,17 @@ other = "Se encontraron {{ .Count }} resultados sobre “{{ .Term }}”"
 [searchResultsNone]
 other = "No se encontró ningún resultado sobre “{{ .Term }}”"
 
+[backToTop]
+other = "Volver arriba"
+
+[themeSwitcher]
+other = "Cambiar tema"
+
 
 # Socials
 
-[twitter]
-other = "Twitter"
+[x]
+other = "𝕏"
 
 [facebook]
 other = "Facebook"

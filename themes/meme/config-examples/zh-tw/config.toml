@@ -344,7 +344,7 @@ uglyURLs = false
     # 注意：請保持此格式，更改數字
 
     # 站點的推特帳號
-    siteTwitter = "reuixiy"
+    siteTwitter = "yixiuer"
     # 說明：用於 Twitter Cards
 
 
@@ -478,6 +478,10 @@ uglyURLs = false
     #      有一個比手動指定更高的優先順序——
     #      Front Matter 中的 `description`。
 
+    # 客製頁尾（支援 Template 與 Markdown 語法）
+    feedFooter = """> 閱讀原文：<{{ .Permalink }}>  
+> 網誌公告：網誌現已開通郵件訂閱，歡迎[透過 Substack 訂閱](https://username.substack.com)支援我的創作！"""
+
 
     ######################################
     # 深色模式
@@ -508,12 +512,7 @@ uglyURLs = false
     # 網頁應用
 
     # 說明：前往 https://realfavicongenerator.net/
-    #      生成相關圖示和檔案，下載後解壓，僅保留
-    #      android-chrome-512x512.png、
-    #      apple-touch-icon.png、
-    #      mstile-150x150.png、
-    #      safari-pinned-tab.svg、favicon.ico、
-    #      site.webmanifest 這些檔案，刪除其餘。
+    #      生成相關圖示和檔案，下載後解壓。
     #      然後將這些檔案移動到 ~/blog/static/icons/
     #      目錄下，再將 favicon.ico、site.webmanifest
     #      移動到 ~/blog/static/ 目錄下，
@@ -521,10 +520,16 @@ uglyURLs = false
     #      manifest.json，並檢查和修改相關內容
     #      （圖示的路徑）。
 
+    # 注意：要檢查你的圖標
+    #      請前往 https://realfavicongenerator.net/favicon-checker。
+    #      如果偵測到任何問題，檢查生成的檔案和
+    #      ~/blog/themes/meme/static/ 目錄下
+    #      相關檔案的檔案名稱差異。如果有差異，
+    #      這意味著某些文件可能已經過時。
+    #      如有需要，請提 Issue。
+
     themeColor = "#fff"
     themeColorDark = "#16171d"
-    safariMaskColor = "#2a6df4"
-    msApplicationTileColor = "#fff"
 
 
     ######################################
@@ -1083,8 +1088,8 @@ uglyURLs = false
     ######################################
     ## 著重號
 
-    # 說明：MemE 主題自創的新 Markdown 語法
-    #      `..文字..`
+    # 說明：MemE 主題定義的語法 `..文字..`
+    #      https://www.w3.org/International/clreq/#id84
 
     # 是否開啟
     enableEmphasisPoint = true
@@ -1180,7 +1185,7 @@ uglyURLs = false
 
     displayShareOnText = false
 
-    postShareItems = ["facebook", "mastodon", "fediverse", "twitter", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
+    postShareItems = ["facebook", "mastodon", "fediverse", "x", "linkedin", "telegram", "weibo", "douban", "qq", "qzone", "pocket", "hackernews", "qrcode", "email"]
 
     # 從網路取得 Fediverse 實例清單用於輸入建議
     fetchFediverseInstances = false
@@ -1487,6 +1492,6 @@ uglyURLs = false
         # 網站（預設值：baseURL）
         website = "https://io-oi.me/"
         # 推特
-        twitter = "reuixiy"
+        twitter = "yixiuer"
         # Fediverse
-        fediverse = "@reuixiy@bird.makeup"
+        fediverse = "@yixiuer@mastodon.social"

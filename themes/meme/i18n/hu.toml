@@ -63,11 +63,17 @@ other = "A “{{ .Term }}” kifejezésre {{ .Count }} eredményt találtam"
 [searchResultsNone]
 other = "A “{{ .Term }}” kifejezésre nincs találat"
 
+[backToTop]
+other = "Vissza a tetejére"
+
+[themeSwitcher]
+other = "Téma váltása"
+
 
 # Socials
 
-[twitter]
-other = "Twitter"
+[x]
+other = "𝕏"
 
 [facebook]
 other = "Facebook"
