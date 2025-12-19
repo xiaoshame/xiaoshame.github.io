@@ -4,7 +4,7 @@ date : "2025-12-19T13:54:10+08:00"
 lastmod : "2025-12-19T13:54:10+08:00" 
 tags : ["信息差","理财"] 
 categories : ["财商"]
-draft : true
+draft : false
 featuredImage : /images/posts/financial/information_gap/featuredImage.jpg
 summary : '整理日常看的理财信息源和通过信息差套利方法'
 ---
