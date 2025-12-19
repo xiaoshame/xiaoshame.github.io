@@ -3,7 +3,7 @@ title : "小白理财之路"
 date : "2025-01-23T16:15:24+08:00" 
 lastmod : "2025-01-23T16:15:24+08:00" 
 tags : ["理财","总结"] 
-categories : ["生活"]
+categories : ["财商"]
 draft : false
 featuredImage : /images/posts/financial/lessons_learned/featuredImage.jpg
 summary : '一个小白慢慢认识理财，慢慢提高财商'
