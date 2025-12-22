@@ -30,7 +30,7 @@ version: "3"
 
 services:
   freshrss-db:
-    image: postgres:latest
+    image: postgres:17.4
     container_name: freshrss-db
     hostname: freshrss-db
     restart: unless-stopped
