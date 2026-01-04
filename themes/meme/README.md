@@ -51,10 +51,10 @@ For users of other systems, see: https://gohugo.io/getting-started/installing/
 
 ### Blogging
 
-1. Replace `config.toml` with [config examples](https://github.com/reuixiy/hugo-theme-meme/blob/master/config-examples/en/config.toml).
+1. Replace `hugo.toml` with [config examples](https://github.com/reuixiy/hugo-theme-meme/blob/master/config-examples/en/config.toml).
 
    ```sh
-   ~/blog $ rm config.toml && cp themes/meme/config-examples/en/config.toml config.toml
+   ~/blog $ rm hugo.toml && cp themes/meme/config-examples/en/config.toml config.toml
    ```
 
 2. Create a new post and the about page:
@@ -82,6 +82,8 @@ Actually, you can override any template of theme in Hugo, see this _unofficial m
 
 ```sh
 ~/blog $ git submodule update --rebase --remote
+# or
+~/blog $ cd themes/meme && git pull
 ```
 
 If failed, try:
@@ -178,3 +180,13 @@ See [#2](https://github.com/reuixiy/hugo-theme-meme/issues/2).
   \*: see https://gohugo.io/content-management/front-matter/
       and https://gohugo.io/templates/internal/#configure-disqus
 </details>
+
+## Sponsorship
+
+We are grateful to the following sponsors for their support:
+
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/reuixiy?style=social)](https://github.com/sponsors/reuixiy)
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com?aff=QuirkyKoala717 "Powered by DartNode - Free VPS for Open Source")
+
+*: _Some of these links are affiliate links, which means that if you click on one of the product links, I’ll receive a small commission. This helps support me to spend more time developing MemE. Thank you for the support!_
