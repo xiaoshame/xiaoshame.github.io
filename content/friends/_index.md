@@ -7,15 +7,7 @@ comments = true
 
 {{< friend-css >}}
 
-{{< friend name="HAKULA†CHANNEL" url="https://hakula.xyz/"  desc="Hakula 的个人站" logo="https://hakula.xyz/images/hotlink-ok/avatar-lite.webp" >}}
-
-{{< friend name="秋夜 の ブログ" url="https://qiuyedx.com/"  desc="热爱你的热爱" logo="https://qiuyedx.com/wp-content/uploads/2022/07/leaf_2.png" >}}
-
 {{< friend name="程序员的喵" url="https://catcoding.me/"  desc="coding and writing, don't panic" logo="https://catcoding.me/css/images/logo.png" >}}
-
-{{< friend name="荷戟独彷徨" url="https://guanqr.com/"  desc="爱光学，爱生活，爱创造" logo="https://cdn.jsdelivr.net/gh/guanqr/blog/static/icons/android-chrome-512x512.png" >}}
-
-{{< friend name="Memory" url="https://blog.yandaojiang.com/" desc="yandaojiang" logo="https://ydj-image-1258588170.cos.ap-chengdu.myqcloud.com/memos_img/2306/header.webp" >}}
 
 {{< friend name="Jack's Space" url="https://veryjack.com/" desc="一切都是最好的安排" logo="https://pix.veryjack.com/i/2023/04/04/fsxnkv.webp" >}}
 
