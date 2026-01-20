@@ -38,4 +38,5 @@ docker run -d \
 5. cpu和内存根据需要进行调节，左边有一天预估费用，保证月费用不超5美元，即可长时间使用
 
 ### 总结
-互联网上有很多免费的资源，利用好可以极大方便个人日常使用。推荐几个我使用的服务，vercel/cloudflare/nic.ua/aws.amazon.com。
+1. wewe-rss登录微信账号频繁掉线导致获取公众号不稳定，可换成[we-mp-rss](https://github.com/rachelos/we-mp-rss) 不足之处是4天就要扫码授权维持登录状态
+2. 互联网上有很多免费的资源，利用好可以极大方便个人日常使用。推荐几个我使用的服务，vercel/cloudflare/nic.ua/aws.amazon.com
