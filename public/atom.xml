@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2026-05-09T18:03:43&#43;08:00</updated>
+    <updated>2026-05-09T18:08:53&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -36,8 +36,8 @@
             
                 <content type="html">
                     
-&lt;p&gt;平时小朋友使用ipad看动画片，家里的电视处于闲置状态，为了保护小朋友的眼睛，就想着把电视用起来。
-电视上的APP看个啥都要会员，成本太高。家里也没有nas，也不想折腾，最后通过夸克网盘实现了观看自由。&lt;/p&gt;
+&lt;p&gt;平时小朋友使用ipad看动画片，家里的电视处于闲置状态，为了保护小朋友的眼睛，就想着把电视用起来。&lt;/p&gt;
+&lt;p&gt;电视上的APP看个啥都要会员，成本太高。家里也没有nas，也不想折腾，最后通过夸克网盘实现了观看自由。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;手机和电视上都安装一个夸克网盘APP。&lt;/li&gt;
 &lt;li&gt;咸鱼10块钱收一个88VIP夸克网盘会员年卡绑定到自己手机上，使用对应手机号在手机和电视上登录。如果自己开通了88VIP，就可直接手机号登录。&lt;/li&gt;

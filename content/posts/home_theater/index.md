@@ -9,6 +9,7 @@ featuredImage : /images/posts/home_theater/featuredImage.jpg
 summary : '10块钱的夸克网盘会员真香'
 ---
 平时小朋友使用ipad看动画片，家里的电视处于闲置状态，为了保护小朋友的眼睛，就想着把电视用起来。
+
 电视上的APP看个啥都要会员，成本太高。家里也没有nas，也不想折腾，最后通过夸克网盘实现了观看自由。
 
 1. 手机和电视上都安装一个夸克网盘APP。
