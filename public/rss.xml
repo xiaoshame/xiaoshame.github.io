@@ -23,10 +23,67 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 20 Jan 2026 10:40:57 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 09 May 2026 18:02:48 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://xiaoshame.github.io/rss.xml" />
         
+        
+            <item>
+                <title>
+10块钱使用夸克网盘搭建家庭影院</title>
+                <link>https://xiaoshame.github.io/posts/home_theater/</link>
+                <guid isPermaLink="true">https://xiaoshame.github.io/posts/home_theater/</guid>
+                <pubDate>Sat, 09 May 2026 17:24:13 &#43;0800</pubDate>
+                
+                    <author>xiaoshame1209@gmail.com (阿松)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                
+                <description>
+                        
+&lt;p&gt;平时小朋友使用ipad看动画片，家里的电视处于闲置状态，为了保护小朋友的眼睛，就想着把电视用起来。
+电视上的APP看个啥都要会员，成本太高。家里也没有nas，也不想折腾，最后通过夸克网盘实现了观看自由。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;手机和电视上都安装一个夸克网盘APP。&lt;/li&gt;
+&lt;li&gt;咸鱼10块钱收一个88VIP夸克网盘会员年卡绑定到自己手机上，使用对应手机号在手机和电视上登录。如果自己开通了88VIP，就可直接手机号登录。&lt;/li&gt;
+&lt;li&gt;开源项目&lt;a href=&#34;https://github.com/fish2018/pansou&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pansou&lt;/a&gt;可以搜索夸克的内容，手机浏览器打开&lt;a href=&#34;https://so.252035.xyz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;盘搜网页&lt;/a&gt;搜索资源，跳转夸克APP保存。&lt;/li&gt;
+&lt;li&gt;电视上打开夸克APP，然后在文件中可以找到刚保存的资源，进行在线观看&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果习惯使用115/阿里/百度/天翼等其他网盘，都可用这套方案进行替换。&lt;/p&gt;
+&lt;p&gt;小朋友突然想看什么，电话和我说，在手机上操作，几分钟后就可以看，非常的便捷。&lt;/p&gt;
+
+                        
+
+                    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://xiaoshame.github.io/tags/%E5%BD%B1%E8%A7%86/">影视</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>
