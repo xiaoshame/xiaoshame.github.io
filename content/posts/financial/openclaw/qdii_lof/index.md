@@ -18,7 +18,6 @@ summary : '小龙虾和大模型技术平权的工具，核心是我们的思维
 2. openclaw最新版本集成了qq机器人，在[qq开放平台](https://q.qq.com/#/)创建机器人，获取AppID:AppSecret，在openclaw初始化配置时，机器人选择qq，按照提示输入AppID和AppSecret，最后扫码绑定即可
 
 配置大模型
-
 1. 注册大模型厂商账号，国内推荐的模型有阿里云qwen3.6-plus和智普 glm-5.1，注意大模型厂商都提供Coding Plan,使用这个费用更低。
 2. [阿里云](https://help.aliyun.com/zh/model-studio/coding-plan?spm=5176.44390736.0.0.23f033a6140SBM)
 3. [智普](https://open.bigmodel.cn/glm-coding)
