@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2026-05-18T16:41:15&#43;08:00</updated>
+    <updated>2026-05-18T16:43:10&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -57,11 +57,10 @@
 &lt;/ol&gt;
 &lt;p&gt;使用案例&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;微信机器人中和小龙虾对话，创建定时任务，工作日15点30获取中国船舶当日股票涨跌、近5日资金流向、分红、公告、财报等信息。经过几轮对话既可以获得如下报告
-以下是今天（2026-05-18）最新生成的中国船舶监控报告：&lt;/li&gt;
+&lt;li&gt;微信机器人中和小龙虾对话，创建定时任务，工作日15点30获取中国船舶当日股票涨跌、近5日资金流向、分红、公告、财报等信息。经过几轮对话后可以获得如下报告。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;============================================
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;以下是今天（2026-05-18）最新生成的中国船舶监控报告
+============================================
 🌲 中国船舶（600150）监控报告
 📅 2026-05-18 15:35
 ============================================
@@ -241,7 +240,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;&lt;/div&gt;
-&lt;p&gt;大模型是小龙虾的核心，大模型是大脑，小龙虾是躯干和四肢。有想法后，借助小龙虾和大模型可以跃过技术的鸿沟，构建自己的自动化工具，现在真是一个美妙的时代。&lt;/p&gt;
+&lt;p&gt;大模型是小龙虾的核心，大模型是大脑，小龙虾是躯干和四肢。有想法后，借助小龙虾和大模型可以跃过技术的鸿沟，构建自己的自动化工具。&lt;/p&gt;
 
                     
 
