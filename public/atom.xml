@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2026-05-09T18:18:37&#43;08:00</updated>
+    <updated>2026-05-18T16:26:24&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -16,6 +16,277 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.148.2">Hugo</generator>
+        <entry>
+            <title type="text">
+小龙虾监听财经消息</title>
+            <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/posts/financial/openclaw/qdii_lof/" />
+            <id>https://xiaoshame.github.io/posts/financial/openclaw/qdii_lof/</id>
+            <updated>2026-05-18T11:54:39&#43;08:00</updated>
+            <published>2026-05-18T11:54:39&#43;08:00</published>
+            <author>
+                    <name>阿松</name>
+                    <uri>https://xiaoshame.github.io/</uri>
+                    <email>xiaoshame1209@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">
+                小龙虾和大模型技术平权的工具，核心是我们的思维
+                
+
+            </summary>
+            
+                <content type="html">
+                    
+&lt;p&gt;每天登陆网页查看不同的财经信息，很繁琐、不够便捷也不够隐蔽。前段时间小龙虾很火，导致微信和qq都推出了适配小龙虾的机器人。同时小龙虾接入大模型后，具备了通过对话实现自动化监控的能力。通过小龙虾获取特定网页信息，然后在微信或者qq看的数据的方案也就具备了可行性。&lt;/p&gt;
+&lt;p&gt;我安装了2个小龙虾，一个使用家里旧电脑安装，&lt;a href=&#34;https://www.cnblogs.com/chenxiaomeng/p/19712272&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;windows安装参考文档&lt;/a&gt;。一个在阿里云花了99买的一年服务器安装，&lt;a href=&#34;https://developer.aliyun.com/article/1717942&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linux安装参考文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;绑定机器人&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/2019677743126704371&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;微信机器人安装参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openclaw最新版本集成了qq机器人，在&lt;a href=&#34;https://q.qq.com/#/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;qq开放平台&lt;/a&gt;创建机器人，获取AppID:AppSecret，在openclaw初始化配置时，机器人选择qq，按照提示输入AppID和AppSecret，最后扫码绑定即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注册大模型厂商账号，国内推荐的模型有阿里云qwen3.6-plus和智普 glm-5.1，注意大模型厂商都提供Coding Plan,使用这个费用更低。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://help.aliyun.com/zh/model-studio/coding-plan?spm=5176.44390736.0.0.23f033a6140SBM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;阿里云&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://open.bigmodel.cn/glm-coding&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;智普&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;获取到云厂商调用地址和key后，修改openclaw配置，&lt;a href=&#34;https://help.aliyun.com/zh/model-studio/openclaw?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.17.73482f3dWr51ZA&amp;amp;scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@3020785._.ID_help@@%E6%96%87%E6%A1%A3@@3020785-RL_codingplanopenclaw-LOC_2024SPAllResult-OR_ser-PAR1_0a06dc3717790920054144100e91a6-V_4-PAR3_o-RE_new5-P0_0-P1_0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;参考文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用案例&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;微信机器人中和小龙虾对话，创建定时任务，工作日15点30获取中国船舶当日股票涨跌、近5日资金流向、分红、公告、财报等信息。经过几轮对话既可以获得如下报告
+以下是今天（2026-05-18）最新生成的中国船舶监控报告：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;============================================
+🌲 中国船舶（600150）监控报告
+📅 2026-05-18 15:35
+============================================
+========================================
+📊 中国船舶（600150）收盘复盘
+========================================
+
+📉 收盘价：38.17 元
+   涨跌额：-2.38  涨跌幅：-5.87%
+   昨收：40.55  今开：40.20
+   最高：40.55  最低：38.01
+   振幅：6.26%
+   日期：2026-05-18 15:00:01
+
+📦 成交量：1,548,147 手
+💰 成交额：60.23亿
+
+
+── 近 5 日资金流向明细 ──
+   2026-05-12 📉 收40.50 [-1.65%] | 主力 -2.60亿 | 超大 -3.36亿 大单 7525.93万 | 中单 -7312.78万 小单 3.33亿
+   2026-05-13 📈 收41.77 [+3.14%] | 主力 4.49亿 | 超大 1.27亿 大单 3.21亿 | 中单 -7720.20万 小单 -3.71亿
+   2026-05-14 📉 收40.22 [-3.71%] | 主力 -4.38亿 | 超大 -3.42亿 大单 -9627.47万 | 中单 2.01亿 小单 2.37亿
+   2026-05-15 📈 收40.55 [+0.82%] | 主力 1.27亿 | 超大 4390.08万 大单 8309.69万 | 中单 -1.05亿 小单 -2224.73万
+   2026-05-18 📉 收38.17 [-5.87%] | 主力 -8.99亿 | 超大 -6.99亿 大单 -1.99亿 | 中单 -1.01亿 小单 9.99亿
+
+
+========================================
+📊 中国船舶 最新公告
+========================================
+📋 [2026-05-15] 保荐/核查意见
+   中信证券股份有限公司关于中国船舶工业股份有限公司换股吸收合并中国船舶重工股份有限公司暨关联交易之2025年度持续督导意见
+
+📋 [2026-04-30] 保荐/核查意见
+   天职国际关于中国船舶工业股份有限公司2025年度募集资金存放、管理与实际使用情况鉴证报告
+
+📋 [2026-04-30] 董事会决议公告
+   中国船舶工业股份有限公司第九届董事会独立董事第三次专门会议决议
+
+📋 [2026-04-30] 年度报告全文
+   中国船舶工业股份有限公司2025年年度报告
+
+📋 [2026-04-30] 分配预案
+   中国船舶工业股份有限公司2025年度利润分配方案及2026年中期分红安排公告
+
+📋 [2026-04-30] 议事规则/实施细则
+   中国船舶工业股份有限公司董事会审计委员会工作细则
+
+📋 [2026-04-30] 其他
+   中国船舶工业股份有限公司2025年度&amp;#34;提质增效重回报&amp;#34;行动方案评估报告暨2026年度&amp;#34;提质增效重回报&amp;#34;行动方案
+
+📋 [2026-04-30] ESG公告
+   中国船舶工业股份有限公司2025年度可持续发展报告暨ESG报告摘要
+
+
+
+========================================
+📊 中国船舶 股东与分红
+========================================
+
+── 分红历史（近 5 次） ──
+   [2026-04-30] 每股派息 3.65 元（税前）| 状态: 预案
+   [2025-06-13] 每股派息 2.5 元（税前）| 状态: 实施
+   [2024-08-02] 每股派息 2.0 元（税前）| 状态: 实施
+   [2023-07-06] 每股派息 0.2 元（税前）| 状态: 实施
+   [2022-08-10] 每股派息 0.3 元（税前）| 状态: 实施
+
+── 十大流通股东（最近一期） ──
+   - 中国船舶工业集团有限公司: 19.89亿股 [26.43%]
+   - 中船海洋与防务装备股份有限公司: 2.17亿股 [2.89%]
+   - 中国国有资本风险投资基金股份有限公司: 1.83亿股 [2.43%]
+   - 香港中央结算有限公司: 1.53亿股 [2.03%] [-7,228,523]
+   - 中国信达资产管理股份有限公司: 1.17亿股 [1.55%]
+   - 中国工商银行-上证50交易型开放式指数证券投资基金: 8622万股 [1.15%] [+4237万]
+   - 中国工商银行股份有限公司-华泰柏瑞沪深300交易型开放式指数证券投资基金: 7203万股 [0.96%] [+3225万]
+   - 中国建设银行股份有限公司-易方达沪深300交易型开放式指数发起式证券投资基金: 5550万股 [0.74%] [+2710万]
+   - 中国国有企业结构调整基金股份有限公司: 5157万股 [0.69%]
+   - 中船投资发展有限公司: 4856万股 [0.65%]
+
+── 股份回购 ──
+   当前无进行中的回购计划
+
+
+========================================
+📊 中国船舶 财务摘要
+========================================
+
+── 关键财务指标（最近 4 期） ──
+   报告期 | 营收 | 净利润 | EPS | ROE | 毛利率 | 负债率
+   --------------------------------------------------------------------------------
+   2025-06-30 | 403.25亿 | 29.46亿 | 0.6590 | 5.63% | 12.21% | 68.39%
+   2025-09-30 | 1074.03亿 | 58.52亿 | 0.9870 | 6.20% | 12.56% | 63.88%
+   2025-12-31 | 1519.78亿 | 78.48亿 | 1.2400 | 7.36% | 12.58% | 64.42%
+   2026-03-31 | 433.12亿 | 48.32亿 | 0.6420 | 3.30% | 17.48% | 62.71%
+
+============================================
+📡 数据来源：新浪行情 / akshare / 东方财富公告
+⏱️  生成时间：2026-05-18 15:35:15
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;微信机器人中对话，分析这三个页面 &lt;a href=&#34;https://palmmicro.com/woody/res/lofcn.php?sort=premium&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://palmmicro.com/woody/res/lofcn.php?sort=premium&lt;/a&gt;、https://www.haoetf.com/lof、https://www.haoetf.com/，创建定时任务，工作日10点30获取三个页面中，溢价 3% 以上的数据。多次对话调整后获得如下报告。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;📊 基金溢价监控 [2026-05-18 10:30]共 7 支高溢价基金 [实时溢价或最新溢价≥3.0%]&lt;/p&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;代码&lt;/th&gt;
+          &lt;th&gt;名称&lt;/th&gt;
+          &lt;th&gt;实时溢价&lt;/th&gt;
+          &lt;th&gt;最新溢价&lt;/th&gt;
+          &lt;th&gt;现价&lt;/th&gt;
+          &lt;th&gt;限购&lt;/th&gt;
+          &lt;th&gt;备注&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;501225&lt;/td&gt;
+          &lt;td&gt;全球芯片LOF&lt;/td&gt;
+          &lt;td&gt;--&lt;/td&gt;
+          &lt;td&gt;24.78%&lt;/td&gt;
+          &lt;td&gt;3.75&lt;/td&gt;
+          &lt;td&gt;--&lt;/td&gt;
+          &lt;td&gt;⚠️&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;161226&lt;/td&gt;
+          &lt;td&gt;国投白银LOF&lt;/td&gt;
+          &lt;td&gt;18.55%&lt;/td&gt;
+          &lt;td&gt;18.55%&lt;/td&gt;
+          &lt;td&gt;2.503&lt;/td&gt;
+          &lt;td&gt;暂停申购&lt;/td&gt;
+          &lt;td&gt;⚠️&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;501018&lt;/td&gt;
+          &lt;td&gt;南方原油&lt;/td&gt;
+          &lt;td&gt;5.72%&lt;/td&gt;
+          &lt;td&gt;7.92%&lt;/td&gt;
+          &lt;td&gt;2.125&lt;/td&gt;
+          &lt;td&gt;暂停申购&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;161129&lt;/td&gt;
+          &lt;td&gt;原油基金&lt;/td&gt;
+          &lt;td&gt;3.95%&lt;/td&gt;
+          &lt;td&gt;6.11%&lt;/td&gt;
+          &lt;td&gt;1.985&lt;/td&gt;
+          &lt;td&gt;暂停申购&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;513100&lt;/td&gt;
+          &lt;td&gt;纳指ETF&lt;/td&gt;
+          &lt;td&gt;4.79%&lt;/td&gt;
+          &lt;td&gt;4.12%&lt;/td&gt;
+          &lt;td&gt;2.073&lt;/td&gt;
+          &lt;td&gt;100万份&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;160723&lt;/td&gt;
+          &lt;td&gt;嘉实原油&lt;/td&gt;
+          &lt;td&gt;1.98%&lt;/td&gt;
+          &lt;td&gt;4.09%&lt;/td&gt;
+          &lt;td&gt;2.339&lt;/td&gt;
+          &lt;td&gt;暂停申购&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;159941&lt;/td&gt;
+          &lt;td&gt;纳指ETF&lt;/td&gt;
+          &lt;td&gt;3.56%&lt;/td&gt;
+          &lt;td&gt;2.90%&lt;/td&gt;
+          &lt;td&gt;1.537&lt;/td&gt;
+          &lt;td&gt;100万份&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;大模型是小龙虾的核心，大模型是大脑，小龙虾是躯干和四肢。有想法后，借助小龙虾和大模型可以跃过技术的鸿沟，构建自己的自动化工具，现在真是一个美妙的时代。&lt;/p&gt;
+
+                    
+
+                </content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/categories/%E8%B4%A2%E5%95%86/" term="财商" label="财商" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E4%BF%A1%E6%81%AF%E5%B7%AE/" term="信息差" label="信息差" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E7%90%86%E8%B4%A2/" term="理财" label="理财" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" term="大模型" label="大模型" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://xiaoshame.github.io/tags/%E5%B0%8F%E9%BE%99%E8%99%BE/" term="小龙虾" label="小龙虾" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">
 10块钱搭建家庭影院，电视不再吃灰</title>
