@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">阿松的博客</title>
     <subtitle type="html">一位普通的奶爸，一个不出名的程序员，正在努力赚钱和感受生活</subtitle>
-    <updated>2026-05-18T16:35:43&#43;08:00</updated>
+    <updated>2026-05-18T16:37:13&#43;08:00</updated>
     <id>https://xiaoshame.github.io/</id>
     <link rel="alternate" type="text/html" href="https://xiaoshame.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://xiaoshame.github.io/atom.xml" />
@@ -37,7 +37,7 @@
                 <content type="html">
                     
 &lt;p&gt;每天登陆网页查看不同的财经信息，很繁琐、不够便捷也不够隐蔽。前段时间小龙虾很火，导致微信和qq都推出了适配小龙虾的机器人。小龙虾接入大模型后，具备了通过对话实现自动化监控的能力,不懂编程的人通过小龙虾获取特定网页信息，然后在微信或者qq看的数据的方案，也具备了可行性。&lt;/p&gt;
-&lt;p&gt;我安装了2个小龙虾，一个使用家里旧电脑安装，&lt;a href=&#34;https://www.cnblogs.com/chenxiaomeng/p/19712272&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;windows安装参考文档&lt;/a&gt;。一个在阿里云花了99买的一年服务器安装，&lt;a href=&#34;https://developer.aliyun.com/article/1717942&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linux安装参考文档&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我安装了2个小龙虾，一个安装在家里旧电脑windows上，&lt;a href=&#34;https://www.cnblogs.com/chenxiaomeng/p/19712272&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;windows安装参考文档&lt;/a&gt;。一个安装在阿里云99买的一年服务器上，&lt;a href=&#34;https://developer.aliyun.com/article/1717942&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;linux安装参考文档&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;绑定机器人&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/2019677743126704371&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;微信机器人安装参考文档&lt;/a&gt;&lt;/li&gt;

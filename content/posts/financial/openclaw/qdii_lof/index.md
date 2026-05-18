@@ -11,16 +11,18 @@ summary : '小龙虾和大模型技术平权的工具，核心是我们的思维
 
 每天登陆网页查看不同的财经信息，很繁琐、不够便捷也不够隐蔽。前段时间小龙虾很火，导致微信和qq都推出了适配小龙虾的机器人。小龙虾接入大模型后，具备了通过对话实现自动化监控的能力,不懂编程的人通过小龙虾获取特定网页信息，然后在微信或者qq看的数据的方案，也具备了可行性。
 
-我安装了2个小龙虾，一个使用家里旧电脑安装，[windows安装参考文档](https://www.cnblogs.com/chenxiaomeng/p/19712272)。一个在阿里云花了99买的一年服务器安装，[linux安装参考文档](https://developer.aliyun.com/article/1717942)。
+我安装了2个小龙虾，一个安装在家里旧电脑windows上，[windows安装参考文档](https://www.cnblogs.com/chenxiaomeng/p/19712272)。一个安装在阿里云99买的一年服务器上，[linux安装参考文档](https://developer.aliyun.com/article/1717942)。
 
 绑定机器人
 1. [微信机器人安装参考文档](https://zhuanlan.zhihu.com/p/2019677743126704371)
 2. openclaw最新版本集成了qq机器人，在[qq开放平台](https://q.qq.com/#/)创建机器人，获取AppID:AppSecret，在openclaw初始化配置时，机器人选择qq，按照提示输入AppID和AppSecret，最后扫码绑定即可
 
-注册大模型厂商账号，国内推荐的模型有阿里云qwen3.6-plus和智普 glm-5.1，注意大模型厂商都提供Coding Plan,使用这个费用更低。
-1. [阿里云](https://help.aliyun.com/zh/model-studio/coding-plan?spm=5176.44390736.0.0.23f033a6140SBM)
-2. [智普](https://open.bigmodel.cn/glm-coding)
-3. 获取到云厂商调用地址和key后，修改openclaw配置，[参考文档](https://help.aliyun.com/zh/model-studio/openclaw?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.17.73482f3dWr51ZA&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@3020785._.ID_help@@%E6%96%87%E6%A1%A3@@3020785-RL_codingplanopenclaw-LOC_2024SPAllResult-OR_ser-PAR1_0a06dc3717790920054144100e91a6-V_4-PAR3_o-RE_new5-P0_0-P1_0)
+配置大模型
+
+1. 注册大模型厂商账号，国内推荐的模型有阿里云qwen3.6-plus和智普 glm-5.1，注意大模型厂商都提供Coding Plan,使用这个费用更低。
+2. [阿里云](https://help.aliyun.com/zh/model-studio/coding-plan?spm=5176.44390736.0.0.23f033a6140SBM)
+3. [智普](https://open.bigmodel.cn/glm-coding)
+4. 获取到云厂商调用地址和key后，修改openclaw配置，[参考文档](https://help.aliyun.com/zh/model-studio/openclaw?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.17.73482f3dWr51ZA&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@3020785._.ID_help@@%E6%96%87%E6%A1%A3@@3020785-RL_codingplanopenclaw-LOC_2024SPAllResult-OR_ser-PAR1_0a06dc3717790920054144100e91a6-V_4-PAR3_o-RE_new5-P0_0-P1_0)
 
 使用案例
 1. 微信机器人中和小龙虾对话，创建定时任务，工作日15点30获取中国船舶当日股票涨跌、近5日资金流向、分红、公告、财报等信息。经过几轮对话既可以获得如下报告
