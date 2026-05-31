@@ -11,11 +11,11 @@ summary : 'Windows上一些提升快乐的小技巧'
 
 日常在Windows上办公，有几个提高效率的小技巧推荐给大家
 
-## Windows自带的剪贴板
+### Windows自带的剪贴板
 1. Windows的剪贴板默认处于关闭状态，需先手动开启才能使用。Win+V，然后选择"打开"。
 2. Win+V查看剪贴板历史，按照时间倒序展示历史复制的内容，展示最近25条复制记录。需要切换复制内容时，非常好用
 
-## Windows 实用工具合集PowerToys
+### Windows 实用工具合集PowerToys
 1. 安装
     - [Microsoft PowerToys GitHub 发布页面](https://aka.ms/installpowertoys)
     - [Microsoft Store 的 PowerToys 页面安装 PowerToys](https://aka.ms/getPowertoys)
@@ -23,11 +23,11 @@ summary : 'Windows上一些提升快乐的小技巧'
 3. Win+Alt+空格，唤起命令面板，搜索应用、文件
 4. Alt+空格，可以计算和搜索文件，我直接当计算器使用
 
-## 截图&录制
+### 截图&录制
 1. PixPin，可以长截图、OCR文字识别、截图置顶展示
 2. Windows 自带录屏，Win+G开启
 
-## Chrome浏览器
+### Chrome浏览器
 1. 网页内容保存为pdf，发送给他人。右上角竖着三个点(浏览器设置入口)-打印-目标打印机-另存为PDF-保存，即可保存到本地
 2. Chrome有个很强的功能就是插件系统，右上角竖着三个点-扩展程序-访问Chrome应用商店
     - Cookie-Editor，获取指定网页登录账号的cookie信息
